@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "outDir": ".tmp-tests",
+    "rootDir": ".",
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "strict": true,
+    "noEmitOnError": false
+  },
+  "include": [
+    "supabase/functions/_shared/privacy.ts",
+    "supabase/functions/_shared/privacy.test.ts",
+    "supabase/functions/admin-user-management/helpers.ts",
+    "supabase/functions/admin-user-management/helpers.test.ts"
+  ]
+}
