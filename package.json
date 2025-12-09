@@ -34,7 +34,8 @@
   "scripts": {
     "build": "vite build",
     "dev": "vite",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "tsc -p tsconfig.tests.json && node --test .tmp-tests/supabase/functions/_shared/privacy.test.js .tmp-tests/supabase/functions/admin-user-management/helpers.test.js"
   },
   "type": "module",
   "version": "0.0.0"
