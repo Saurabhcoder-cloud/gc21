@@ -109,7 +109,7 @@ export default function ReadyToShipPage() {
               <div key={product.id} className="bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-lg transition-all">
                 <div className="relative">
                   <div className="absolute top-4 right-4 z-10">
-                    <span className="px-3 py-1 bg-green-500 text-white text-xs font-bold rounded-full">
+                    <span className="px-3 py-1 bg-primary text-white text-xs font-bold rounded-full">
                       IN STOCK
                     </span>
                   </div>

@@ -81,7 +81,7 @@ export default function InquiryListPage() {
             <p className="text-gray-600 mb-6">Start adding products you're interested in to compare and send inquiries</p>
             <a
               href="/products"
-              className="inline-flex items-center px-6 py-3 bg-emerald-600 text-white font-semibold rounded-lg hover:bg-emerald-700 transition-all whitespace-nowrap cursor-pointer"
+              className="inline-flex items-center px-6 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-primary-dark transition-all whitespace-nowrap cursor-pointer"
             >
               <i className="ri-search-line mr-2"></i>
               Browse Products
@@ -98,7 +98,7 @@ export default function InquiryListPage() {
                       type="checkbox"
                       checked={selectedItems.length === inquiryList.length}
                       onChange={handleSelectAll}
-                      className="w-4 h-4 text-emerald-600 border-gray-300 rounded focus:ring-emerald-500"
+                      className="w-4 h-4 text-primary border-gray-300 rounded focus:ring-primary"
                     />
                     <span className="text-sm font-medium text-gray-700">
                       Select All ({inquiryList.length} items)
@@ -115,7 +115,7 @@ export default function InquiryListPage() {
                     <>
                       <button
                         onClick={handleSendRFQ}
-                        className="px-6 py-2 bg-emerald-600 text-white font-semibold rounded-lg hover:bg-emerald-700 transition-all whitespace-nowrap"
+                        className="px-6 py-2 bg-primary text-white font-semibold rounded-lg hover:bg-primary-dark transition-all whitespace-nowrap"
                       >
                         <i className="ri-send-plane-line mr-2"></i>
                         Send RFQ ({selectedItems.length})
@@ -140,7 +140,7 @@ export default function InquiryListPage() {
                         type="checkbox"
                         checked={selectedItems.includes(item.id)}
                         onChange={() => handleSelectItem(item.id)}
-                        className="w-5 h-5 text-emerald-600 border-gray-300 rounded focus:ring-emerald-500 mt-1 cursor-pointer"
+                        className="w-5 h-5 text-primary border-gray-300 rounded focus:ring-primary mt-1 cursor-pointer"
                       />
                       <div className="w-24 h-24 bg-gray-100 rounded-lg overflow-hidden flex-shrink-0">
                         <img
@@ -172,7 +172,7 @@ export default function InquiryListPage() {
                         </div>
                       </div>
                       <div className="flex flex-col space-y-2">
-                        <button className="px-4 py-2 bg-emerald-600 text-white text-sm font-medium rounded-lg hover:bg-emerald-700 transition-all whitespace-nowrap">
+                        <button className="px-4 py-2 bg-primary text-white text-sm font-medium rounded-lg hover:bg-primary-dark transition-all whitespace-nowrap">
                           <i className="ri-send-plane-line mr-2"></i>
                           Send Inquiry
                         </button>
@@ -242,7 +242,7 @@ export default function InquiryListPage() {
                     <input
                       type="text"
                       placeholder="e.g., 1000 pieces"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary"
                     />
                   </div>
                   <div>
@@ -252,7 +252,7 @@ export default function InquiryListPage() {
                     <input
                       type="text"
                       placeholder="e.g., $10-15 per unit"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary"
                     />
                   </div>
                 </div>
@@ -262,7 +262,7 @@ export default function InquiryListPage() {
                     <label className="block text-sm font-semibold text-gray-900 mb-2">
                       Shipping Country
                     </label>
-                    <select className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                    <select className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary">
                       <option>United States</option>
                       <option>United Kingdom</option>
                       <option>Canada</option>
@@ -275,7 +275,7 @@ export default function InquiryListPage() {
                     </label>
                     <input
                       type="date"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary"
                     />
                   </div>
                 </div>
@@ -288,7 +288,7 @@ export default function InquiryListPage() {
                     rows={4}
                     maxLength={500}
                     placeholder="Describe your specific requirements, quality standards, packaging needs, etc."
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 resize-none"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary resize-none"
                   />
                   <p className="text-xs text-gray-500 mt-1">Maximum 500 characters</p>
                 </div>
@@ -303,7 +303,7 @@ export default function InquiryListPage() {
                   </button>
                   <button
                     type="submit"
-                    className="flex-1 px-6 py-3 bg-emerald-600 text-white font-semibold rounded-lg hover:bg-emerald-700 transition-all whitespace-nowrap"
+                    className="flex-1 px-6 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-primary-dark transition-all whitespace-nowrap"
                   >
                     <i className="ri-send-plane-line mr-2"></i>
                     Send RFQ

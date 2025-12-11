@@ -61,8 +61,8 @@ export default function AdminDisputesPage() {
         </div>
         <div className="bg-white rounded-xl p-6 border border-gray-200">
           <div className="flex items-center justify-between mb-2">
-            <div className="w-10 h-10 bg-emerald-100 rounded-lg flex items-center justify-center">
-              <i className="ri-check-line text-emerald-600"></i>
+            <div className="w-10 h-10 bg-primary-light rounded-lg flex items-center justify-center">
+              <i className="ri-check-line text-primary"></i>
             </div>
             <span className="text-2xl font-bold text-gray-900">47</span>
           </div>
@@ -136,7 +136,7 @@ export default function AdminDisputesPage() {
                     <span className={`px-3 py-1 text-xs font-semibold rounded-full ${
                       dispute.status === 'Open' ? 'bg-red-100 text-red-700' :
                       dispute.status === 'Under Review' ? 'bg-blue-100 text-blue-700' :
-                      'bg-emerald-100 text-emerald-700'
+                      'bg-primary-light text-primary-dark'
                     }`}>
                       {dispute.status}
                     </span>
@@ -204,7 +204,7 @@ export default function AdminDisputesPage() {
                       <span className={`px-3 py-1 text-xs font-semibold rounded-full ${
                         selectedDispute.status === 'Open' ? 'bg-red-100 text-red-700' :
                         selectedDispute.status === 'Under Review' ? 'bg-blue-100 text-blue-700' :
-                        'bg-emerald-100 text-emerald-700'
+                        'bg-primary-light text-primary-dark'
                       }`}>
                         {selectedDispute.status}
                       </span>
@@ -263,7 +263,7 @@ export default function AdminDisputesPage() {
                       <option>Replacement Order</option>
                       <option>Reject Dispute</option>
                     </select>
-                    <button className="px-6 py-3 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 transition-all whitespace-nowrap">
+                    <button className="px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary-dark transition-all whitespace-nowrap">
                       <i className="ri-check-line mr-2"></i>
                       Resolve Dispute
                     </button>

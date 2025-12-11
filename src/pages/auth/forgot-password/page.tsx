@@ -11,11 +11,11 @@ export default function ForgotPasswordPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-white to-teal-50 flex items-center justify-center px-4 py-12">
+    <div className="min-h-screen bg-gradient-to-br from-primary-light via-white to-primary-light flex items-center justify-center px-4 py-12">
       <div className="max-w-md w-full">
         <div className="text-center mb-8">
-          <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
-            <i className="ri-lock-unlock-line text-3xl text-emerald-600"></i>
+          <div className="w-16 h-16 bg-primary-light rounded-full flex items-center justify-center mx-auto mb-4">
+            <i className="ri-lock-unlock-line text-3xl text-primary"></i>
           </div>
           <h1 className="text-3xl font-bold text-gray-900 mb-2" style={{ fontFamily: 'Poppins, sans-serif' }}>
             Forgot Password?
@@ -44,7 +44,7 @@ export default function ForgotPasswordPage() {
                     id="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+                    className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                     placeholder="you@company.com"
                     required
                   />
@@ -53,15 +53,15 @@ export default function ForgotPasswordPage() {
 
               <button
                 type="submit"
-                className="w-full px-6 py-3 bg-emerald-600 text-white font-semibold rounded-lg hover:bg-emerald-700 transition-all whitespace-nowrap"
+                className="w-full px-6 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-primary-dark transition-all whitespace-nowrap"
               >
                 Send Reset Link
               </button>
             </form>
           ) : (
             <div className="text-center py-6">
-              <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <i className="ri-mail-check-line text-3xl text-emerald-600"></i>
+              <div className="w-16 h-16 bg-primary-light rounded-full flex items-center justify-center mx-auto mb-4">
+                <i className="ri-mail-check-line text-3xl text-primary"></i>
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Email Sent!</h3>
               <p className="text-sm text-gray-600 mb-6">
@@ -71,7 +71,7 @@ export default function ForgotPasswordPage() {
                 Didn't receive the email? Check your spam folder or{' '}
                 <button
                   onClick={() => setSubmitted(false)}
-                  className="text-emerald-600 hover:text-emerald-700 font-medium"
+                  className="text-primary hover:text-primary-dark font-medium"
                 >
                   try again
                 </button>

@@ -117,7 +117,7 @@ export default function PricingPage() {
               <span className={`text-lg ${currency === 'USD' ? 'text-white font-semibold' : 'text-gray-400'}`}>USD ($)</span>
               <button
                 onClick={() => setCurrency(currency === 'USD' ? 'INR' : 'USD')}
-                className="relative w-16 h-8 bg-emerald-500 rounded-full transition-colors cursor-pointer"
+                className="relative w-16 h-8 bg-primary rounded-full transition-colors cursor-pointer"
               >
                 <div className={`absolute top-1 w-6 h-6 bg-white rounded-full transition-transform ${currency === 'INR' ? 'translate-x-9' : 'translate-x-1'}`}></div>
               </button>
@@ -135,11 +135,11 @@ export default function PricingPage() {
               <div
                 key={plan.id}
                 className={`relative bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow ${
-                  plan.popular ? 'ring-2 ring-emerald-500 scale-105' : ''
+                  plan.popular ? 'ring-2 ring-primary scale-105' : ''
                 }`}
               >
                 {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-emerald-500 text-white px-6 py-1 rounded-full text-sm font-semibold whitespace-nowrap">
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-white px-6 py-1 rounded-full text-sm font-semibold whitespace-nowrap">
                     Most Popular
                   </div>
                 )}
@@ -156,7 +156,7 @@ export default function PricingPage() {
                     to={plan.id === 'enterprise' ? '/contact' : '/auth/register'}
                     className={`block w-full text-center py-3 rounded-md font-semibold whitespace-nowrap transition-colors mb-8 ${
                       plan.popular
-                        ? 'bg-emerald-500 hover:bg-emerald-600 text-white'
+                        ? 'bg-primary hover:bg-primary-dark text-white'
                         : 'bg-gray-100 hover:bg-gray-200 text-slate-900'
                     }`}
                   >
@@ -165,7 +165,7 @@ export default function PricingPage() {
                   <ul className="space-y-4">
                     {plan.features.map((feature, idx) => (
                       <li key={idx} className="flex items-start gap-3">
-                        <i className="ri-check-line text-emerald-500 text-xl flex-shrink-0 mt-0.5"></i>
+                        <i className="ri-check-line text-primary text-xl flex-shrink-0 mt-0.5"></i>
                         <span className="text-gray-700">{feature}</span>
                       </li>
                     ))}
@@ -201,15 +201,15 @@ export default function PricingPage() {
                   </tr>
                   <tr className="bg-gray-50">
                     <td className="px-6 py-4 text-gray-700">Supplier verification</td>
-                    <td className="px-6 py-4 text-center"><i className="ri-check-line text-emerald-500 text-xl"></i></td>
-                    <td className="px-6 py-4 text-center"><i className="ri-check-line text-emerald-500 text-xl"></i></td>
-                    <td className="px-6 py-4 text-center"><i className="ri-check-line text-emerald-500 text-xl"></i></td>
+                    <td className="px-6 py-4 text-center"><i className="ri-check-line text-primary text-xl"></i></td>
+                    <td className="px-6 py-4 text-center"><i className="ri-check-line text-primary text-xl"></i></td>
+                    <td className="px-6 py-4 text-center"><i className="ri-check-line text-primary text-xl"></i></td>
                   </tr>
                   <tr>
                     <td className="px-6 py-4 text-gray-700">Priority support</td>
                     <td className="px-6 py-4 text-center"><i className="ri-close-line text-gray-400 text-xl"></i></td>
-                    <td className="px-6 py-4 text-center"><i className="ri-check-line text-emerald-500 text-xl"></i></td>
-                    <td className="px-6 py-4 text-center"><i className="ri-check-line text-emerald-500 text-xl"></i></td>
+                    <td className="px-6 py-4 text-center"><i className="ri-check-line text-primary text-xl"></i></td>
+                    <td className="px-6 py-4 text-center"><i className="ri-check-line text-primary text-xl"></i></td>
                   </tr>
                   <tr className="bg-gray-50">
                     <td className="px-6 py-4 text-gray-700">Analytics dashboard</td>
@@ -220,20 +220,20 @@ export default function PricingPage() {
                   <tr>
                     <td className="px-6 py-4 text-gray-700">API access</td>
                     <td className="px-6 py-4 text-center"><i className="ri-close-line text-gray-400 text-xl"></i></td>
-                    <td className="px-6 py-4 text-center"><i className="ri-check-line text-emerald-500 text-xl"></i></td>
-                    <td className="px-6 py-4 text-center"><i className="ri-check-line text-emerald-500 text-xl"></i></td>
+                    <td className="px-6 py-4 text-center"><i className="ri-check-line text-primary text-xl"></i></td>
+                    <td className="px-6 py-4 text-center"><i className="ri-check-line text-primary text-xl"></i></td>
                   </tr>
                   <tr className="bg-gray-50">
                     <td className="px-6 py-4 text-gray-700">Dedicated account manager</td>
                     <td className="px-6 py-4 text-center"><i className="ri-close-line text-gray-400 text-xl"></i></td>
-                    <td className="px-6 py-4 text-center"><i className="ri-check-line text-emerald-500 text-xl"></i></td>
-                    <td className="px-6 py-4 text-center"><i className="ri-check-line text-emerald-500 text-xl"></i></td>
+                    <td className="px-6 py-4 text-center"><i className="ri-check-line text-primary text-xl"></i></td>
+                    <td className="px-6 py-4 text-center"><i className="ri-check-line text-primary text-xl"></i></td>
                   </tr>
                   <tr>
                     <td className="px-6 py-4 text-gray-700">White-label solutions</td>
                     <td className="px-6 py-4 text-center"><i className="ri-close-line text-gray-400 text-xl"></i></td>
                     <td className="px-6 py-4 text-center"><i className="ri-close-line text-gray-400 text-xl"></i></td>
-                    <td className="px-6 py-4 text-center"><i className="ri-check-line text-emerald-500 text-xl"></i></td>
+                    <td className="px-6 py-4 text-center"><i className="ri-check-line text-primary text-xl"></i></td>
                   </tr>
                 </tbody>
               </table>
@@ -268,11 +268,11 @@ export default function PricingPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-emerald-600 text-white">
+      <section className="py-20 bg-primary text-white">
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-4xl font-bold mb-6">Still Have Questions?</h2>
-          <p className="text-xl mb-8 text-emerald-50">Our team is here to help you choose the right plan</p>
-          <Link to="/contact" className="bg-white hover:bg-gray-100 text-emerald-600 px-10 py-4 rounded-md font-semibold whitespace-nowrap transition-colors inline-block">
+          <p className="text-xl mb-8 text-primary-light">Our team is here to help you choose the right plan</p>
+          <Link to="/contact" className="bg-white hover:bg-gray-100 text-primary px-10 py-4 rounded-md font-semibold whitespace-nowrap transition-colors inline-block">
             Contact Sales
           </Link>
         </div>

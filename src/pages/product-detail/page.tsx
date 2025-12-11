@@ -133,9 +133,9 @@ export default function ProductDetailPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           {/* Breadcrumb */}
           <div className="flex items-center space-x-2 text-sm text-gray-600 mb-6">
-            <a href="/" className="hover:text-emerald-600 cursor-pointer">Home</a>
+            <a href="/" className="hover:text-primary-dark cursor-pointer">Home</a>
             <i className="ri-arrow-right-s-line"></i>
-            <a href="/products" className="hover:text-emerald-600 cursor-pointer">Products</a>
+            <a href="/products" className="hover:text-primary-dark cursor-pointer">Products</a>
             <i className="ri-arrow-right-s-line"></i>
             <span className="text-gray-900">LED Flood Light</span>
           </div>
@@ -158,7 +158,7 @@ export default function ProductDetailPage() {
                     key={index}
                     onClick={() => setSelectedImage(index)}
                     className={`w-full h-24 rounded-lg overflow-hidden cursor-pointer border-2 transition-all ${
-                      selectedImage === index ? 'border-emerald-600' : 'border-gray-200 hover:border-gray-300'
+                      selectedImage === index ? 'border-primary' : 'border-gray-200 hover:border-gray-300'
                     }`}
                   >
                     <img
@@ -189,7 +189,7 @@ export default function ProductDetailPage() {
                 </div>
 
                 <div className="mb-6">
-                  <div className="text-3xl font-bold text-emerald-600 mb-2">
+                  <div className="text-3xl font-bold text-primary mb-2">
                     ${product.price.min}.00 - ${product.price.max}.00
                   </div>
                   <p className="text-sm text-gray-600">Price varies based on quantity</p>
@@ -226,7 +226,7 @@ export default function ProductDetailPage() {
                       type="number"
                       value={quantity}
                       onChange={(e) => setQuantity(Math.max(product.moq, parseInt(e.target.value) || product.moq))}
-                      className="flex-1 px-4 py-2 border border-gray-300 rounded-lg text-center text-base font-semibold focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                      className="flex-1 px-4 py-2 border border-gray-300 rounded-lg text-center text-base font-semibold focus:outline-none focus:ring-2 focus:ring-primary"
                     />
                     <button
                       onClick={() => setQuantity(quantity + 10)}
@@ -240,11 +240,11 @@ export default function ProductDetailPage() {
 
                 {/* Action Buttons */}
                 <div className="space-y-3">
-                  <button className="w-full px-6 py-3 bg-emerald-600 text-white font-semibold rounded-lg hover:bg-emerald-700 transition-all whitespace-nowrap">
+                  <button className="w-full px-6 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-primary-dark transition-all whitespace-nowrap">
                     <i className="ri-mail-line mr-2"></i>
                     Contact Supplier
                   </button>
-                  <button className="w-full px-6 py-3 bg-white text-emerald-600 font-semibold rounded-lg border-2 border-emerald-600 hover:bg-emerald-50 transition-all whitespace-nowrap">
+                  <button className="w-full px-6 py-3 bg-white text-primary font-semibold rounded-lg border-2 border-primary hover:bg-primary-light transition-all whitespace-nowrap">
                     <i className="ri-price-tag-3-line mr-2"></i>
                     Get Latest Price
                   </button>
@@ -270,7 +270,7 @@ export default function ProductDetailPage() {
                     <div className="flex items-center space-x-2 mb-1">
                       <h4 className="text-base font-semibold text-gray-900">{product.supplier.name}</h4>
                       {product.supplier.verified && (
-                        <i className="ri-verified-badge-fill text-emerald-600"></i>
+                        <i className="ri-verified-badge-fill text-primary"></i>
                       )}
                     </div>
                     <p className="text-sm text-gray-600 flex items-center">
@@ -296,7 +296,7 @@ export default function ProductDetailPage() {
                 <div className="grid grid-cols-2 gap-3">
                   <button
                     onClick={() => navigate(`/supplier/${product.id}`)}
-                    className="w-full px-4 py-2 bg-emerald-50 text-emerald-600 font-medium rounded-lg hover:bg-emerald-600 hover:text-white transition-all whitespace-nowrap"
+                    className="w-full px-4 py-2 bg-primary-light text-primary font-medium rounded-lg hover:bg-primary hover:text-white transition-all whitespace-nowrap"
                   >
                     View Supplier
                   </button>
@@ -305,7 +305,7 @@ export default function ProductDetailPage() {
                       // Scroll to contact section or open contact modal
                       window.scrollTo({ top: 0, behavior: 'smooth' });
                     }}
-                    className="w-full px-4 py-2 bg-emerald-600 text-white font-medium rounded-lg hover:bg-emerald-700 transition-all whitespace-nowrap"
+                    className="w-full px-4 py-2 bg-primary text-white font-medium rounded-lg hover:bg-primary-dark transition-all whitespace-nowrap"
                   >
                     Contact Now
                   </button>
@@ -322,7 +322,7 @@ export default function ProductDetailPage() {
                   onClick={() => setActiveTab('description')}
                   className={`py-4 text-sm font-semibold border-b-2 transition-colors whitespace-nowrap ${
                     activeTab === 'description'
-                      ? 'border-emerald-600 text-emerald-600'
+                      ? 'border-primary text-primary'
                       : 'border-transparent text-gray-600 hover:text-gray-900'
                   }`}
                 >
@@ -332,7 +332,7 @@ export default function ProductDetailPage() {
                   onClick={() => setActiveTab('specifications')}
                   className={`py-4 text-sm font-semibold border-b-2 transition-colors whitespace-nowrap ${
                     activeTab === 'specifications'
-                      ? 'border-emerald-600 text-emerald-600'
+                      ? 'border-primary text-primary'
                       : 'border-transparent text-gray-600 hover:text-gray-900'
                   }`}
                 >
@@ -342,7 +342,7 @@ export default function ProductDetailPage() {
                   onClick={() => setActiveTab('reviews')}
                   className={`py-4 text-sm font-semibold border-b-2 transition-colors whitespace-nowrap ${
                     activeTab === 'reviews'
-                      ? 'border-emerald-600 text-emerald-600'
+                      ? 'border-primary text-primary'
                       : 'border-transparent text-gray-600 hover:text-gray-900'
                   }`}
                 >
@@ -360,7 +360,7 @@ export default function ProductDetailPage() {
                   <ul className="space-y-2">
                     {product.features.map((feature, index) => (
                       <li key={index} className="flex items-start space-x-2 text-gray-700">
-                        <i className="ri-checkbox-circle-fill text-emerald-600 mt-1"></i>
+                        <i className="ri-checkbox-circle-fill text-primary mt-1"></i>
                         <span>{feature}</span>
                       </li>
                     ))}
@@ -393,7 +393,7 @@ export default function ProductDetailPage() {
                             <div className="flex items-center space-x-2 mb-1">
                               <h4 className="text-base font-semibold text-gray-900">{review.author}</h4>
                               {review.verified && (
-                                <span className="px-2 py-0.5 bg-emerald-100 text-emerald-700 text-xs font-medium rounded">
+                                <span className="px-2 py-0.5 bg-primary-light text-primary-dark text-xs font-medium rounded">
                                   Verified Purchase
                                 </span>
                               )}
@@ -442,11 +442,11 @@ export default function ProductDetailPage() {
                     />
                   </div>
                   <div className="p-4">
-                    <h3 className="text-sm font-semibold text-gray-900 mb-2 line-clamp-2 group-hover:text-emerald-600 transition-colors">
+                    <h3 className="text-sm font-semibold text-gray-900 mb-2 line-clamp-2 group-hover:text-primary-dark transition-colors">
                       {relatedProduct.name}
                     </h3>
                     <div className="flex items-center justify-between mb-2">
-                      <span className="text-base font-bold text-emerald-600">{relatedProduct.price}</span>
+                      <span className="text-base font-bold text-primary">{relatedProduct.price}</span>
                       <div className="flex items-center space-x-1">
                         <i className="ri-star-fill text-yellow-400 text-sm"></i>
                         <span className="text-sm text-gray-600">{relatedProduct.rating}</span>

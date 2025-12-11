@@ -56,7 +56,7 @@ function BuyerContactBlock({ buyer, isPaidSupplier }: BuyerContactBlockProps) {
                 <span className="font-semibold">Email:</span> <span className="font-mono">xxxx@hidden.com</span> 🔒
               </p>
             </div>
-            <button className="px-6 py-2.5 bg-emerald-600 text-white rounded-lg font-semibold hover:bg-emerald-700 transition-all whitespace-nowrap cursor-pointer">
+            <button className="px-6 py-2.5 bg-primary text-white rounded-lg font-semibold hover:bg-primary-dark transition-all whitespace-nowrap cursor-pointer">
               <i className="ri-vip-crown-line mr-2"></i>
               Upgrade to Premium
             </button>
@@ -67,43 +67,43 @@ function BuyerContactBlock({ buyer, isPaidSupplier }: BuyerContactBlockProps) {
   }
 
   return (
-    <div className="rounded-lg border-2 border-emerald-500 bg-emerald-50 p-6">
+    <div className="rounded-lg border-2 border-primary bg-primary-light p-6">
       <div className="flex items-start space-x-4">
-        <div className="w-12 h-12 bg-emerald-500 rounded-full flex items-center justify-center flex-shrink-0">
+        <div className="w-12 h-12 bg-primary-light0 rounded-full flex items-center justify-center flex-shrink-0">
           <i className="ri-shield-check-fill text-2xl text-white"></i>
         </div>
         <div className="flex-1">
           <div className="flex items-center space-x-3 mb-3">
-            <p className="font-bold text-emerald-900 text-lg">Buyer Contact Details</p>
+            <p className="font-bold text-primary text-lg">Buyer Contact Details</p>
             <span className="px-3 py-1 bg-yellow-400 text-yellow-900 rounded-full text-xs font-bold">
               <i className="ri-vip-crown-fill mr-1"></i>
               Premium Access
             </span>
           </div>
           <div className="space-y-2">
-            <p className="text-sm text-emerald-900">
+            <p className="text-sm text-primary">
               <span className="font-semibold">Name:</span> {buyer.name}
             </p>
-            <p className="text-sm text-emerald-900">
+            <p className="text-sm text-primary">
               <span className="font-semibold">Company:</span> {buyer.company}
             </p>
-            <p className="text-sm text-emerald-900">
+            <p className="text-sm text-primary">
               <span className="font-semibold">Country:</span> {buyer.country}
             </p>
             {buyer.city && (
-              <p className="text-sm text-emerald-900">
+              <p className="text-sm text-primary">
                 <span className="font-semibold">City:</span> {buyer.city}
               </p>
             )}
-            <p className="text-sm text-emerald-900">
+            <p className="text-sm text-primary">
               <span className="font-semibold">Phone:</span> 
-              <a href={`tel:${buyer.phone}`} className="ml-2 text-emerald-700 hover:text-emerald-800 font-semibold underline">
+              <a href={`tel:${buyer.phone}`} className="ml-2 text-primary hover:text-primary-dark font-semibold underline">
                 {buyer.phone}
               </a>
             </p>
-            <p className="text-sm text-emerald-900">
+            <p className="text-sm text-primary">
               <span className="font-semibold">Email:</span> 
-              <a href={`mailto:${buyer.email}`} className="ml-2 text-emerald-700 hover:text-emerald-800 font-semibold underline">
+              <a href={`mailto:${buyer.email}`} className="ml-2 text-primary hover:text-primary-dark font-semibold underline">
                 {buyer.email}
               </a>
             </p>
@@ -111,14 +111,14 @@ function BuyerContactBlock({ buyer, isPaidSupplier }: BuyerContactBlockProps) {
           <div className="mt-4 flex space-x-3">
             <a
               href={`mailto:${buyer.email}`}
-              className="px-4 py-2 bg-emerald-600 text-white rounded-lg font-medium hover:bg-emerald-700 transition-all whitespace-nowrap cursor-pointer inline-block"
+              className="px-4 py-2 bg-primary text-white rounded-lg font-medium hover:bg-primary-dark transition-all whitespace-nowrap cursor-pointer inline-block"
             >
               <i className="ri-mail-line mr-2"></i>
               Send Email
             </a>
             <a
               href={`tel:${buyer.phone}`}
-              className="px-4 py-2 bg-white text-emerald-600 border-2 border-emerald-600 rounded-lg font-medium hover:bg-emerald-50 transition-all whitespace-nowrap cursor-pointer inline-block"
+              className="px-4 py-2 bg-white text-primary border-2 border-primary rounded-lg font-medium hover:bg-primary-light transition-all whitespace-nowrap cursor-pointer inline-block"
             >
               <i className="ri-phone-line mr-2"></i>
               Call Now
@@ -215,7 +215,7 @@ export default function SupplierInquiriesPage() {
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'New': return 'bg-blue-100 text-blue-700';
-      case 'Quoted': return 'bg-emerald-100 text-emerald-700';
+      case 'Quoted': return 'bg-primary-light text-primary-dark';
       case 'Closed': return 'bg-gray-100 text-gray-700';
       default: return 'bg-gray-100 text-gray-700';
     }
@@ -238,7 +238,7 @@ export default function SupplierInquiriesPage() {
               Premium Supplier
             </span>
           ) : (
-            <button className="px-6 py-2.5 bg-emerald-600 text-white rounded-lg font-semibold hover:bg-emerald-700 transition-all whitespace-nowrap cursor-pointer">
+            <button className="px-6 py-2.5 bg-primary text-white rounded-lg font-semibold hover:bg-primary-dark transition-all whitespace-nowrap cursor-pointer">
               <i className="ri-vip-crown-line mr-2"></i>
               Upgrade to Premium
             </button>
@@ -274,7 +274,7 @@ export default function SupplierInquiriesPage() {
         </div>
         <div className="bg-white rounded-lg p-4 border border-gray-200">
           <p className="text-sm text-gray-600 mb-1">Quoted</p>
-          <p className="text-2xl font-bold text-emerald-600">{rfqs.filter(r => r.status === 'Quoted').length}</p>
+          <p className="text-2xl font-bold text-primary">{rfqs.filter(r => r.status === 'Quoted').length}</p>
         </div>
         <div className="bg-white rounded-lg p-4 border border-gray-200">
           <p className="text-sm text-gray-600 mb-1">Response Rate</p>
@@ -292,7 +292,7 @@ export default function SupplierInquiriesPage() {
               onClick={() => setFilterStatus(status)}
               className={`px-4 py-2 rounded-lg text-sm font-medium transition-all whitespace-nowrap cursor-pointer ${
                 filterStatus === status
-                  ? 'bg-emerald-600 text-white'
+                  ? 'bg-primary text-white'
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
@@ -351,7 +351,7 @@ export default function SupplierInquiriesPage() {
                   <td className="px-6 py-4 whitespace-nowrap">
                     <button
                       onClick={() => setSelectedRFQ(rfq)}
-                      className="text-emerald-600 hover:text-emerald-700 font-medium text-sm cursor-pointer"
+                      className="text-primary hover:text-primary-dark font-medium text-sm cursor-pointer"
                     >
                       View Details
                     </button>
@@ -435,7 +435,7 @@ export default function SupplierInquiriesPage() {
                 <div className="flex space-x-3 pt-4">
                   {isPaidSupplier ? (
                     <>
-                      <button className="flex-1 px-6 py-3 bg-emerald-600 text-white rounded-lg font-semibold hover:bg-emerald-700 transition-all whitespace-nowrap cursor-pointer">
+                      <button className="flex-1 px-6 py-3 bg-primary text-white rounded-lg font-semibold hover:bg-primary-dark transition-all whitespace-nowrap cursor-pointer">
                         <i className="ri-send-plane-fill mr-2"></i>
                         Submit Quote
                       </button>
@@ -445,7 +445,7 @@ export default function SupplierInquiriesPage() {
                       </button>
                     </>
                   ) : (
-                    <button className="flex-1 px-6 py-3 bg-emerald-600 text-white rounded-lg font-semibold hover:bg-emerald-700 transition-all whitespace-nowrap cursor-pointer">
+                    <button className="flex-1 px-6 py-3 bg-primary text-white rounded-lg font-semibold hover:bg-primary-dark transition-all whitespace-nowrap cursor-pointer">
                       <i className="ri-vip-crown-line mr-2"></i>
                       Upgrade to Submit Quote
                     </button>

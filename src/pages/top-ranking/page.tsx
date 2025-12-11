@@ -63,7 +63,7 @@ export default function TopRankingPage() {
                     <div className="flex items-center gap-3 mb-2">
                       <h3 className="text-2xl font-bold text-gray-900">{supplier.name}</h3>
                       {supplier.verified && (
-                        <span className="px-3 py-1 bg-green-100 text-green-700 text-xs font-semibold rounded-full flex items-center gap-1">
+                        <span className="px-3 py-1 bg-primary-light text-primary-dark text-xs font-semibold rounded-full flex items-center gap-1">
                           <i className="ri-verified-badge-fill"></i>
                           Verified
                         </span>

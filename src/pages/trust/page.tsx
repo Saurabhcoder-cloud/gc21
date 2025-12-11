@@ -55,22 +55,22 @@ export default function TrustPage() {
           <div className="max-w-5xl mx-auto">
             <div className="grid md:grid-cols-3 gap-8">
               <div className="text-center">
-                <div className="w-20 h-20 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <i className="ri-file-list-3-line text-4xl text-emerald-600"></i>
+                <div className="w-20 h-20 bg-primary-light rounded-full flex items-center justify-center mx-auto mb-6">
+                  <i className="ri-file-list-3-line text-4xl text-primary"></i>
                 </div>
                 <h3 className="text-xl font-semibold mb-4 text-slate-900">Document Verification</h3>
                 <p className="text-gray-600">Business licenses, certifications, and legal documents are thoroughly reviewed by our team</p>
               </div>
               <div className="text-center">
-                <div className="w-20 h-20 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <i className="ri-building-line text-4xl text-emerald-600"></i>
+                <div className="w-20 h-20 bg-primary-light rounded-full flex items-center justify-center mx-auto mb-6">
+                  <i className="ri-building-line text-4xl text-primary"></i>
                 </div>
                 <h3 className="text-xl font-semibold mb-4 text-slate-900">On-Site Inspection</h3>
                 <p className="text-gray-600">Third-party auditors visit facilities to verify production capabilities and quality standards</p>
               </div>
               <div className="text-center">
-                <div className="w-20 h-20 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <i className="ri-shield-check-line text-4xl text-emerald-600"></i>
+                <div className="w-20 h-20 bg-primary-light rounded-full flex items-center justify-center mx-auto mb-6">
+                  <i className="ri-shield-check-line text-4xl text-primary"></i>
                 </div>
                 <h3 className="text-xl font-semibold mb-4 text-slate-900">Ongoing Monitoring</h3>
                 <p className="text-gray-600">Continuous performance tracking and buyer feedback ensure maintained quality standards</p>
@@ -88,8 +88,8 @@ export default function TrustPage() {
             <div>
               <div className="bg-white p-8 rounded-lg shadow-sm mb-6">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <i className="ri-shield-check-line text-2xl text-emerald-600"></i>
+                  <div className="w-12 h-12 bg-primary-light rounded-lg flex items-center justify-center flex-shrink-0">
+                    <i className="ri-shield-check-line text-2xl text-primary"></i>
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold mb-2 text-slate-900">Payment Protection</h3>
@@ -99,8 +99,8 @@ export default function TrustPage() {
               </div>
               <div className="bg-white p-8 rounded-lg shadow-sm mb-6">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <i className="ri-checkbox-circle-line text-2xl text-emerald-600"></i>
+                  <div className="w-12 h-12 bg-primary-light rounded-lg flex items-center justify-center flex-shrink-0">
+                    <i className="ri-checkbox-circle-line text-2xl text-primary"></i>
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold mb-2 text-slate-900">Quality Assurance</h3>
@@ -110,8 +110,8 @@ export default function TrustPage() {
               </div>
               <div className="bg-white p-8 rounded-lg shadow-sm">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <i className="ri-time-line text-2xl text-emerald-600"></i>
+                  <div className="w-12 h-12 bg-primary-light rounded-lg flex items-center justify-center flex-shrink-0">
+                    <i className="ri-time-line text-2xl text-primary"></i>
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold mb-2 text-slate-900">On-Time Delivery</h3>
@@ -123,8 +123,8 @@ export default function TrustPage() {
             <div>
               <div className="bg-white p-8 rounded-lg shadow-sm mb-6">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <i className="ri-refund-2-line text-2xl text-emerald-600"></i>
+                  <div className="w-12 h-12 bg-primary-light rounded-lg flex items-center justify-center flex-shrink-0">
+                    <i className="ri-refund-2-line text-2xl text-primary"></i>
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold mb-2 text-slate-900">Refund Policy</h3>
@@ -134,8 +134,8 @@ export default function TrustPage() {
               </div>
               <div className="bg-white p-8 rounded-lg shadow-sm mb-6">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <i className="ri-customer-service-2-line text-2xl text-emerald-600"></i>
+                  <div className="w-12 h-12 bg-primary-light rounded-lg flex items-center justify-center flex-shrink-0">
+                    <i className="ri-customer-service-2-line text-2xl text-primary"></i>
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold mb-2 text-slate-900">Dispute Resolution</h3>
@@ -145,8 +145,8 @@ export default function TrustPage() {
               </div>
               <div className="bg-white p-8 rounded-lg shadow-sm">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <i className="ri-lock-line text-2xl text-emerald-600"></i>
+                  <div className="w-12 h-12 bg-primary-light rounded-lg flex items-center justify-center flex-shrink-0">
+                    <i className="ri-lock-line text-2xl text-primary"></i>
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold mb-2 text-slate-900">Data Security</h3>
@@ -165,19 +165,19 @@ export default function TrustPage() {
           <h2 className="text-4xl font-bold text-center mb-16 text-slate-900">Trust by Numbers</h2>
           <div className="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
             <div className="text-center">
-              <div className="text-5xl font-bold text-emerald-600 mb-2">99.8%</div>
+              <div className="text-5xl font-bold text-primary mb-2">99.8%</div>
               <div className="text-gray-600">Successful Transactions</div>
             </div>
             <div className="text-center">
-              <div className="text-5xl font-bold text-emerald-600 mb-2">24/7</div>
+              <div className="text-5xl font-bold text-primary mb-2">24/7</div>
               <div className="text-gray-600">Customer Support</div>
             </div>
             <div className="text-center">
-              <div className="text-5xl font-bold text-emerald-600 mb-2">$50M+</div>
+              <div className="text-5xl font-bold text-primary mb-2">$50M+</div>
               <div className="text-gray-600">Protected Annually</div>
             </div>
             <div className="text-center">
-              <div className="text-5xl font-bold text-emerald-600 mb-2">4.8/5</div>
+              <div className="text-5xl font-bold text-primary mb-2">4.8/5</div>
               <div className="text-gray-600">Trust Rating</div>
             </div>
           </div>
@@ -206,15 +206,15 @@ export default function TrustPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-emerald-600 text-white">
+      <section className="py-20 bg-primary text-white">
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-4xl font-bold mb-6">Trade with Confidence</h2>
-          <p className="text-xl mb-8 text-emerald-50">Join thousands of businesses who trust our platform</p>
+          <p className="text-xl mb-8 text-primary-light">Join thousands of businesses who trust our platform</p>
           <div className="flex gap-4 justify-center">
-            <Link to="/auth/register" className="bg-white hover:bg-gray-100 text-emerald-600 px-10 py-4 rounded-md font-semibold whitespace-nowrap transition-colors">
+            <Link to="/auth/register" className="bg-white hover:bg-gray-100 text-primary px-10 py-4 rounded-md font-semibold whitespace-nowrap transition-colors">
               Get Started
             </Link>
-            <Link to="/contact" className="bg-emerald-700 hover:bg-emerald-800 text-white px-10 py-4 rounded-md font-semibold whitespace-nowrap transition-colors">
+            <Link to="/contact" className="bg-primary-dark hover:bg-primary-dark text-white px-10 py-4 rounded-md font-semibold whitespace-nowrap transition-colors">
               Contact Us
             </Link>
           </div>

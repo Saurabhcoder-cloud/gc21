@@ -134,7 +134,7 @@ export default function AdminSuppliersPage() {
                   </td>
                   <td className="px-6 py-4">
                     <span className={`px-3 py-1 text-xs font-semibold rounded-full ${
-                      supplier.verification === 'Verified' ? 'bg-emerald-100 text-emerald-700' :
+                      supplier.verification === 'Verified' ? 'bg-primary-light text-primary-dark' :
                       supplier.verification === 'Pending' ? 'bg-amber-100 text-amber-700' :
                       'bg-gray-100 text-gray-700'
                     }`}>
@@ -143,7 +143,7 @@ export default function AdminSuppliersPage() {
                   </td>
                   <td className="px-6 py-4">
                     <span className={`px-3 py-1 text-xs font-semibold rounded-full ${
-                      supplier.status === 'Active' ? 'bg-emerald-100 text-emerald-700' :
+                      supplier.status === 'Active' ? 'bg-primary-light text-primary-dark' :
                       'bg-red-100 text-red-700'
                     }`}>
                       {supplier.status}
@@ -159,7 +159,7 @@ export default function AdminSuppliersPage() {
                         <i className="ri-eye-line"></i>
                       </button>
                       <button
-                        className="p-2 text-emerald-600 hover:bg-emerald-50 rounded-lg transition-all"
+                        className="p-2 text-primary hover:bg-primary-light rounded-lg transition-all"
                         title="Verify"
                       >
                         <i className="ri-shield-check-line"></i>
@@ -206,7 +206,7 @@ export default function AdminSuppliersPage() {
                     <label className="text-sm font-semibold text-gray-700">Verification Status</label>
                     <p className="mt-1">
                       <span className={`px-3 py-1 text-xs font-semibold rounded-full ${
-                        selectedSupplier.verification === 'Verified' ? 'bg-emerald-100 text-emerald-700' :
+                        selectedSupplier.verification === 'Verified' ? 'bg-primary-light text-primary-dark' :
                         selectedSupplier.verification === 'Pending' ? 'bg-amber-100 text-amber-700' :
                         'bg-gray-100 text-gray-700'
                       }`}>
@@ -238,7 +238,7 @@ export default function AdminSuppliersPage() {
                     <label className="text-sm font-semibold text-gray-700">Account Status</label>
                     <p className="mt-1">
                       <span className={`px-3 py-1 text-xs font-semibold rounded-full ${
-                        selectedSupplier.status === 'Active' ? 'bg-emerald-100 text-emerald-700' : 'bg-red-100 text-red-700'
+                        selectedSupplier.status === 'Active' ? 'bg-primary-light text-primary-dark' : 'bg-red-100 text-red-700'
                       }`}>
                         {selectedSupplier.status}
                       </span>
@@ -267,7 +267,7 @@ export default function AdminSuppliersPage() {
                 <div className="border-t border-gray-200 pt-6">
                   <h3 className="font-semibold text-gray-900 mb-4">Admin Actions</h3>
                   <div className="flex flex-wrap gap-3">
-                    <button className="px-4 py-2 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 transition-all whitespace-nowrap">
+                    <button className="px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary-dark transition-all whitespace-nowrap">
                       <i className="ri-shield-check-line mr-2"></i>
                       Verify Supplier
                     </button>

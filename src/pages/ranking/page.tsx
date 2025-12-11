@@ -60,19 +60,19 @@ export default function RankingPage() {
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-4 gap-6">
             <div className="bg-white p-6 rounded-lg shadow-sm text-center">
-              <div className="text-4xl font-bold text-emerald-600 mb-2">200M+</div>
+              <div className="text-4xl font-bold text-primary mb-2">200M+</div>
               <div className="text-gray-600">Total Products</div>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm text-center">
-              <div className="text-4xl font-bold text-emerald-600 mb-2">200K+</div>
+              <div className="text-4xl font-bold text-primary mb-2">200K+</div>
               <div className="text-gray-600">Verified Suppliers</div>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm text-center">
-              <div className="text-4xl font-bold text-emerald-600 mb-2">5,900+</div>
+              <div className="text-4xl font-bold text-primary mb-2">5,900+</div>
               <div className="text-gray-600">Categories</div>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm text-center">
-              <div className="text-4xl font-bold text-emerald-600 mb-2">200+</div>
+              <div className="text-4xl font-bold text-primary mb-2">200+</div>
               <div className="text-gray-600">Countries</div>
             </div>
           </div>
@@ -87,7 +87,7 @@ export default function RankingPage() {
               onClick={() => setActiveTab('products')}
               className={`px-8 py-3 rounded-full font-semibold whitespace-nowrap transition-colors ${
                 activeTab === 'products'
-                  ? 'bg-emerald-500 text-white'
+                  ? 'bg-primary text-white'
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
@@ -97,7 +97,7 @@ export default function RankingPage() {
               onClick={() => setActiveTab('suppliers')}
               className={`px-8 py-3 rounded-full font-semibold whitespace-nowrap transition-colors ${
                 activeTab === 'suppliers'
-                  ? 'bg-emerald-500 text-white'
+                  ? 'bg-primary text-white'
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
@@ -107,7 +107,7 @@ export default function RankingPage() {
               onClick={() => setActiveTab('categories')}
               className={`px-8 py-3 rounded-full font-semibold whitespace-nowrap transition-colors ${
                 activeTab === 'categories'
-                  ? 'bg-emerald-500 text-white'
+                  ? 'bg-primary text-white'
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
@@ -136,13 +136,13 @@ export default function RankingPage() {
                         <tr key={product.rank} className="hover:bg-gray-50 transition-colors">
                           <td className="px-6 py-4">
                             <div className={`w-10 h-10 rounded-full flex items-center justify-center font-bold ${
-                              product.rank <= 3 ? 'bg-emerald-100 text-emerald-600' : 'bg-gray-100 text-gray-600'
+                              product.rank <= 3 ? 'bg-primary-light text-primary-dark' : 'bg-gray-100 text-gray-600'
                             }`}>
                               {product.rank}
                             </div>
                           </td>
                           <td className="px-6 py-4">
-                            <Link to="/products" className="text-slate-900 hover:text-emerald-600 font-medium">
+                            <Link to="/products" className="text-slate-900 hover:text-primary font-medium">
                               {product.name}
                             </Link>
                           </td>
@@ -155,7 +155,7 @@ export default function RankingPage() {
                             </div>
                           </td>
                           <td className="px-6 py-4 text-center">
-                            {product.trend === 'up' && <i className="ri-arrow-up-line text-emerald-500 text-xl"></i>}
+                            {product.trend === 'up' && <i className="ri-arrow-up-line text-primary text-xl"></i>}
                             {product.trend === 'down' && <i className="ri-arrow-down-line text-red-500 text-xl"></i>}
                             {product.trend === 'same' && <i className="ri-subtract-line text-gray-400 text-xl"></i>}
                           </td>
@@ -189,13 +189,13 @@ export default function RankingPage() {
                         <tr key={supplier.rank} className="hover:bg-gray-50 transition-colors">
                           <td className="px-6 py-4">
                             <div className={`w-10 h-10 rounded-full flex items-center justify-center font-bold ${
-                              supplier.rank <= 3 ? 'bg-emerald-100 text-emerald-600' : 'bg-gray-100 text-gray-600'
+                              supplier.rank <= 3 ? 'bg-primary-light text-primary-dark' : 'bg-gray-100 text-gray-600'
                             }`}>
                               {supplier.rank}
                             </div>
                           </td>
                           <td className="px-6 py-4">
-                            <Link to="/suppliers" className="text-slate-900 hover:text-emerald-600 font-medium">
+                            <Link to="/suppliers" className="text-slate-900 hover:text-primary font-medium">
                               {supplier.name}
                             </Link>
                           </td>
@@ -209,7 +209,7 @@ export default function RankingPage() {
                           </td>
                           <td className="px-6 py-4 text-center">
                             {supplier.verified && (
-                              <span className="inline-flex items-center gap-1 bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full text-sm font-medium whitespace-nowrap">
+                              <span className="inline-flex items-center gap-1 bg-primary-light text-primary-dark-dark px-3 py-1 rounded-full text-sm font-medium whitespace-nowrap">
                                 <i className="ri-verified-badge-fill"></i>
                                 Verified
                               </span>
@@ -244,20 +244,20 @@ export default function RankingPage() {
                         <tr key={category.rank} className="hover:bg-gray-50 transition-colors">
                           <td className="px-6 py-4">
                             <div className={`w-10 h-10 rounded-full flex items-center justify-center font-bold ${
-                              category.rank <= 3 ? 'bg-emerald-100 text-emerald-600' : 'bg-gray-100 text-gray-600'
+                              category.rank <= 3 ? 'bg-primary-light text-primary-dark' : 'bg-gray-100 text-gray-600'
                             }`}>
                               {category.rank}
                             </div>
                           </td>
                           <td className="px-6 py-4">
-                            <Link to="/products" className="text-slate-900 hover:text-emerald-600 font-medium">
+                            <Link to="/products" className="text-slate-900 hover:text-primary font-medium">
                               {category.name}
                             </Link>
                           </td>
                           <td className="px-6 py-4 text-center text-gray-700 font-medium">{category.products.toLocaleString()}</td>
                           <td className="px-6 py-4 text-center text-gray-700 font-medium">{category.suppliers.toLocaleString()}</td>
                           <td className="px-6 py-4 text-center">
-                            <span className="inline-flex items-center gap-1 bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full text-sm font-medium whitespace-nowrap">
+                            <span className="inline-flex items-center gap-1 bg-primary-light text-primary-dark-dark px-3 py-1 rounded-full text-sm font-medium whitespace-nowrap">
                               <i className="ri-arrow-up-line"></i>
                               {category.growth}
                             </span>
@@ -274,15 +274,15 @@ export default function RankingPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-emerald-600 text-white">
+      <section className="py-20 bg-primary text-white">
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-4xl font-bold mb-6">Want to Be on the Top Rankings?</h2>
-          <p className="text-xl mb-8 text-emerald-50">Join our platform and start growing your business today</p>
+          <p className="text-xl mb-8 text-primary-light">Join our platform and start growing your business today</p>
           <div className="flex gap-4 justify-center">
-            <Link to="/auth/register" className="bg-white hover:bg-gray-100 text-emerald-600 px-10 py-4 rounded-md font-semibold whitespace-nowrap transition-colors">
+            <Link to="/auth/register" className="bg-white hover:bg-gray-100 text-primary px-10 py-4 rounded-md font-semibold whitespace-nowrap transition-colors">
               Get Started
             </Link>
-            <Link to="/suppliers" className="bg-emerald-700 hover:bg-emerald-800 text-white px-10 py-4 rounded-md font-semibold whitespace-nowrap transition-colors">
+            <Link to="/suppliers" className="bg-primary-dark hover:bg-primary-dark text-white px-10 py-4 rounded-md font-semibold whitespace-nowrap transition-colors">
               Browse Suppliers
             </Link>
           </div>

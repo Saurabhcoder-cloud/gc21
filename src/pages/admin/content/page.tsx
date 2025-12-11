@@ -91,7 +91,7 @@ export default function AdminContentPage() {
                         <p className="text-sm text-gray-600">Position: {banner.position}</p>
                       </div>
                       <span className={`px-3 py-1 text-xs font-semibold rounded-full ${
-                        banner.status === 'Active' ? 'bg-emerald-100 text-emerald-700' : 'bg-gray-100 text-gray-700'
+                        banner.status === 'Active' ? 'bg-primary-light text-primary-dark' : 'bg-gray-100 text-gray-700'
                       }`}>
                         {banner.status}
                       </span>
@@ -104,7 +104,7 @@ export default function AdminContentPage() {
                         <i className="ri-edit-line mr-2"></i>
                         Edit
                       </button>
-                      <button className="px-4 py-2 bg-emerald-100 text-emerald-700 rounded-lg hover:bg-emerald-200 transition-all text-sm font-medium whitespace-nowrap">
+                      <button className="px-4 py-2 bg-primary-light text-primary-dark rounded-lg hover:bg-primary-light transition-all text-sm font-medium whitespace-nowrap">
                         <i className="ri-eye-line mr-2"></i>
                         Preview
                       </button>
@@ -156,7 +156,7 @@ export default function AdminContentPage() {
                     </td>
                     <td className="px-6 py-4">
                       <span className={`px-3 py-1 text-xs font-semibold rounded-full ${
-                        page.status === 'Published' ? 'bg-emerald-100 text-emerald-700' : 'bg-amber-100 text-amber-700'
+                        page.status === 'Published' ? 'bg-primary-light text-primary-dark' : 'bg-amber-100 text-amber-700'
                       }`}>
                         {page.status}
                       </span>
@@ -200,7 +200,7 @@ export default function AdminContentPage() {
                     <div className="flex items-center space-x-3 mb-2">
                       <h3 className="text-lg font-bold text-gray-900">{announcement.title}</h3>
                       <span className={`px-3 py-1 text-xs font-semibold rounded-full ${
-                        announcement.status === 'Active' ? 'bg-emerald-100 text-emerald-700' : 'bg-gray-100 text-gray-700'
+                        announcement.status === 'Active' ? 'bg-primary-light text-primary-dark' : 'bg-gray-100 text-gray-700'
                       }`}>
                         {announcement.status}
                       </span>

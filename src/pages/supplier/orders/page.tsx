@@ -77,7 +77,7 @@ export default function SupplierOrdersPage() {
       case 'confirmed': return 'bg-blue-100 text-blue-700';
       case 'in-production': return 'bg-amber-100 text-amber-700';
       case 'shipped': return 'bg-purple-100 text-purple-700';
-      case 'completed': return 'bg-emerald-100 text-emerald-700';
+      case 'completed': return 'bg-primary-light text-primary-dark';
       case 'cancelled': return 'bg-red-100 text-red-700';
       default: return 'bg-gray-100 text-gray-700';
     }
@@ -86,7 +86,7 @@ export default function SupplierOrdersPage() {
   const getPaymentStatusColor = (status: string) => {
     switch (status) {
       case 'deposit-paid': return 'bg-amber-100 text-amber-700';
-      case 'full-paid': return 'bg-emerald-100 text-emerald-700';
+      case 'full-paid': return 'bg-primary-light text-primary-dark';
       case 'pending': return 'bg-gray-100 text-gray-700';
       default: return 'bg-gray-100 text-gray-700';
     }
@@ -139,8 +139,8 @@ export default function SupplierOrdersPage() {
           <div className="bg-white rounded-xl p-6 border border-gray-200">
             <div className="flex items-center justify-between mb-2">
               <span className="text-sm font-semibold text-gray-600">Completed</span>
-              <div className="w-10 h-10 bg-emerald-100 rounded-lg flex items-center justify-center">
-                <i className="ri-checkbox-circle-line text-emerald-600"></i>
+              <div className="w-10 h-10 bg-primary-light rounded-lg flex items-center justify-center">
+                <i className="ri-checkbox-circle-line text-primary"></i>
               </div>
             </div>
             <p className="text-3xl font-bold text-gray-900">234</p>
@@ -153,7 +153,7 @@ export default function SupplierOrdersPage() {
             <button
               onClick={() => setFilterStatus('all')}
               className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all whitespace-nowrap ${
-                filterStatus === 'all' ? 'bg-emerald-600 text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                filterStatus === 'all' ? 'bg-primary text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
               All Orders
@@ -161,7 +161,7 @@ export default function SupplierOrdersPage() {
             <button
               onClick={() => setFilterStatus('confirmed')}
               className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all whitespace-nowrap ${
-                filterStatus === 'confirmed' ? 'bg-emerald-600 text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                filterStatus === 'confirmed' ? 'bg-primary text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
               Confirmed
@@ -169,7 +169,7 @@ export default function SupplierOrdersPage() {
             <button
               onClick={() => setFilterStatus('in-production')}
               className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all whitespace-nowrap ${
-                filterStatus === 'in-production' ? 'bg-emerald-600 text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                filterStatus === 'in-production' ? 'bg-primary text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
               In Production
@@ -177,7 +177,7 @@ export default function SupplierOrdersPage() {
             <button
               onClick={() => setFilterStatus('shipped')}
               className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all whitespace-nowrap ${
-                filterStatus === 'shipped' ? 'bg-emerald-600 text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                filterStatus === 'shipped' ? 'bg-primary text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
               Shipped
@@ -185,7 +185,7 @@ export default function SupplierOrdersPage() {
             <button
               onClick={() => setFilterStatus('completed')}
               className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all whitespace-nowrap ${
-                filterStatus === 'completed' ? 'bg-emerald-600 text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                filterStatus === 'completed' ? 'bg-primary text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
               Completed
@@ -199,7 +199,7 @@ export default function SupplierOrdersPage() {
             <div key={order.id} className="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-all">
               <div className="flex items-start justify-between mb-4">
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-emerald-600 rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">
+                  <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">
                     {order.buyer.avatar}
                   </div>
                   <div>
@@ -220,7 +220,7 @@ export default function SupplierOrdersPage() {
                   </div>
                 </div>
                 <div className="text-right">
-                  <p className="text-2xl font-bold text-emerald-600">{order.amount}</p>
+                  <p className="text-2xl font-bold text-primary">{order.amount}</p>
                   <p className="text-xs text-gray-500 mt-1">Order Date: {order.date}</p>
                 </div>
               </div>
@@ -246,11 +246,11 @@ export default function SupplierOrdersPage() {
               <div className="mb-4">
                 <div className="flex items-center justify-between mb-2">
                   <span className="text-xs font-semibold text-gray-600">Production Progress</span>
-                  <span className="text-xs font-semibold text-emerald-600">{order.progress}%</span>
+                  <span className="text-xs font-semibold text-primary">{order.progress}%</span>
                 </div>
                 <div className="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
                   <div
-                    className="h-full bg-emerald-600 transition-all"
+                    className="h-full bg-primary transition-all"
                     style={{ width: `${order.progress}%` }}
                   ></div>
                 </div>
@@ -274,7 +274,7 @@ export default function SupplierOrdersPage() {
               {/* Action Buttons */}
               <div className="flex items-center space-x-3">
                 {order.status === 'confirmed' && (
-                  <button className="px-6 py-2.5 bg-emerald-600 text-white font-semibold rounded-lg hover:bg-emerald-700 transition-all whitespace-nowrap">
+                  <button className="px-6 py-2.5 bg-primary text-white font-semibold rounded-lg hover:bg-primary-dark transition-all whitespace-nowrap">
                     <i className="ri-play-line mr-2"></i>
                     Start Production
                   </button>

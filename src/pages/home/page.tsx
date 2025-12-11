@@ -142,22 +142,22 @@ export default function HomePage() {
               
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-h-[70vh] overflow-y-auto">
                 {categories.map((category, idx) => (
-                  <div key={idx} className="rounded-2xl border border-gray-200 bg-white p-6 hover:border-orange-300 hover:shadow-lg transition-all">
+                  <div key={idx} className="rounded-2xl border border-gray-200 bg-white p-6 hover:border-primary hover:shadow-lg transition-all">
                     <a 
                       href={category.url}
                       className="flex items-center gap-3 mb-4 group cursor-pointer"
                     >
-                      <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-orange-100 text-orange-600 flex-shrink-0">
+                      <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary-light text-primary flex-shrink-0">
                         <i className={`${category.icon} text-2xl`}></i>
                       </div>
-                      <h4 className="text-lg font-semibold text-gray-900 group-hover:text-orange-600 transition-colors">{category.name}</h4>
+                      <h4 className="text-lg font-semibold text-gray-900 group-hover:text-primary transition-colors">{category.name}</h4>
                     </a>
                     <ul className="space-y-2">
                       {category.subcategories.map((sub, subIdx) => (
                         <li key={subIdx}>
                           <a 
                             href={`${category.url}/${sub.toLowerCase().replace(/\s+/g, '-').replace(/'/g, '')}`}
-                            className="text-sm text-gray-600 hover:text-orange-600 hover:translate-x-1 transition-all inline-block cursor-pointer"
+                            className="text-sm text-gray-600 hover:text-primary hover:translate-x-1 transition-all inline-block cursor-pointer"
                           >
                             {sub}
                           </a>
@@ -171,7 +171,7 @@ export default function HomePage() {
               <div className="mt-8 flex items-center justify-center">
                 <a 
                   href="/categories"
-                  className="inline-flex items-center gap-2 rounded-full bg-orange-600 px-8 py-3 text-base font-semibold text-white hover:bg-orange-700 transition-colors cursor-pointer whitespace-nowrap"
+                  className="inline-flex items-center gap-2 rounded-full bg-primary px-8 py-3 text-base font-semibold text-white hover:bg-primary-dark transition-colors cursor-pointer whitespace-nowrap"
                 >
                   View All Categories
                   <i className="ri-arrow-right-line"></i>
@@ -183,16 +183,16 @@ export default function HomePage() {
       )}
 
       {/* Promo Banner */}
-      <div className="fixed top-0 left-0 right-0 z-40 bg-gradient-to-r from-gray-900 to-gray-800 text-white py-2 text-center text-sm">
+      <div className="fixed top-0 left-0 right-0 z-40 bg-gradient-to-r from-primary-dark to-primary text-white py-2 text-center text-sm">
         <span className="mr-2">Super Deal: 200K+ curated products for seasonal sourcing.</span>
-        <a href="/promotions" className="underline font-semibold hover:text-emerald-300 cursor-pointer">Explore now →</a>
+        <a href="/promotions" className="underline font-semibold hover:text-primary-light cursor-pointer">Explore now →</a>
       </div>
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden" style={{ marginTop: '40px' }}>
-        <div className="absolute inset-0 w-full h-full bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
-          <div className="absolute inset-0 opacity-20" style={{ 
-            backgroundImage: 'radial-gradient(circle at 20% 50%, rgba(16, 185, 129, 0.3) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(59, 130, 246, 0.3) 0%, transparent 50%)',
+        <div className="absolute inset-0 w-full h-full bg-gradient-to-br from-primary-dark via-primary to-primary-dark">
+          <div className="absolute inset-0 opacity-20" style={{
+            backgroundImage: 'radial-gradient(circle at 20% 50%, rgba(47, 128, 237, 0.35) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(86, 204, 242, 0.35) 0%, transparent 50%)',
           }}></div>
         </div>
 
@@ -234,7 +234,7 @@ export default function HomePage() {
                 </button>
                 <button
                   type="submit"
-                  className="px-8 py-3 bg-orange-600 text-white font-semibold rounded-md hover:bg-orange-700 transition-all whitespace-nowrap"
+                  className="px-8 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary-dark transition-all whitespace-nowrap"
                 >
                   Search
                 </button>
@@ -301,7 +301,7 @@ export default function HomePage() {
             <aside className="rounded-3xl border border-gray-200 bg-white p-8 shadow-sm h-fit">
               <div className="flex items-center justify-between gap-4 mb-6">
                 <h2 className="text-xl font-semibold text-gray-900">Categories</h2>
-                <a href="/categories" className="text-sm font-medium text-orange-600 hover:text-orange-500 cursor-pointer">View all</a>
+                <a href="/categories" className="text-sm font-medium text-primary hover:text-primary cursor-pointer">View all</a>
               </div>
               <ul className="space-y-2 text-sm text-gray-700">
                 {[
@@ -326,10 +326,10 @@ export default function HomePage() {
                   <li key={idx}>
                     <a 
                       href={cat.url}
-                      className="flex items-center justify-between rounded-xl px-4 py-3 transition hover:bg-orange-50 hover:text-orange-600 cursor-pointer"
+                      className="flex items-center justify-between rounded-xl px-4 py-3 transition hover:bg-primary-light hover:text-primary cursor-pointer"
                     >
                       <span className="flex items-center gap-3 font-medium">
-                        <i className={`${cat.icon} text-lg text-orange-500`}></i>
+                        <i className={`${cat.icon} text-lg text-primary`}></i>
                         {cat.name}
                       </span>
                       <i className="ri-arrow-right-up-line text-base"></i>
@@ -372,13 +372,13 @@ export default function HomePage() {
                     <a 
                       key={idx}
                       href={`/category/${item.name.toLowerCase().replace(/\s+/g, '-')}`}
-                      className="group flex flex-col items-center gap-3 rounded-3xl border border-gray-200 bg-white p-6 text-center transition hover:-translate-y-1 hover:border-orange-200 hover:shadow-xl cursor-pointer"
+                      className="group flex flex-col items-center gap-3 rounded-3xl border border-gray-200 bg-white p-6 text-center transition hover:-translate-y-1 hover:border-primary hover:shadow-xl cursor-pointer"
                     >
                       <div className="relative h-24 w-24 overflow-hidden rounded-full border border-gray-100 bg-gray-50">
                         <img src={item.img} alt={item.name} className="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
                       </div>
                       <span className="text-sm font-semibold text-gray-900">{item.name}</span>
-                      <span className="text-xs font-medium text-orange-500">Shop now</span>
+                      <span className="text-xs font-medium text-primary">Shop now</span>
                     </a>
                   ))}
                 </div>
@@ -391,7 +391,7 @@ export default function HomePage() {
                     <p className="text-sm uppercase tracking-[0.35em] text-gray-500">Apparel & Accessories</p>
                     <h4 className="mt-2 text-2xl font-semibold text-gray-900">Curated selections</h4>
                   </div>
-                  <a href="/category/apparel-accessories" className="inline-flex items-center gap-2 text-sm font-semibold text-orange-600 hover:text-orange-500 cursor-pointer whitespace-nowrap">
+                  <a href="/category/apparel-accessories" className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:text-primary cursor-pointer whitespace-nowrap">
                     View more
                     <i className="ri-arrow-right-line"></i>
                   </a>
@@ -413,7 +413,7 @@ export default function HomePage() {
                         <img src={product.img} alt={product.name} className="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
                       </div>
                       <div className="flex flex-1 flex-col gap-3 p-6">
-                        <span className="inline-flex w-fit items-center rounded-full bg-orange-100 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-orange-600">Apparel & Accessories</span>
+                        <span className="inline-flex w-fit items-center rounded-full bg-primary-light px-3 py-1 text-xs font-semibold uppercase tracking-wider text-primary">Apparel & Accessories</span>
                         <h5 className="text-lg font-semibold text-gray-900 leading-tight">{product.name}</h5>
                         <p className="text-sm text-gray-600 leading-relaxed">{product.desc}</p>
                         <div className="mt-auto flex items-center justify-between text-sm text-gray-700">
@@ -433,7 +433,7 @@ export default function HomePage() {
                     <p className="text-sm uppercase tracking-[0.35em] text-gray-500">Consumer Electronics</p>
                     <h4 className="mt-2 text-2xl font-semibold text-gray-900">Curated selections</h4>
                   </div>
-                  <a href="/category/consumer-electronics" className="inline-flex items-center gap-2 text-sm font-semibold text-orange-600 hover:text-orange-500 cursor-pointer whitespace-nowrap">
+                  <a href="/category/consumer-electronics" className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:text-primary cursor-pointer whitespace-nowrap">
                     View more
                     <i className="ri-arrow-right-line"></i>
                   </a>
@@ -455,7 +455,7 @@ export default function HomePage() {
                         <img src={product.img} alt={product.name} className="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
                       </div>
                       <div className="flex flex-1 flex-col gap-3 p-6">
-                        <span className="inline-flex w-fit items-center rounded-full bg-orange-100 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-orange-600">Consumer Electronics</span>
+                        <span className="inline-flex w-fit items-center rounded-full bg-primary-light px-3 py-1 text-xs font-semibold uppercase tracking-wider text-primary">Consumer Electronics</span>
                         <h5 className="text-lg font-semibold text-gray-900 leading-tight">{product.name}</h5>
                         <p className="text-sm text-gray-600 leading-relaxed">{product.desc}</p>
                         <div className="mt-auto flex items-center justify-between text-sm text-gray-700">
@@ -475,7 +475,7 @@ export default function HomePage() {
                     <p className="text-sm uppercase tracking-[0.35em] text-gray-500">Construction & Real Estate</p>
                     <h4 className="mt-2 text-2xl font-semibold text-gray-900">Curated selections</h4>
                   </div>
-                  <a href="/category/construction-real-estate" className="inline-flex items-center gap-2 text-sm font-semibold text-orange-600 hover:text-orange-500 cursor-pointer whitespace-nowrap">
+                  <a href="/category/construction-real-estate" className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:text-primary cursor-pointer whitespace-nowrap">
                     View more
                     <i className="ri-arrow-right-line"></i>
                   </a>
@@ -497,7 +497,7 @@ export default function HomePage() {
                         <img src={product.img} alt={product.name} className="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
                       </div>
                       <div className="flex flex-1 flex-col gap-3 p-6">
-                        <span className="inline-flex w-fit items-center rounded-full bg-orange-100 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-orange-600">Construction & Real Estate</span>
+                        <span className="inline-flex w-fit items-center rounded-full bg-primary-light px-3 py-1 text-xs font-semibold uppercase tracking-wider text-primary">Construction & Real Estate</span>
                         <h5 className="text-lg font-semibold text-gray-900 leading-tight">{product.name}</h5>
                         <p className="text-sm text-gray-600 leading-relaxed">{product.desc}</p>
                         <div className="mt-auto flex items-center justify-between text-sm text-gray-700">
@@ -517,7 +517,7 @@ export default function HomePage() {
                     <p className="text-sm uppercase tracking-[0.35em] text-gray-500">Vehicles & Accessories</p>
                     <h4 className="mt-2 text-2xl font-semibold text-gray-900">Curated selections</h4>
                   </div>
-                  <a href="/category/vehicles-accessories" className="inline-flex items-center gap-2 text-sm font-semibold text-orange-600 hover:text-orange-500 cursor-pointer whitespace-nowrap">
+                  <a href="/category/vehicles-accessories" className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:text-primary cursor-pointer whitespace-nowrap">
                     View more
                     <i className="ri-arrow-right-line"></i>
                   </a>
@@ -539,7 +539,7 @@ export default function HomePage() {
                         <img src={product.img} alt={product.name} className="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
                       </div>
                       <div className="flex flex-1 flex-col gap-3 p-6">
-                        <span className="inline-flex w-fit items-center rounded-full bg-orange-100 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-orange-600">Vehicles & Accessories</span>
+                        <span className="inline-flex w-fit items-center rounded-full bg-primary-light px-3 py-1 text-xs font-semibold uppercase tracking-wider text-primary">Vehicles & Accessories</span>
                         <h5 className="text-lg font-semibold text-gray-900 leading-tight">{product.name}</h5>
                         <p className="text-sm text-gray-600 leading-relaxed">{product.desc}</p>
                         <div className="mt-auto flex items-center justify-between text-sm text-gray-700">
@@ -559,7 +559,7 @@ export default function HomePage() {
                     <p className="text-sm uppercase tracking-[0.35em] text-gray-500">Machinery & Equipment</p>
                     <h4 className="mt-2 text-2xl font-semibold text-gray-900">Curated selections</h4>
                   </div>
-                  <a href="/category/machinery-equipment" className="inline-flex items-center gap-2 text-sm font-semibold text-orange-600 hover:text-orange-500 cursor-pointer whitespace-nowrap">
+                  <a href="/category/machinery-equipment" className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:text-primary cursor-pointer whitespace-nowrap">
                     View more
                     <i className="ri-arrow-right-line"></i>
                   </a>
@@ -581,7 +581,7 @@ export default function HomePage() {
                         <img src={product.img} alt={product.name} className="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
                       </div>
                       <div className="flex flex-1 flex-col gap-3 p-6">
-                        <span className="inline-flex w-fit items-center rounded-full bg-orange-100 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-orange-600">Machinery & Equipment</span>
+                        <span className="inline-flex w-fit items-center rounded-full bg-primary-light px-3 py-1 text-xs font-semibold uppercase tracking-wider text-primary">Machinery & Equipment</span>
                         <h5 className="text-lg font-semibold text-gray-900 leading-tight">{product.name}</h5>
                         <p className="text-sm text-gray-600 leading-relaxed">{product.desc}</p>
                         <div className="mt-auto flex items-center justify-between text-sm text-gray-700">
@@ -601,7 +601,7 @@ export default function HomePage() {
                     <p className="text-sm uppercase tracking-[0.35em] text-gray-500">Home, Garden & Furniture</p>
                     <h4 className="mt-2 text-2xl font-semibold text-gray-900">Curated selections</h4>
                   </div>
-                  <a href="/category/home-garden" className="inline-flex items-center gap-2 text-sm font-semibold text-orange-600 hover:text-orange-500 cursor-pointer whitespace-nowrap">
+                  <a href="/category/home-garden" className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:text-primary cursor-pointer whitespace-nowrap">
                     View more
                     <i className="ri-arrow-right-line"></i>
                   </a>
@@ -623,7 +623,7 @@ export default function HomePage() {
                         <img src={product.img} alt={product.name} className="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
                       </div>
                       <div className="flex flex-1 flex-col gap-3 p-6">
-                        <span className="inline-flex w-fit items-center rounded-full bg-orange-100 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-orange-600">Home, Garden & Furniture</span>
+                        <span className="inline-flex w-fit items-center rounded-full bg-primary-light px-3 py-1 text-xs font-semibold uppercase tracking-wider text-primary">Home, Garden & Furniture</span>
                         <h5 className="text-lg font-semibold text-gray-900 leading-tight">{product.name}</h5>
                         <p className="text-sm text-gray-600 leading-relaxed">{product.desc}</p>
                         <div className="mt-auto flex items-center justify-between text-sm text-gray-700">
@@ -641,14 +641,14 @@ export default function HomePage() {
       </section>
 
       {/* Trending & New Arrivals */}
-      <section className="bg-gray-50 py-16">
+      <section className="bg-background-soft py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between mb-12">
             <div>
               <p className="text-sm uppercase tracking-[0.3em] text-gray-500">Discover your next business opportunity</p>
               <h2 className="mt-3 text-3xl md:text-4xl font-bold text-gray-900 leading-tight">Match with trending products and verified deals today</h2>
             </div>
-            <a href="/discover" className="inline-flex items-center gap-2 text-sm font-semibold text-orange-600 hover:text-orange-500 cursor-pointer whitespace-nowrap">
+            <a href="/discover" className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:text-primary cursor-pointer whitespace-nowrap">
               Explore more categories
               <i className="ri-arrow-right-up-line"></i>
             </a>
@@ -659,7 +659,7 @@ export default function HomePage() {
               {/* Top Ranking */}
               <article className="rounded-[32px] bg-white p-8 shadow-xl border border-white">
                 <header className="flex flex-col gap-2 mb-6">
-                  <span className="inline-flex w-max items-center rounded-full bg-orange-100 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-orange-500">Top ranking</span>
+                  <span className="inline-flex w-max items-center rounded-full bg-primary-light px-3 py-1 text-xs font-semibold uppercase tracking-wide text-primary">Top ranking</span>
                   <h3 className="text-2xl font-semibold text-gray-900">Standout bestsellers curated by sourcing experts</h3>
                   <p className="text-sm text-gray-500">Access the most in-demand items from audited suppliers and secure early-mover advantage.</p>
                 </header>
@@ -685,9 +685,9 @@ export default function HomePage() {
               </article>
 
               {/* New Arrivals */}
-              <article className="rounded-[32px] bg-gradient-to-br from-orange-50 via-white to-white p-8 shadow-xl border border-orange-100">
+              <article className="rounded-[32px] bg-gradient-to-br from-primary-light via-white to-white p-8 shadow-xl border border-primary">
                 <header className="flex flex-col gap-2 mb-6">
-                  <span className="inline-flex w-max items-center rounded-full bg-orange-200 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-orange-700">New arrivals</span>
+                  <span className="inline-flex w-max items-center rounded-full bg-primary-light px-3 py-1 text-xs font-semibold uppercase tracking-wide text-primary-dark">New arrivals</span>
                   <h3 className="text-2xl font-semibold text-gray-900">Fresh launches direct from factory floors</h3>
                   <p className="text-sm text-gray-600">Discover just-listed innovations ready for custom branding and rapid fulfillment.</p>
                 </header>
@@ -702,11 +702,11 @@ export default function HomePage() {
                         <img src={item.img} alt={item.title} className="h-full w-full object-cover" />
                       </div>
                       <div className="flex-1 min-w-0">
-                        <p className="text-xs font-semibold uppercase tracking-wide text-orange-700/80">{item.label}</p>
+                        <p className="text-xs font-semibold uppercase tracking-wide text-primary-dark/80">{item.label}</p>
                         <h4 className="mt-1 text-base font-semibold text-gray-900 leading-snug">{item.title}</h4>
                         <p className="text-sm text-gray-600">{item.price}</p>
                       </div>
-                      <i className="ri-arrow-right-line text-orange-700/50"></i>
+                      <i className="ri-arrow-right-line text-primary-dark/50"></i>
                     </div>
                   ))}
                 </div>
@@ -714,7 +714,7 @@ export default function HomePage() {
             </div>
 
             {/* Top Deals */}
-            <aside className="flex flex-col justify-between rounded-[32px] bg-gray-900 p-8 text-white shadow-xl">
+            <aside className="flex flex-col justify-between rounded-[32px] bg-gradient-to-br from-primary-dark to-primary p-8 text-white shadow-xl">
               <div>
                 <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1 text-xs font-semibold uppercase tracking-wide text-white/80">Top deals</span>
                 <h3 className="mt-4 text-3xl font-semibold leading-tight">Unlock exclusive sourcing incentives</h3>
@@ -722,15 +722,15 @@ export default function HomePage() {
               </div>
               <ul className="mt-8 space-y-4 text-sm text-white/80">
                 <li className="flex items-start gap-3">
-                  <span className="mt-1 inline-flex h-2.5 w-2.5 flex-none rounded-full bg-orange-400"></span>
+                  <span className="mt-1 inline-flex h-2.5 w-2.5 flex-none rounded-full bg-primary"></span>
                   <span>Up to 18% off secure logistics bundles</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="mt-1 inline-flex h-2.5 w-2.5 flex-none rounded-full bg-orange-400"></span>
+                  <span className="mt-1 inline-flex h-2.5 w-2.5 flex-none rounded-full bg-primary"></span>
                   <span>Flexible payment terms with Trade Assurance</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="mt-1 inline-flex h-2.5 w-2.5 flex-none rounded-full bg-orange-400"></span>
+                  <span className="mt-1 inline-flex h-2.5 w-2.5 flex-none rounded-full bg-primary"></span>
                   <span>Dedicated sourcing advisor for bulk orders</span>
                 </li>
               </ul>
@@ -753,7 +753,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="flex items-start gap-4 p-6 rounded-2xl border border-gray-200 bg-white shadow-sm">
-              <div className="flex h-14 w-14 items-center justify-center rounded-full bg-orange-100 text-orange-500 flex-shrink-0">
+              <div className="flex h-14 w-14 items-center justify-center rounded-full bg-primary-light text-primary flex-shrink-0">
                 <i className="ri-shield-star-line text-2xl"></i>
               </div>
               <div>
@@ -762,7 +762,7 @@ export default function HomePage() {
               </div>
             </div>
             <div className="flex items-start gap-4 p-6 rounded-2xl border border-gray-200 bg-white shadow-sm">
-              <div className="flex h-14 w-14 items-center justify-center rounded-full bg-orange-100 text-orange-500 flex-shrink-0">
+              <div className="flex h-14 w-14 items-center justify-center rounded-full bg-primary-light text-primary flex-shrink-0">
                 <i className="ri-pass-valid-line text-2xl"></i>
               </div>
               <div>
@@ -771,7 +771,7 @@ export default function HomePage() {
               </div>
             </div>
             <div className="flex items-start gap-4 p-6 rounded-2xl border border-gray-200 bg-white shadow-sm">
-              <div className="flex h-14 w-14 items-center justify-center rounded-full bg-orange-100 text-orange-500 flex-shrink-0">
+              <div className="flex h-14 w-14 items-center justify-center rounded-full bg-primary-light text-primary flex-shrink-0">
                 <i className="ri-secure-payment-line text-2xl"></i>
               </div>
               <div>
@@ -819,7 +819,7 @@ export default function HomePage() {
                 <p className="text-gray-600 text-lg">Access trade intelligence, personalized recommendations, and seamless order tracking—all in one platform.</p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
-                <a href="/auth/register" className="inline-flex items-center justify-center rounded-full bg-orange-600 px-6 py-3 text-base font-semibold text-white hover:bg-orange-700 cursor-pointer whitespace-nowrap">Register as Buyer</a>
+                <a href="/auth/register" className="inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 text-base font-semibold text-white hover:bg-primary-dark cursor-pointer whitespace-nowrap">Register as Buyer</a>
                 <a href="/auth/supplier-register" className="inline-flex items-center justify-center rounded-full border border-gray-300 px-6 py-3 text-base font-semibold text-gray-900 hover:border-gray-500 cursor-pointer whitespace-nowrap">Register as Supplier</a>
               </div>
             </div>

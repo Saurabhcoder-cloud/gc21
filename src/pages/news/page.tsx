@@ -86,7 +86,7 @@ export default function NewsPage() {
               </div>
               <div className="p-8 flex flex-col justify-center">
                 <div className="inline-block">
-                  <span className="bg-emerald-100 text-emerald-700 px-4 py-1 rounded-full text-sm font-semibold whitespace-nowrap">
+                  <span className="bg-primary-light text-primary-dark px-4 py-1 rounded-full text-sm font-semibold whitespace-nowrap">
                     {featuredNews.category}
                   </span>
                 </div>
@@ -94,7 +94,7 @@ export default function NewsPage() {
                 <p className="text-gray-600 mb-6 text-lg">{featuredNews.excerpt}</p>
                 <div className="flex items-center justify-between">
                   <span className="text-gray-500 text-sm">{featuredNews.date}</span>
-                  <button className="bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-3 rounded-md font-semibold whitespace-nowrap transition-colors">
+                  <button className="bg-primary hover:bg-primary-dark text-white px-6 py-3 rounded-md font-semibold whitespace-nowrap transition-colors">
                     Read More
                   </button>
                 </div>
@@ -120,7 +120,7 @@ export default function NewsPage() {
                 </div>
                 <div className="p-6">
                   <div className="mb-3">
-                    <span className="bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full text-xs font-semibold whitespace-nowrap">
+                    <span className="bg-primary-light text-primary-dark px-3 py-1 rounded-full text-xs font-semibold whitespace-nowrap">
                       {article.category}
                     </span>
                   </div>
@@ -128,7 +128,7 @@ export default function NewsPage() {
                   <p className="text-gray-600 mb-4 line-clamp-3">{article.excerpt}</p>
                   <div className="flex items-center justify-between">
                     <span className="text-gray-500 text-sm">{article.date}</span>
-                    <button className="text-emerald-600 hover:text-emerald-700 font-semibold whitespace-nowrap transition-colors">
+                    <button className="text-primary hover:text-primary-dark font-semibold whitespace-nowrap transition-colors">
                       Read More →
                     </button>
                   </div>
@@ -142,16 +142,16 @@ export default function NewsPage() {
       {/* Newsletter Section */}
       <section className="py-20">
         <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto bg-gradient-to-br from-emerald-600 to-emerald-700 rounded-xl p-12 text-center text-white">
+          <div className="max-w-4xl mx-auto bg-gradient-to-br from-primary to-primary-dark rounded-xl p-12 text-center text-white">
             <h2 className="text-4xl font-bold mb-4">Stay Informed</h2>
-            <p className="text-xl mb-8 text-emerald-50">Subscribe to our newsletter for weekly insights and updates</p>
+            <p className="text-xl mb-8 text-primary-light">Subscribe to our newsletter for weekly insights and updates</p>
             <div className="flex gap-4 max-w-md mx-auto">
               <input 
                 type="email" 
                 placeholder="Enter your email"
                 className="flex-1 px-6 py-4 rounded-md text-slate-900 focus:outline-none focus:ring-2 focus:ring-white"
               />
-              <button className="bg-white hover:bg-gray-100 text-emerald-600 px-8 py-4 rounded-md font-semibold whitespace-nowrap transition-colors">
+              <button className="bg-white hover:bg-gray-100 text-primary px-8 py-4 rounded-md font-semibold whitespace-nowrap transition-colors">
                 Subscribe
               </button>
             </div>

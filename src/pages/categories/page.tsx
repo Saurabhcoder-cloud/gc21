@@ -34,22 +34,10 @@ export default function CategoriesPage() {
 
   const getColorClass = (index: number) => {
     const colors = [
-      'from-emerald-500 to-teal-600',
-      'from-orange-500 to-red-600',
-      'from-pink-500 to-rose-600',
-      'from-green-500 to-emerald-600',
-      'from-purple-500 to-violet-600',
-      'from-yellow-500 to-amber-600',
-      'from-slate-500 to-gray-600',
-      'from-cyan-500 to-teal-600',
-      'from-pink-400 to-rose-500',
-      'from-indigo-500 to-blue-600',
-      'from-amber-500 to-orange-600',
-      'from-red-500 to-pink-600',
-      'from-green-600 to-emerald-700',
-      'from-gray-600 to-slate-700',
-      'from-purple-400 to-pink-500',
-      'from-teal-500 to-cyan-600'
+      'from-primary to-primary-dark',
+      'from-primary-light to-primary',
+      'from-accent-500 to-primary',
+      'from-primary-dark to-primary'
     ];
     return colors[index % colors.length];
   };
@@ -59,7 +47,7 @@ export default function CategoriesPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 bg-gradient-to-br from-emerald-600 to-teal-700">
+      <section className="relative pt-32 pb-20 bg-gradient-to-br from-primary-light to-primary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-5xl font-bold text-white mb-6" style={{ fontFamily: 'Poppins, sans-serif' }}>
@@ -77,7 +65,7 @@ export default function CategoriesPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {loading ? (
             <div className="text-center py-20">
-              <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-emerald-600"></div>
+              <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
               <p className="mt-4 text-gray-600">Loading categories...</p>
             </div>
           ) : categories.length > 0 ? (
@@ -91,7 +79,7 @@ export default function CategoriesPage() {
                   <div className={`w-14 h-14 bg-gradient-to-br ${getColorClass(index)} rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
                     <i className={`${category.icon || 'ri-folder-line'} text-white text-2xl`}></i>
                   </div>
-                  <h3 className="text-base font-semibold text-gray-900 mb-3 group-hover:text-emerald-600 transition-colors">
+                  <h3 className="text-base font-semibold text-gray-900 mb-3 group-hover:text-primary-dark transition-colors">
                     {category.name}
                   </h3>
                   {category.description && (
@@ -115,7 +103,7 @@ export default function CategoriesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
+      <section className="py-20 bg-background-soft">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Poppins, sans-serif' }}>
             Can't Find What You're Looking For?
@@ -125,7 +113,7 @@ export default function CategoriesPage() {
           </p>
           <button
             onClick={() => navigate('/buyer/rfq')}
-            className="px-8 py-3 bg-emerald-600 text-white font-medium rounded-lg hover:bg-emerald-700 transition-all whitespace-nowrap cursor-pointer"
+            className="px-8 py-3 bg-primary text-white font-medium rounded-lg hover:bg-primary-dark transition-all whitespace-nowrap cursor-pointer"
           >
             Post Buying Request
           </button>

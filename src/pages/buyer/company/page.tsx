@@ -78,7 +78,7 @@ export default function CompanyProfilePage() {
                   </button>
                   <button
                     onClick={handleSave}
-                    className="px-4 py-2 bg-emerald-600 text-white font-medium rounded-lg hover:bg-emerald-700 transition-all whitespace-nowrap"
+                    className="px-4 py-2 bg-primary text-white font-medium rounded-lg hover:bg-primary-dark transition-all whitespace-nowrap"
                   >
                     Save Changes
                   </button>
@@ -90,11 +90,11 @@ export default function CompanyProfilePage() {
           <div className="p-6">
             <div className="flex items-start space-x-6 mb-6">
               <div className="relative">
-                <div className="w-24 h-24 bg-emerald-100 rounded-lg flex items-center justify-center">
-                  <i className="ri-building-line text-4xl text-emerald-600"></i>
+                <div className="w-24 h-24 bg-primary-light rounded-lg flex items-center justify-center">
+                  <i className="ri-building-line text-4xl text-primary"></i>
                 </div>
                 {isEditing && (
-                  <button className="absolute bottom-0 right-0 w-8 h-8 bg-emerald-600 rounded-full flex items-center justify-center text-white hover:bg-emerald-700 cursor-pointer">
+                  <button className="absolute bottom-0 right-0 w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white hover:bg-primary-dark cursor-pointer">
                     <i className="ri-camera-line text-sm"></i>
                   </button>
                 )}
@@ -108,7 +108,7 @@ export default function CompanyProfilePage() {
                   value={companyData.name}
                   onChange={(e) => setCompanyData({ ...companyData, name: e.target.value })}
                   disabled={!isEditing}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 disabled:bg-gray-50 disabled:text-gray-600"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary disabled:bg-gray-50 disabled:text-gray-600"
                 />
               </div>
             </div>
@@ -123,7 +123,7 @@ export default function CompanyProfilePage() {
                   value={companyData.website}
                   onChange={(e) => setCompanyData({ ...companyData, website: e.target.value })}
                   disabled={!isEditing}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 disabled:bg-gray-50 disabled:text-gray-600"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary disabled:bg-gray-50 disabled:text-gray-600"
                 />
               </div>
 
@@ -135,7 +135,7 @@ export default function CompanyProfilePage() {
                   value={companyData.industry}
                   onChange={(e) => setCompanyData({ ...companyData, industry: e.target.value })}
                   disabled={!isEditing}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 disabled:bg-gray-50 disabled:text-gray-600"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary disabled:bg-gray-50 disabled:text-gray-600"
                 >
                   <option value="Electronics">Electronics</option>
                   <option value="Textiles">Textiles & Apparel</option>
@@ -155,7 +155,7 @@ export default function CompanyProfilePage() {
                   value={companyData.taxNumber}
                   onChange={(e) => setCompanyData({ ...companyData, taxNumber: e.target.value })}
                   disabled={!isEditing}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 disabled:bg-gray-50 disabled:text-gray-600"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary disabled:bg-gray-50 disabled:text-gray-600"
                 />
               </div>
 
@@ -167,7 +167,7 @@ export default function CompanyProfilePage() {
                   value={companyData.companySize}
                   onChange={(e) => setCompanyData({ ...companyData, companySize: e.target.value })}
                   disabled={!isEditing}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 disabled:bg-gray-50 disabled:text-gray-600"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary disabled:bg-gray-50 disabled:text-gray-600"
                 >
                   <option value="1-10">1-10 employees</option>
                   <option value="11-50">11-50 employees</option>
@@ -186,7 +186,7 @@ export default function CompanyProfilePage() {
                   value={companyData.yearEstablished}
                   onChange={(e) => setCompanyData({ ...companyData, yearEstablished: e.target.value })}
                   disabled={!isEditing}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 disabled:bg-gray-50 disabled:text-gray-600"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary disabled:bg-gray-50 disabled:text-gray-600"
                 />
               </div>
 
@@ -200,7 +200,7 @@ export default function CompanyProfilePage() {
                   disabled={!isEditing}
                   rows={4}
                   maxLength={500}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 disabled:bg-gray-50 disabled:text-gray-600 resize-none"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary disabled:bg-gray-50 disabled:text-gray-600 resize-none"
                 />
                 <p className="text-xs text-gray-500 mt-1">{companyData.description.length}/500 characters</p>
               </div>
@@ -223,7 +223,7 @@ export default function CompanyProfilePage() {
                   value={companyData.preferredCurrency}
                   onChange={(e) => setCompanyData({ ...companyData, preferredCurrency: e.target.value })}
                   disabled={!isEditing}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 disabled:bg-gray-50 disabled:text-gray-600"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary disabled:bg-gray-50 disabled:text-gray-600"
                 >
                   <option value="USD">USD - US Dollar</option>
                   <option value="EUR">EUR - Euro</option>
@@ -241,7 +241,7 @@ export default function CompanyProfilePage() {
                   value={companyData.preferredLanguage}
                   onChange={(e) => setCompanyData({ ...companyData, preferredLanguage: e.target.value })}
                   disabled={!isEditing}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 disabled:bg-gray-50 disabled:text-gray-600"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary disabled:bg-gray-50 disabled:text-gray-600"
                 >
                   <option value="English">English</option>
                   <option value="Spanish">Spanish</option>
@@ -259,7 +259,7 @@ export default function CompanyProfilePage() {
           <div className="p-6 border-b border-gray-200">
             <div className="flex items-center justify-between">
               <h2 className="text-lg font-bold text-gray-900">Addresses</h2>
-              <button className="px-4 py-2 bg-emerald-600 text-white font-medium rounded-lg hover:bg-emerald-700 transition-all whitespace-nowrap">
+              <button className="px-4 py-2 bg-primary text-white font-medium rounded-lg hover:bg-primary-dark transition-all whitespace-nowrap">
                 <i className="ri-add-line mr-2"></i>
                 Add Address
               </button>
@@ -268,10 +268,10 @@ export default function CompanyProfilePage() {
           <div className="p-6">
             <div className="space-y-4">
               {addresses.map((address) => (
-                <div key={address.id} className="border border-gray-200 rounded-lg p-4 hover:border-emerald-600 transition-all">
+                <div key={address.id} className="border border-gray-200 rounded-lg p-4 hover:border-primary transition-all">
                   <div className="flex items-start justify-between mb-3">
                     <div className="flex items-center space-x-2">
-                      <span className="px-3 py-1 bg-emerald-100 text-emerald-700 text-xs font-semibold rounded-full">
+                      <span className="px-3 py-1 bg-primary-light text-primary-dark text-xs font-semibold rounded-full">
                         {address.type}
                       </span>
                       {address.isDefault && (
@@ -281,7 +281,7 @@ export default function CompanyProfilePage() {
                       )}
                     </div>
                     <div className="flex space-x-2">
-                      <button className="text-gray-400 hover:text-emerald-600 cursor-pointer">
+                      <button className="text-gray-400 hover:text-primary cursor-pointer">
                         <i className="ri-edit-line"></i>
                       </button>
                       <button className="text-gray-400 hover:text-red-600 cursor-pointer">

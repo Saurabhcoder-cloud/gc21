@@ -261,7 +261,7 @@ export default function SupplierRegisterPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-white to-teal-50 px-4 py-12">
+    <div className="min-h-screen bg-gradient-to-br from-primary-light via-white to-primary-light px-4 py-12">
       <div className="max-w-5xl mx-auto">
         {/* Header */}
         <div className="text-center mb-8">
@@ -276,7 +276,7 @@ export default function SupplierRegisterPage() {
           <div className="flex items-center justify-center space-x-2 md:space-x-4">
             <div className="flex items-center">
               <div className={`w-10 h-10 rounded-full flex items-center justify-center font-semibold text-sm ${
-                step >= 1 ? 'bg-emerald-600 text-white' : 'bg-gray-200 text-gray-600'
+                step >= 1 ? 'bg-primary text-white' : 'bg-gray-200 text-gray-600'
               }`}>
                 1
               </div>
@@ -285,7 +285,7 @@ export default function SupplierRegisterPage() {
             <div className="w-8 md:w-16 h-0.5 bg-gray-300"></div>
             <div className="flex items-center">
               <div className={`w-10 h-10 rounded-full flex items-center justify-center font-semibold text-sm ${
-                step >= 2 ? 'bg-emerald-600 text-white' : 'bg-gray-200 text-gray-600'
+                step >= 2 ? 'bg-primary text-white' : 'bg-gray-200 text-gray-600'
               }`}>
                 2
               </div>
@@ -294,7 +294,7 @@ export default function SupplierRegisterPage() {
             <div className="w-8 md:w-16 h-0.5 bg-gray-300"></div>
             <div className="flex items-center">
               <div className={`w-10 h-10 rounded-full flex items-center justify-center font-semibold text-sm ${
-                step >= 3 ? 'bg-emerald-600 text-white' : 'bg-gray-200 text-gray-600'
+                step >= 3 ? 'bg-primary text-white' : 'bg-gray-200 text-gray-600'
               }`}>
                 3
               </div>
@@ -303,7 +303,7 @@ export default function SupplierRegisterPage() {
             <div className="w-8 md:w-16 h-0.5 bg-gray-300"></div>
             <div className="flex items-center">
               <div className={`w-10 h-10 rounded-full flex items-center justify-center font-semibold text-sm ${
-                step >= 4 ? 'bg-emerald-600 text-white' : 'bg-gray-200 text-gray-600'
+                step >= 4 ? 'bg-primary text-white' : 'bg-gray-200 text-gray-600'
               }`}>
                 4
               </div>
@@ -337,7 +337,7 @@ export default function SupplierRegisterPage() {
                     type="text"
                     value={formData.contactPersonName}
                     onChange={(e) => updateFormData('contactPersonName', e.target.value)}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary"
                     placeholder="John Smith"
                     required
                   />
@@ -351,7 +351,7 @@ export default function SupplierRegisterPage() {
                     type="email"
                     value={formData.email}
                     onChange={(e) => updateFormData('email', e.target.value)}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary"
                     placeholder="john@company.com"
                     required
                   />
@@ -365,7 +365,7 @@ export default function SupplierRegisterPage() {
                     type="tel"
                     value={formData.phone}
                     onChange={(e) => updateFormData('phone', e.target.value)}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary"
                     placeholder="+1 234 567 8900"
                     required
                   />
@@ -380,7 +380,7 @@ export default function SupplierRegisterPage() {
                       type={showPassword ? 'text' : 'password'}
                       value={formData.password}
                       onChange={(e) => updateFormData('password', e.target.value)}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary"
                       placeholder="Min. 8 characters"
                       required
                     />
@@ -402,7 +402,7 @@ export default function SupplierRegisterPage() {
                     type="password"
                     value={formData.confirmPassword}
                     onChange={(e) => updateFormData('confirmPassword', e.target.value)}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary"
                     placeholder="Re-enter password"
                     required
                   />
@@ -419,7 +419,7 @@ export default function SupplierRegisterPage() {
                 </a>
                 <button
                   type="submit"
-                  className="px-6 py-3 bg-emerald-600 text-white font-semibold rounded-lg hover:bg-emerald-700 transition-all whitespace-nowrap"
+                  className="px-6 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-primary-dark transition-all whitespace-nowrap"
                 >
                   Continue
                   <i className="ri-arrow-right-line ml-2"></i>
@@ -442,7 +442,7 @@ export default function SupplierRegisterPage() {
                     type="text"
                     value={formData.companyName}
                     onChange={(e) => updateFormData('companyName', e.target.value)}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary"
                     placeholder="Your Company Ltd."
                     required
                   />
@@ -455,7 +455,7 @@ export default function SupplierRegisterPage() {
                   <select
                     value={formData.businessType}
                     onChange={(e) => updateFormData('businessType', e.target.value)}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary"
                     required
                   >
                     <option value="">Select Type</option>
@@ -473,7 +473,7 @@ export default function SupplierRegisterPage() {
                     type="number"
                     value={formData.yearEstablished}
                     onChange={(e) => updateFormData('yearEstablished', e.target.value)}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary"
                     placeholder="2010"
                     min="1900"
                     max={new Date().getFullYear()}
@@ -489,7 +489,7 @@ export default function SupplierRegisterPage() {
                     type="text"
                     value={formData.registrationNumber}
                     onChange={(e) => updateFormData('registrationNumber', e.target.value)}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary"
                     placeholder="Registration number"
                     required
                   />
@@ -503,7 +503,7 @@ export default function SupplierRegisterPage() {
                     type="text"
                     value={formData.gstVatNumber}
                     onChange={(e) => updateFormData('gstVatNumber', e.target.value)}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary"
                     placeholder="GST/VAT number"
                     required
                   />
@@ -516,7 +516,7 @@ export default function SupplierRegisterPage() {
                   <select
                     value={formData.country}
                     onChange={(e) => updateFormData('country', e.target.value)}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary"
                     required
                   >
                     <option value="">Select Country</option>
@@ -541,7 +541,7 @@ export default function SupplierRegisterPage() {
                     type="text"
                     value={formData.city}
                     onChange={(e) => updateFormData('city', e.target.value)}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary"
                     placeholder="City"
                     required
                   />
@@ -555,7 +555,7 @@ export default function SupplierRegisterPage() {
                     type="text"
                     value={formData.address}
                     onChange={(e) => updateFormData('address', e.target.value)}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary"
                     placeholder="Street address, building number, floor"
                     required
                   />
@@ -569,7 +569,7 @@ export default function SupplierRegisterPage() {
                     type="text"
                     value={formData.postalCode}
                     onChange={(e) => updateFormData('postalCode', e.target.value)}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary"
                     placeholder="Postal code"
                   />
                 </div>
@@ -582,7 +582,7 @@ export default function SupplierRegisterPage() {
                     type="url"
                     value={formData.website}
                     onChange={(e) => updateFormData('website', e.target.value)}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary"
                     placeholder="https://www.yourcompany.com"
                   />
                 </div>
@@ -599,7 +599,7 @@ export default function SupplierRegisterPage() {
                 </button>
                 <button
                   type="submit"
-                  className="px-6 py-3 bg-emerald-600 text-white font-semibold rounded-lg hover:bg-emerald-700 transition-all whitespace-nowrap"
+                  className="px-6 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-primary-dark transition-all whitespace-nowrap"
                 >
                   Continue
                   <i className="ri-arrow-right-line ml-2"></i>
@@ -621,7 +621,7 @@ export default function SupplierRegisterPage() {
                   <select
                     value={formData.numberOfEmployees}
                     onChange={(e) => updateFormData('numberOfEmployees', e.target.value)}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary"
                   >
                     <option value="">Select Range</option>
                     <option value="1-10">1-10</option>
@@ -641,7 +641,7 @@ export default function SupplierRegisterPage() {
                     type="text"
                     value={formData.productionCapacity}
                     onChange={(e) => updateFormData('productionCapacity', e.target.value)}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary"
                     placeholder="e.g., 10,000 units/month"
                   />
                 </div>
@@ -653,7 +653,7 @@ export default function SupplierRegisterPage() {
                   <select
                     value={formData.exportPercentage}
                     onChange={(e) => updateFormData('exportPercentage', e.target.value)}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary"
                   >
                     <option value="">Select Range</option>
                     <option value="0-10%">0-10%</option>
@@ -676,7 +676,7 @@ export default function SupplierRegisterPage() {
                           type="checkbox"
                           checked={formData.mainMarkets.includes(market)}
                           onChange={() => toggleArrayItem('mainMarkets', market)}
-                          className="w-4 h-4 text-emerald-600 border-gray-300 rounded focus:ring-emerald-500"
+                          className="w-4 h-4 text-primary border-gray-300 rounded focus:ring-primary"
                         />
                         <span className="text-sm text-gray-700">{market}</span>
                       </label>
@@ -695,7 +695,7 @@ export default function SupplierRegisterPage() {
                           type="checkbox"
                           checked={formData.mainProductCategories.includes(category)}
                           onChange={() => toggleArrayItem('mainProductCategories', category)}
-                          className="w-4 h-4 text-emerald-600 border-gray-300 rounded focus:ring-emerald-500"
+                          className="w-4 h-4 text-primary border-gray-300 rounded focus:ring-primary"
                         />
                         <span className="text-sm text-gray-700">{category}</span>
                       </label>
@@ -710,7 +710,7 @@ export default function SupplierRegisterPage() {
                   <textarea
                     value={formData.shortDescription}
                     onChange={(e) => updateFormData('shortDescription', e.target.value)}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary"
                     rows={2}
                     maxLength={200}
                     placeholder="Brief description of your company and products"
@@ -726,7 +726,7 @@ export default function SupplierRegisterPage() {
                   <textarea
                     value={formData.detailedIntroduction}
                     onChange={(e) => updateFormData('detailedIntroduction', e.target.value)}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary"
                     rows={4}
                     maxLength={500}
                     placeholder="Detailed information about your company, capabilities, certifications, and competitive advantages"
@@ -746,7 +746,7 @@ export default function SupplierRegisterPage() {
                 </button>
                 <button
                   type="submit"
-                  className="px-6 py-3 bg-emerald-600 text-white font-semibold rounded-lg hover:bg-emerald-700 transition-all whitespace-nowrap"
+                  className="px-6 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-primary-dark transition-all whitespace-nowrap"
                 >
                   Continue
                   <i className="ri-arrow-right-line ml-2"></i>
@@ -764,8 +764,8 @@ export default function SupplierRegisterPage() {
                 {/* Company Logo */}
                 <div className="border-2 border-dashed border-gray-300 rounded-lg p-6">
                   <div className="text-center">
-                    <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <i className="ri-image-line text-3xl text-emerald-600"></i>
+                    <div className="w-16 h-16 bg-primary-light rounded-full flex items-center justify-center mx-auto mb-4">
+                      <i className="ri-image-line text-3xl text-primary"></i>
                     </div>
                     <h3 className="text-lg font-semibold text-gray-900 mb-2">Company Logo (Optional)</h3>
                     <p className="text-sm text-gray-600 mb-4">Upload your company logo for better brand visibility</p>
@@ -780,7 +780,7 @@ export default function SupplierRegisterPage() {
                       />
                     </label>
                     {formData.companyLogo && (
-                      <p className="text-sm text-emerald-600 mt-2">
+                      <p className="text-sm text-primary mt-2">
                         <i className="ri-check-line mr-1"></i>
                         {formData.companyLogo.name}
                       </p>
@@ -791,8 +791,8 @@ export default function SupplierRegisterPage() {
                 {/* Business License */}
                 <div className="border-2 border-dashed border-gray-300 rounded-lg p-6">
                   <div className="text-center">
-                    <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <i className="ri-file-text-line text-3xl text-emerald-600"></i>
+                    <div className="w-16 h-16 bg-primary-light rounded-full flex items-center justify-center mx-auto mb-4">
+                      <i className="ri-file-text-line text-3xl text-primary"></i>
                     </div>
                     <h3 className="text-lg font-semibold text-gray-900 mb-2">Business License *</h3>
                     <p className="text-sm text-gray-600 mb-4">Upload your business registration or license document (PDF, JPG, PNG)</p>
@@ -807,7 +807,7 @@ export default function SupplierRegisterPage() {
                       />
                     </label>
                     {formData.businessLicense && (
-                      <p className="text-sm text-emerald-600 mt-2">
+                      <p className="text-sm text-primary mt-2">
                         <i className="ri-check-line mr-1"></i>
                         {formData.businessLicense.name}
                       </p>
@@ -818,8 +818,8 @@ export default function SupplierRegisterPage() {
                 {/* Certifications */}
                 <div className="border-2 border-dashed border-gray-300 rounded-lg p-6">
                   <div className="text-center">
-                    <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <i className="ri-award-line text-3xl text-emerald-600"></i>
+                    <div className="w-16 h-16 bg-primary-light rounded-full flex items-center justify-center mx-auto mb-4">
+                      <i className="ri-award-line text-3xl text-primary"></i>
                     </div>
                     <h3 className="text-lg font-semibold text-gray-900 mb-2">Quality Certifications (Optional)</h3>
                     <p className="text-sm text-gray-600 mb-4">Upload quality certifications (ISO, CE, FDA, etc.) - Multiple files allowed</p>
@@ -837,7 +837,7 @@ export default function SupplierRegisterPage() {
                     {formData.certifications.length > 0 && (
                       <div className="mt-3 space-y-1">
                         {formData.certifications.map((file, idx) => (
-                          <p key={idx} className="text-sm text-emerald-600">
+                          <p key={idx} className="text-sm text-primary">
                             <i className="ri-check-line mr-1"></i>
                             {file.name}
                           </p>
@@ -870,16 +870,16 @@ export default function SupplierRegisterPage() {
                     type="checkbox"
                     checked={formData.agreeToTerms}
                     onChange={(e) => updateFormData('agreeToTerms', e.target.checked)}
-                    className="w-5 h-5 text-emerald-600 border-gray-300 rounded focus:ring-emerald-500 mt-0.5"
+                    className="w-5 h-5 text-primary border-gray-300 rounded focus:ring-primary mt-0.5"
                     required
                   />
                   <span className="text-sm text-gray-700">
                     I agree to the{' '}
-                    <a href="/terms" target="_blank" className="text-emerald-600 hover:text-emerald-700 font-medium">
+                    <a href="/terms" target="_blank" className="text-primary hover:text-primary-dark font-medium">
                       Terms & Conditions
                     </a>{' '}
                     and{' '}
-                    <a href="/privacy" target="_blank" className="text-emerald-600 hover:text-emerald-700 font-medium">
+                    <a href="/privacy" target="_blank" className="text-primary hover:text-primary-dark font-medium">
                       Privacy Policy
                     </a>
                   </span>
@@ -890,7 +890,7 @@ export default function SupplierRegisterPage() {
                     type="checkbox"
                     checked={formData.agreeToSellerPolicies}
                     onChange={(e) => updateFormData('agreeToSellerPolicies', e.target.checked)}
-                    className="w-5 h-5 text-emerald-600 border-gray-300 rounded focus:ring-emerald-500 mt-0.5"
+                    className="w-5 h-5 text-primary border-gray-300 rounded focus:ring-primary mt-0.5"
                     required
                   />
                   <span className="text-sm text-gray-700">
@@ -912,7 +912,7 @@ export default function SupplierRegisterPage() {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="px-6 py-3 bg-emerald-600 text-white font-semibold rounded-lg hover:bg-emerald-700 transition-all whitespace-nowrap disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="px-6 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-primary-dark transition-all whitespace-nowrap disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {loading ? (
                     <>
@@ -932,13 +932,13 @@ export default function SupplierRegisterPage() {
         <div className="mt-6 text-center">
           <p className="text-sm text-gray-600">
             Already have an account?{' '}
-            <a href="/auth/login" className="font-semibold text-emerald-600 hover:text-emerald-700 cursor-pointer">
+            <a href="/auth/login" className="font-semibold text-primary hover:text-primary-dark cursor-pointer">
               Sign In
             </a>
           </p>
           <p className="text-sm text-gray-600 mt-2">
             Want to buy products?{' '}
-            <a href="/auth/register" className="font-semibold text-emerald-600 hover:text-emerald-700 cursor-pointer">
+            <a href="/auth/register" className="font-semibold text-primary hover:text-primary-dark cursor-pointer">
               Register as Buyer
             </a>
           </p>

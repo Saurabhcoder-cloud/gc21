@@ -2,7 +2,7 @@ export default function TermsPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-12 bg-gradient-to-br from-emerald-600 to-teal-700">
+      <section className="relative pt-32 pb-12 bg-gradient-to-br from-primary to-primary-dark">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-5xl font-bold text-white mb-4" style={{ fontFamily: 'Poppins, sans-serif' }}>

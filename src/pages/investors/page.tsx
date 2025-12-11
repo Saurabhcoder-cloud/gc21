@@ -34,7 +34,7 @@ export default function InvestorsPage() {
                 </div>
                 <p className="text-gray-600 text-sm mb-2">{metric.label}</p>
                 <p className="text-3xl font-bold text-gray-900 mb-2">{metric.value}</p>
-                <p className="text-green-600 text-sm font-semibold">{metric.change}</p>
+                <p className="text-primary text-sm font-semibold">{metric.change}</p>
               </div>
             ))}
           </div>

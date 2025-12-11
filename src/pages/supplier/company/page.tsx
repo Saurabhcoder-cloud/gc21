@@ -19,13 +19,13 @@ export default function SupplierCompanyPage() {
         {/* Verification Status Banner */}
         <div className={`rounded-xl p-6 ${
           verificationStatus === 'verified' 
-            ? 'bg-emerald-50 border border-emerald-200' 
+            ? 'bg-primary-light border border-primary' 
             : 'bg-amber-50 border border-amber-200'
         }`}>
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-4">
               <div className={`w-16 h-16 rounded-full flex items-center justify-center ${
-                verificationStatus === 'verified' ? 'bg-emerald-600' : 'bg-amber-600'
+                verificationStatus === 'verified' ? 'bg-primary' : 'bg-amber-600'
               }`}>
                 <i className={`${
                   verificationStatus === 'verified' ? 'ri-shield-check-line' : 'ri-time-line'
@@ -33,12 +33,12 @@ export default function SupplierCompanyPage() {
               </div>
               <div>
                 <h3 className={`text-lg font-bold ${
-                  verificationStatus === 'verified' ? 'text-emerald-900' : 'text-amber-900'
+                  verificationStatus === 'verified' ? 'text-primary' : 'text-amber-900'
                 }`}>
                   {verificationStatus === 'verified' ? 'Verified Supplier' : 'Verification Pending'}
                 </h3>
                 <p className={`text-sm ${
-                  verificationStatus === 'verified' ? 'text-emerald-700' : 'text-amber-700'
+                  verificationStatus === 'verified' ? 'text-primary-dark' : 'text-amber-700'
                 }`}>
                   {verificationStatus === 'verified' 
                     ? 'Your company has been verified. Verified badge is displayed on your profile.'
@@ -47,7 +47,7 @@ export default function SupplierCompanyPage() {
               </div>
             </div>
             {verificationStatus === 'verified' && (
-              <div className="px-4 py-2 bg-emerald-600 text-white font-semibold rounded-lg">
+              <div className="px-4 py-2 bg-primary text-white font-semibold rounded-lg">
                 <i className="ri-check-line mr-2"></i>
                 Verified
               </div>
@@ -63,7 +63,7 @@ export default function SupplierCompanyPage() {
                 onClick={() => setActiveTab('profile')}
                 className={`py-4 border-b-2 font-semibold text-sm transition-all whitespace-nowrap ${
                   activeTab === 'profile'
-                    ? 'border-emerald-600 text-emerald-600'
+                    ? 'border-primary text-primary'
                     : 'border-transparent text-gray-600 hover:text-gray-900'
                 }`}
               >
@@ -74,7 +74,7 @@ export default function SupplierCompanyPage() {
                 onClick={() => setActiveTab('gallery')}
                 className={`py-4 border-b-2 font-semibold text-sm transition-all whitespace-nowrap ${
                   activeTab === 'gallery'
-                    ? 'border-emerald-600 text-emerald-600'
+                    ? 'border-primary text-primary'
                     : 'border-transparent text-gray-600 hover:text-gray-900'
                 }`}
               >
@@ -85,7 +85,7 @@ export default function SupplierCompanyPage() {
                 onClick={() => setActiveTab('certifications')}
                 className={`py-4 border-b-2 font-semibold text-sm transition-all whitespace-nowrap ${
                   activeTab === 'certifications'
-                    ? 'border-emerald-600 text-emerald-600'
+                    ? 'border-primary text-primary'
                     : 'border-transparent text-gray-600 hover:text-gray-900'
                 }`}
               >
@@ -117,13 +117,13 @@ export default function SupplierCompanyPage() {
                   <input
                     type="text"
                     defaultValue="Acme Manufacturing Co., Ltd."
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary"
                   />
                 </div>
 
                 <div>
                   <label className="block text-sm font-semibold text-gray-900 mb-2">Business Type *</label>
-                  <select className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                  <select className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary">
                     <option>Manufacturer</option>
                     <option>Trading Company</option>
                     <option>Wholesaler</option>
@@ -136,13 +136,13 @@ export default function SupplierCompanyPage() {
                   <input
                     type="number"
                     defaultValue="2010"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary"
                   />
                 </div>
 
                 <div>
                   <label className="block text-sm font-semibold text-gray-900 mb-2">Number of Employees</label>
-                  <select className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                  <select className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary">
                     <option>101-500</option>
                     <option>1-10</option>
                     <option>11-50</option>
@@ -157,7 +157,7 @@ export default function SupplierCompanyPage() {
                   <input
                     type="url"
                     defaultValue="https://www.acmemanufacturing.com"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary"
                   />
                 </div>
 
@@ -166,7 +166,7 @@ export default function SupplierCompanyPage() {
                   <textarea
                     rows={5}
                     defaultValue="Acme Manufacturing is a leading manufacturer of industrial lighting solutions and electronic components. With over 14 years of experience, we serve clients worldwide with high-quality products and excellent service."
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 resize-none"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary resize-none"
                     maxLength={500}
                   ></textarea>
                 </div>
@@ -176,13 +176,13 @@ export default function SupplierCompanyPage() {
                   <input
                     type="text"
                     defaultValue="LED Lights, Bluetooth Speakers, Smart Home Devices, USB Cables"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary"
                   />
                 </div>
 
                 <div>
                   <label className="block text-sm font-semibold text-gray-900 mb-2">Country *</label>
-                  <select className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                  <select className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary">
                     <option>China</option>
                     <option>India</option>
                     <option>United States</option>
@@ -195,7 +195,7 @@ export default function SupplierCompanyPage() {
                   <input
                     type="text"
                     defaultValue="Shenzhen"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary"
                   />
                 </div>
 
@@ -204,13 +204,13 @@ export default function SupplierCompanyPage() {
                   <input
                     type="text"
                     defaultValue="Building 5, Industrial Park, Nanshan District"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary"
                   />
                 </div>
               </div>
 
               <div className="pt-6 border-t border-gray-200">
-                <button className="px-6 py-3 bg-emerald-600 text-white font-semibold rounded-lg hover:bg-emerald-700 transition-all whitespace-nowrap">
+                <button className="px-6 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-primary-dark transition-all whitespace-nowrap">
                   <i className="ri-save-line mr-2"></i>
                   Save Changes
                 </button>
@@ -223,7 +223,7 @@ export default function SupplierCompanyPage() {
             <div className="p-6 space-y-6">
               <div className="flex items-center justify-between">
                 <p className="text-sm text-gray-600">Showcase your factory, production lines, and facilities</p>
-                <button className="px-4 py-2 bg-emerald-600 text-white font-semibold rounded-lg hover:bg-emerald-700 transition-all text-sm whitespace-nowrap">
+                <button className="px-4 py-2 bg-primary text-white font-semibold rounded-lg hover:bg-primary-dark transition-all text-sm whitespace-nowrap">
                   <i className="ri-upload-2-line mr-2"></i>
                   Upload Images
                 </button>
@@ -258,7 +258,7 @@ export default function SupplierCompanyPage() {
             <div className="p-6 space-y-6">
               <div className="flex items-center justify-between">
                 <p className="text-sm text-gray-600">Upload your quality certifications and business documents</p>
-                <button className="px-4 py-2 bg-emerald-600 text-white font-semibold rounded-lg hover:bg-emerald-700 transition-all text-sm whitespace-nowrap">
+                <button className="px-4 py-2 bg-primary text-white font-semibold rounded-lg hover:bg-primary-dark transition-all text-sm whitespace-nowrap">
                   <i className="ri-upload-2-line mr-2"></i>
                   Upload Document
                 </button>
@@ -273,8 +273,8 @@ export default function SupplierCompanyPage() {
                 ].map((cert, idx) => (
                   <div key={idx} className="bg-gray-50 rounded-lg p-4 flex items-center justify-between">
                     <div className="flex items-center space-x-4">
-                      <div className="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <i className="ri-file-text-line text-2xl text-emerald-600"></i>
+                      <div className="w-12 h-12 bg-primary-light rounded-lg flex items-center justify-center flex-shrink-0">
+                        <i className="ri-file-text-line text-2xl text-primary"></i>
                       </div>
                       <div>
                         <h3 className="text-sm font-semibold text-gray-900">{cert.name}</h3>
@@ -285,7 +285,7 @@ export default function SupplierCompanyPage() {
                     <div className="flex items-center space-x-3">
                       <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
                         cert.status === 'verified' 
-                          ? 'bg-emerald-100 text-emerald-700' 
+                          ? 'bg-primary-light text-primary-dark' 
                           : 'bg-amber-100 text-amber-700'
                       }`}>
                         {cert.status}

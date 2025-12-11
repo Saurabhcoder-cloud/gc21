@@ -3,7 +3,7 @@ import SupplierLayout from '../../../components/layout/SupplierLayout';
 export default function SupplierAnalyticsPage() {
   const stats = [
     { label: 'Total Views', value: '45.2K', change: '+12.5%', trend: 'up', icon: 'ri-eye-line', color: 'blue' },
-    { label: 'Total Inquiries', value: '1,247', change: '+8.3%', trend: 'up', icon: 'ri-file-list-3-line', color: 'emerald' },
+    { label: 'Total Inquiries', value: '1,247', change: '+8.3%', trend: 'up', icon: 'ri-file-list-3-line', color: 'primary' },
     { label: 'Conversion Rate', value: '24.5%', change: '+3.2%', trend: 'up', icon: 'ri-arrow-up-circle-line', color: 'purple' },
     { label: 'Avg Response Time', value: '2.3h', change: '-15%', trend: 'down', icon: 'ri-time-line', color: 'amber' },
   ];
@@ -42,7 +42,7 @@ export default function SupplierAnalyticsPage() {
                   <i className={`${stat.icon} text-2xl text-${stat.color}-600`}></i>
                 </div>
                 <span className={`text-sm font-semibold ${
-                  stat.trend === 'up' ? 'text-emerald-600' : 'text-red-600'
+                  stat.trend === 'up' ? 'text-primary' : 'text-red-600'
                 }`}>
                   {stat.change}
                 </span>
@@ -86,7 +86,7 @@ export default function SupplierAnalyticsPage() {
                         <p className="text-sm text-gray-700">{product.orders}</p>
                       </td>
                       <td className="px-6 py-4">
-                        <p className="text-sm font-semibold text-emerald-600">{product.revenue}</p>
+                        <p className="text-sm font-semibold text-primary">{product.revenue}</p>
                       </td>
                     </tr>
                   ))}
@@ -105,13 +105,13 @@ export default function SupplierAnalyticsPage() {
                 <div key={idx} className="flex items-start space-x-3">
                   <div className={`w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0 ${
                     activity.type === 'view' ? 'bg-blue-100' :
-                    activity.type === 'inquiry' ? 'bg-emerald-100' :
+                    activity.type === 'inquiry' ? 'bg-primary-light' :
                     activity.type === 'order' ? 'bg-purple-100' :
                     'bg-amber-100'
                   }`}>
                     <i className={`${
                       activity.type === 'view' ? 'ri-eye-line text-blue-600' :
-                      activity.type === 'inquiry' ? 'ri-file-list-3-line text-emerald-600' :
+                      activity.type === 'inquiry' ? 'ri-file-list-3-line text-primary' :
                       activity.type === 'order' ? 'ri-shopping-bag-3-line text-purple-600' :
                       'ri-star-line text-amber-600'
                     }`}></i>

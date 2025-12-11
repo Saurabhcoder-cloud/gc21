@@ -11,10 +11,10 @@ export default function SupplierDashboardPage() {
   });
 
   const stats = [
-    { label: 'Total Products', value: '248', icon: 'ri-box-3-line', color: 'bg-blue-500', change: '+12 this month' },
-    { label: 'New Inquiries', value: '34', icon: 'ri-file-list-3-line', color: 'bg-emerald-500', change: '+8 today' },
-    { label: 'Active Orders', value: '18', icon: 'ri-shopping-bag-3-line', color: 'bg-orange-500', change: '5 pending' },
-    { label: 'Total Revenue', value: '$124K', icon: 'ri-money-dollar-circle-line', color: 'bg-purple-500', change: '+15% this month' },
+    { label: 'Total Products', value: '248', icon: 'ri-box-3-line', color: 'bg-primary', change: '+12 this month' },
+    { label: 'New Inquiries', value: '34', icon: 'ri-file-list-3-line', color: 'bg-primary-dark', change: '+8 today' },
+    { label: 'Active Orders', value: '18', icon: 'ri-shopping-bag-3-line', color: 'bg-accent-500', change: '5 pending' },
+    { label: 'Total Revenue', value: '$124K', icon: 'ri-money-dollar-circle-line', color: 'bg-primary', change: '+15% this month' },
   ];
 
   const recentInquiries = [
@@ -31,11 +31,11 @@ export default function SupplierDashboardPage() {
 
   const getStatusColor = (status: string) => {
     switch (status) {
-      case 'New': return 'bg-blue-100 text-blue-700';
-      case 'Quoted': return 'bg-emerald-100 text-emerald-700';
-      case 'Processing': return 'bg-yellow-100 text-yellow-700';
-      case 'Shipped': return 'bg-purple-100 text-purple-700';
-      case 'Delivered': return 'bg-green-100 text-green-700';
+      case 'New': return 'bg-primary-light text-primary-dark';
+      case 'Quoted': return 'bg-background-soft text-primary-dark';
+      case 'Processing': return 'bg-primary-light text-primary';
+      case 'Shipped': return 'bg-primary text-white';
+      case 'Delivered': return 'bg-primary-dark text-white';
       default: return 'bg-gray-100 text-gray-700';
     }
   };
@@ -43,16 +43,16 @@ export default function SupplierDashboardPage() {
   return (
     <div className="space-y-6">
       {/* Welcome Section */}
-      <div className="bg-gradient-to-r from-emerald-500 to-teal-600 rounded-xl p-8 text-white">
+      <div className="bg-gradient-to-r from-primary-dark to-primary rounded-xl p-8 text-white">
         <div className="flex items-start justify-between">
           <div>
             <h1 className="text-3xl font-bold mb-2" style={{ fontFamily: 'Poppins, sans-serif' }}>
               Welcome, {supplier.name}!
             </h1>
-            <p className="text-emerald-50 text-lg mb-4">{supplier.country}</p>
+            <p className="text-white/80 text-lg mb-4">{supplier.country}</p>
             <div className="flex items-center space-x-3">
               {supplier.isPaidSupplier ? (
-                <span className="px-4 py-2 bg-yellow-400 text-yellow-900 rounded-lg font-bold text-sm flex items-center">
+                <span className="px-4 py-2 bg-primary-light text-primary-dark rounded-lg font-bold text-sm flex items-center">
                   <i className="ri-vip-crown-fill mr-2"></i>
                   {supplier.membershipTier} Supplier
                 </span>
@@ -69,7 +69,7 @@ export default function SupplierDashboardPage() {
           </div>
           <div className="text-right">
             {!supplier.isPaidSupplier && (
-              <button className="px-6 py-3 bg-yellow-400 text-yellow-900 rounded-lg font-bold hover:bg-yellow-300 transition-all whitespace-nowrap cursor-pointer">
+              <button className="px-6 py-3 bg-primary text-white rounded-lg font-bold hover:bg-primary-dark transition-all whitespace-nowrap cursor-pointer">
                 <i className="ri-vip-crown-line mr-2"></i>
                 Upgrade to Premium
               </button>
@@ -80,11 +80,11 @@ export default function SupplierDashboardPage() {
 
       {/* Upgrade Banner for Free Suppliers */}
       {!supplier.isPaidSupplier && (
-        <div className="bg-gradient-to-r from-yellow-50 to-orange-50 border-2 border-yellow-300 rounded-xl p-6">
+        <div className="bg-gradient-to-r from-primary-light to-background-soft border-2 border-primary rounded-xl p-6">
           <div className="flex items-start justify-between">
             <div className="flex-1">
               <h3 className="text-xl font-bold text-gray-900 mb-2">
-                <i className="ri-lock-line mr-2 text-yellow-600"></i>
+                <i className="ri-lock-line mr-2 text-primary"></i>
                 Unlock Full Buyer Contact Details
               </h3>
               <p className="text-gray-700 mb-4">
@@ -93,33 +93,33 @@ export default function SupplierDashboardPage() {
               </p>
               <ul className="space-y-2 mb-4">
                 <li className="flex items-center text-sm text-gray-700">
-                  <i className="ri-check-line text-emerald-600 mr-2"></i>
+                  <i className="ri-check-line text-primary mr-2"></i>
                   View full buyer contact details (phone & email)
                 </li>
                 <li className="flex items-center text-sm text-gray-700">
-                  <i className="ri-check-line text-emerald-600 mr-2"></i>
+                  <i className="ri-check-line text-primary mr-2"></i>
                   Priority placement in search results
                 </li>
                 <li className="flex items-center text-sm text-gray-700">
-                  <i className="ri-check-line text-emerald-600 mr-2"></i>
+                  <i className="ri-check-line text-primary mr-2"></i>
                   Unlimited quote submissions
                 </li>
                 <li className="flex items-center text-sm text-gray-700">
-                  <i className="ri-check-line text-emerald-600 mr-2"></i>
+                  <i className="ri-check-line text-primary mr-2"></i>
                   Advanced analytics and insights
                 </li>
               </ul>
               <button
                 onClick={() => navigate('/pricing')}
-                className="px-6 py-3 bg-emerald-600 text-white rounded-lg font-semibold hover:bg-emerald-700 transition-all whitespace-nowrap cursor-pointer"
+                className="px-6 py-3 bg-primary text-white rounded-lg font-semibold hover:bg-primary-dark transition-all whitespace-nowrap cursor-pointer"
               >
                 View Pricing Plans
                 <i className="ri-arrow-right-line ml-2"></i>
               </button>
             </div>
             <div className="ml-6">
-              <div className="w-32 h-32 bg-yellow-200 rounded-full flex items-center justify-center">
-                <i className="ri-vip-crown-fill text-6xl text-yellow-600"></i>
+              <div className="w-32 h-32 bg-primary-light rounded-full flex items-center justify-center">
+                <i className="ri-vip-crown-fill text-6xl text-primary-dark"></i>
               </div>
             </div>
           </div>
@@ -153,7 +153,7 @@ export default function SupplierDashboardPage() {
           </div>
           <button
             onClick={() => navigate('/supplier/inquiries')}
-            className="px-4 py-2 text-emerald-600 hover:bg-emerald-50 rounded-lg font-medium transition-all whitespace-nowrap cursor-pointer"
+            className="px-4 py-2 text-primary hover:bg-primary-light rounded-lg font-medium transition-all whitespace-nowrap cursor-pointer"
           >
             View All
             <i className="ri-arrow-right-line ml-2"></i>
@@ -202,7 +202,7 @@ export default function SupplierDashboardPage() {
                   <td className="px-6 py-4 whitespace-nowrap">
                     <button
                       onClick={() => navigate('/supplier/inquiries')}
-                      className="text-emerald-600 hover:text-emerald-700 font-medium text-sm cursor-pointer"
+                      className="text-primary hover:text-primary-dark font-medium text-sm cursor-pointer"
                     >
                       View Details
                     </button>
@@ -225,7 +225,7 @@ export default function SupplierDashboardPage() {
           </div>
           <button
             onClick={() => navigate('/supplier/orders')}
-            className="px-4 py-2 text-emerald-600 hover:bg-emerald-50 rounded-lg font-medium transition-all whitespace-nowrap cursor-pointer"
+            className="px-4 py-2 text-primary hover:bg-primary-light rounded-lg font-medium transition-all whitespace-nowrap cursor-pointer"
           >
             View All
             <i className="ri-arrow-right-line ml-2"></i>
@@ -233,7 +233,7 @@ export default function SupplierDashboardPage() {
         </div>
         <div className="p-6 space-y-4">
           {recentOrders.map((order) => (
-            <div key={order.id} className="flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:border-emerald-300 hover:shadow-md transition-all">
+            <div key={order.id} className="flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:border-primary hover:shadow-md transition-all">
               <div className="flex-1">
                 <div className="flex items-center space-x-3 mb-2">
                   <span className="text-sm font-semibold text-gray-900">{order.id}</span>
@@ -245,12 +245,12 @@ export default function SupplierDashboardPage() {
                 <div className="flex items-center space-x-4 text-sm text-gray-600">
                   <span>Buyer: {order.buyer}</span>
                   <span>•</span>
-                  <span>Amount: <span className="font-semibold text-emerald-600">{order.amount}</span></span>
+                  <span>Amount: <span className="font-semibold text-primary">{order.amount}</span></span>
                   <span>•</span>
                   <span>{order.date}</span>
                 </div>
               </div>
-              <button className="px-4 py-2 bg-emerald-600 text-white rounded-lg font-medium hover:bg-emerald-700 transition-all whitespace-nowrap cursor-pointer">
+              <button className="px-4 py-2 bg-primary text-white rounded-lg font-medium hover:bg-primary-dark transition-all whitespace-nowrap cursor-pointer">
                 Manage Order
               </button>
             </div>

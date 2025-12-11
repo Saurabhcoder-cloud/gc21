@@ -11,8 +11,8 @@ export default function BuyerDashboardPage() {
 
   const stats = [
     { label: 'Active RFQs', value: '12', icon: 'ri-file-list-3-line', color: 'bg-blue-500', change: '+3 this week' },
-    { label: 'Quotes Received', value: '28', icon: 'ri-mail-line', color: 'bg-emerald-500', change: '+8 new' },
-    { label: 'Active Orders', value: '5', icon: 'ri-shopping-bag-line', color: 'bg-orange-500', change: '2 shipped' },
+    { label: 'Quotes Received', value: '28', icon: 'ri-mail-line', color: 'bg-primary', change: '+8 new' },
+    { label: 'Active Orders', value: '5', icon: 'ri-shopping-bag-line', color: 'bg-primary-dark', change: '2 shipped' },
     { label: 'Saved Suppliers', value: '34', icon: 'ri-bookmark-line', color: 'bg-purple-500', change: '+2 this month' },
   ];
 
@@ -32,10 +32,10 @@ export default function BuyerDashboardPage() {
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'Open': return 'bg-blue-100 text-blue-700';
-      case 'Quoted': return 'bg-emerald-100 text-emerald-700';
+      case 'Quoted': return 'bg-primary-light text-primary-dark';
       case 'Closed': return 'bg-gray-100 text-gray-700';
       case 'Pending Review': return 'bg-yellow-100 text-yellow-700';
-      case 'Accepted': return 'bg-green-100 text-green-700';
+      case 'Accepted': return 'bg-primary-light text-primary-dark';
       default: return 'bg-gray-100 text-gray-700';
     }
   };
@@ -43,22 +43,22 @@ export default function BuyerDashboardPage() {
   return (
     <div className="space-y-6">
       {/* Welcome Section */}
-      <div className="bg-gradient-to-r from-emerald-500 to-teal-600 rounded-xl p-8 text-white">
+      <div className="bg-gradient-to-r from-primary-dark to-primary rounded-xl p-8 text-white">
         <h1 className="text-3xl font-bold mb-2" style={{ fontFamily: 'Poppins, sans-serif' }}>
           Welcome back, {buyer.name}!
         </h1>
-        <p className="text-emerald-50 text-lg mb-4">{buyer.company} • {buyer.country}</p>
+        <p className="text-primary-light text-lg mb-4">{buyer.company} • {buyer.country}</p>
         <div className="flex flex-wrap gap-3">
           <button
             onClick={() => navigate('/buyer/rfq')}
-            className="px-6 py-2.5 bg-white text-emerald-600 rounded-lg font-semibold hover:bg-emerald-50 transition-all whitespace-nowrap cursor-pointer"
+            className="px-6 py-2.5 bg-white text-primary rounded-lg font-semibold hover:bg-primary-light transition-all whitespace-nowrap cursor-pointer"
           >
             <i className="ri-add-line mr-2"></i>
             Create New RFQ
           </button>
           <button
             onClick={() => navigate('/products')}
-            className="px-6 py-2.5 bg-emerald-600 text-white rounded-lg font-semibold hover:bg-emerald-700 border-2 border-white transition-all whitespace-nowrap cursor-pointer"
+            className="px-6 py-2.5 bg-primary text-white rounded-lg font-semibold hover:bg-primary-dark border-2 border-white transition-all whitespace-nowrap cursor-pointer"
           >
             <i className="ri-search-line mr-2"></i>
             Browse Products
@@ -93,7 +93,7 @@ export default function BuyerDashboardPage() {
           </div>
           <button
             onClick={() => navigate('/buyer/rfq')}
-            className="px-4 py-2 text-emerald-600 hover:bg-emerald-50 rounded-lg font-medium transition-all whitespace-nowrap cursor-pointer"
+            className="px-4 py-2 text-primary hover:bg-primary-light rounded-lg font-medium transition-all whitespace-nowrap cursor-pointer"
           >
             View All
             <i className="ri-arrow-right-line ml-2"></i>
@@ -130,13 +130,13 @@ export default function BuyerDashboardPage() {
                     </span>
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
-                    <span className="text-sm font-semibold text-emerald-600">{rfq.quotes} quotes</span>
+                    <span className="text-sm font-semibold text-primary">{rfq.quotes} quotes</span>
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
                     <span className="text-sm text-gray-500">{rfq.date}</span>
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
-                    <button className="text-emerald-600 hover:text-emerald-700 font-medium text-sm cursor-pointer">
+                    <button className="text-primary hover:text-primary-dark font-medium text-sm cursor-pointer">
                       View Details
                     </button>
                   </td>
@@ -156,14 +156,14 @@ export default function BuyerDashboardPage() {
             </h2>
             <p className="text-sm text-gray-500 mt-1">Latest quotes from suppliers</p>
           </div>
-          <button className="px-4 py-2 text-emerald-600 hover:bg-emerald-50 rounded-lg font-medium transition-all whitespace-nowrap cursor-pointer">
+          <button className="px-4 py-2 text-primary hover:bg-primary-light rounded-lg font-medium transition-all whitespace-nowrap cursor-pointer">
             View All
             <i className="ri-arrow-right-line ml-2"></i>
           </button>
         </div>
         <div className="p-6 space-y-4">
           {recentQuotes.map((quote) => (
-            <div key={quote.id} className="flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:border-emerald-300 hover:shadow-md transition-all">
+            <div key={quote.id} className="flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:border-primary hover:shadow-md transition-all">
               <div className="flex-1">
                 <div className="flex items-center space-x-3 mb-2">
                   <span className="text-sm font-semibold text-gray-900">{quote.id}</span>
@@ -174,12 +174,12 @@ export default function BuyerDashboardPage() {
                 <h3 className="text-base font-semibold text-gray-900 mb-1">{quote.product}</h3>
                 <p className="text-sm text-gray-600 mb-1">Supplier: {quote.supplier}</p>
                 <div className="flex items-center space-x-4 text-sm text-gray-500">
-                  <span>Price: <span className="font-semibold text-emerald-600">{quote.price}</span></span>
+                  <span>Price: <span className="font-semibold text-primary">{quote.price}</span></span>
                   <span>•</span>
                   <span>{quote.date}</span>
                 </div>
               </div>
-              <button className="px-4 py-2 bg-emerald-600 text-white rounded-lg font-medium hover:bg-emerald-700 transition-all whitespace-nowrap cursor-pointer">
+              <button className="px-4 py-2 bg-primary text-white rounded-lg font-medium hover:bg-primary-dark transition-all whitespace-nowrap cursor-pointer">
                 Review Quote
               </button>
             </div>

@@ -182,8 +182,8 @@ export default function TradeShowsPage() {
                   />
                   <div className="absolute top-4 right-4">
                     <span className={`px-4 py-1 rounded-full text-sm font-semibold whitespace-nowrap ${
-                      show.status === 'upcoming' ? 'bg-primary-500 text-white' :
-                      show.status === 'ongoing' ? 'bg-orange-500 text-white' :
+                      show.status === 'upcoming' ? 'bg-primary text-white' :
+                      show.status === 'ongoing' ? 'bg-primary-dark text-white' :
                       'bg-gray-500 text-white'
                     }`}>
                       {show.status.charAt(0).toUpperCase() + show.status.slice(1)}
