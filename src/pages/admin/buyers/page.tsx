@@ -261,7 +261,7 @@ export default function AdminBuyersPage() {
                 onClick={handleExportCSV}
                 className="w-full px-4 py-3 text-left hover:bg-gray-50 flex items-center gap-3 text-gray-700 transition-colors"
               >
-                <i className="ri-download-line text-green-600"></i>
+                <i className="ri-download-line text-primary"></i>
                 Export to CSV
               </button>
               <button
@@ -278,7 +278,7 @@ export default function AdminBuyersPage() {
               <button
                 className="w-full px-4 py-3 text-left hover:bg-gray-50 flex items-center gap-3 text-gray-700 transition-colors"
               >
-                <i className="ri-time-line text-orange-600"></i>
+                <i className="ri-time-line text-primary"></i>
                 View Pending
               </button>
               <button
@@ -310,7 +310,7 @@ export default function AdminBuyersPage() {
             </div>
           </div>
           <div className="mt-4 flex items-center gap-2 text-sm">
-            <span className="text-green-600 flex items-center gap-1">
+            <span className="text-primary flex items-center gap-1">
               <i className="ri-arrow-up-line"></i>
               +15% this month
             </span>
@@ -323,12 +323,12 @@ export default function AdminBuyersPage() {
               <p className="text-gray-600 text-sm">Active Buyers</p>
               <p className="text-3xl font-bold text-gray-900 mt-1">{Math.floor(buyers.length * 0.85)}</p>
             </div>
-            <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
-              <i className="ri-check-line text-2xl text-green-600"></i>
+            <div className="w-12 h-12 bg-primary-light rounded-lg flex items-center justify-center">
+              <i className="ri-check-line text-2xl text-primary"></i>
             </div>
           </div>
           <div className="mt-4 flex items-center gap-2 text-sm">
-            <span className="text-green-600 flex items-center gap-1">
+            <span className="text-primary flex items-center gap-1">
               <i className="ri-arrow-up-line"></i>
               +8% this month
             </span>
@@ -341,8 +341,8 @@ export default function AdminBuyersPage() {
               <p className="text-gray-600 text-sm">Pending</p>
               <p className="text-3xl font-bold text-gray-900 mt-1">{Math.floor(buyers.length * 0.1)}</p>
             </div>
-            <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
-              <i className="ri-time-line text-2xl text-orange-600"></i>
+            <div className="w-12 h-12 bg-primary-light rounded-lg flex items-center justify-center">
+              <i className="ri-time-line text-2xl text-primary"></i>
             </div>
           </div>
           <div className="mt-4 flex items-center gap-2 text-sm">
@@ -361,7 +361,7 @@ export default function AdminBuyersPage() {
             </div>
           </div>
           <div className="mt-4 flex items-center gap-2 text-sm">
-            <span className="text-green-600 flex items-center gap-1">
+            <span className="text-primary flex items-center gap-1">
               <i className="ri-arrow-up-line"></i>
               +12% vs last month
             </span>
@@ -419,7 +419,7 @@ export default function AdminBuyersPage() {
                 <tr key={buyer.id} className="hover:bg-gray-50 transition-colors">
                   <td className="px-6 py-4">
                     <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 bg-gradient-to-br from-red-500 to-orange-500 rounded-full flex items-center justify-center text-white font-semibold">
+                      <div className="w-10 h-10 bg-gradient-to-br from-primary to-primary-dark rounded-full flex items-center justify-center text-white font-semibold">
                         {buyer.name.charAt(0)}
                       </div>
                       <div>
@@ -445,7 +445,7 @@ export default function AdminBuyersPage() {
                     <p className="text-sm text-gray-700 max-w-xs truncate">{buyer.requirement}</p>
                   </td>
                   <td className="px-6 py-4">
-                    <span className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm font-medium whitespace-nowrap">
+                    <span className="px-3 py-1 bg-primary-light text-primary-dark rounded-full text-sm font-medium whitespace-nowrap">
                       Active
                     </span>
                   </td>
@@ -499,9 +499,9 @@ export default function AdminBuyersPage() {
 
             <form onSubmit={handleAddBuyer} className="p-8">
               {successMessage && (
-                <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg flex items-center gap-3">
-                  <i className="ri-check-line text-green-600 text-xl"></i>
-                  <p className="text-green-700 font-medium">{successMessage}</p>
+                <div className="mb-6 p-4 bg-primary-light border border-primary rounded-lg flex items-center gap-3">
+                  <i className="ri-check-line text-primary text-xl"></i>
+                  <p className="text-primary-dark font-medium">{successMessage}</p>
                 </div>
               )}
 

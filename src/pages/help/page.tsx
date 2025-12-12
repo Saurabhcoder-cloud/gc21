@@ -101,7 +101,7 @@ export default function HelpPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 bg-gradient-to-br from-emerald-600 to-teal-700">
+      <section className="relative pt-32 pb-20 bg-gradient-to-br from-primary to-primary-dark">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-5xl font-bold text-white mb-6" style={{ fontFamily: 'Poppins, sans-serif' }}>
@@ -133,8 +133,8 @@ export default function HelpPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <a href="/contact" className="flex items-center space-x-3 p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors cursor-pointer">
-              <div className="w-10 h-10 bg-emerald-100 rounded-lg flex items-center justify-center">
-                <i className="ri-customer-service-line text-emerald-600 text-lg"></i>
+              <div className="w-10 h-10 bg-primary-light rounded-lg flex items-center justify-center">
+                <i className="ri-customer-service-line text-primary text-lg"></i>
               </div>
               <div>
                 <div className="text-sm font-semibold text-gray-900">Contact Support</div>
@@ -142,8 +142,8 @@ export default function HelpPage() {
               </div>
             </a>
             <a href="/auth/register" className="flex items-center space-x-3 p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors cursor-pointer">
-              <div className="w-10 h-10 bg-emerald-100 rounded-lg flex items-center justify-center">
-                <i className="ri-user-add-line text-emerald-600 text-lg"></i>
+              <div className="w-10 h-10 bg-primary-light rounded-lg flex items-center justify-center">
+                <i className="ri-user-add-line text-primary text-lg"></i>
               </div>
               <div>
                 <div className="text-sm font-semibold text-gray-900">Create Account</div>
@@ -151,8 +151,8 @@ export default function HelpPage() {
               </div>
             </a>
             <a href="/become-supplier" className="flex items-center space-x-3 p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors cursor-pointer">
-              <div className="w-10 h-10 bg-emerald-100 rounded-lg flex items-center justify-center">
-                <i className="ri-store-line text-emerald-600 text-lg"></i>
+              <div className="w-10 h-10 bg-primary-light rounded-lg flex items-center justify-center">
+                <i className="ri-store-line text-primary text-lg"></i>
               </div>
               <div>
                 <div className="text-sm font-semibold text-gray-900">Become Supplier</div>
@@ -160,8 +160,8 @@ export default function HelpPage() {
               </div>
             </a>
             <a href="/trust" className="flex items-center space-x-3 p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors cursor-pointer">
-              <div className="w-10 h-10 bg-emerald-100 rounded-lg flex items-center justify-center">
-                <i className="ri-shield-check-line text-emerald-600 text-lg"></i>
+              <div className="w-10 h-10 bg-primary-light rounded-lg flex items-center justify-center">
+                <i className="ri-shield-check-line text-primary text-lg"></i>
               </div>
               <div>
                 <div className="text-sm font-semibold text-gray-900">Trust & Safety</div>
@@ -182,7 +182,7 @@ export default function HelpPage() {
                 onClick={() => setActiveCategory(category.id)}
                 className={`px-4 py-2 rounded-lg font-medium text-sm transition-all whitespace-nowrap ${
                   activeCategory === category.id
-                    ? 'bg-emerald-600 text-white'
+                    ? 'bg-primary text-white'
                     : 'bg-white text-gray-700 hover:bg-gray-100'
                 }`}
               >
@@ -231,10 +231,10 @@ export default function HelpPage() {
             Can't find what you're looking for? Our support team is here to assist you.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-            <a href="/contact" className="px-8 py-3 bg-emerald-600 text-white font-medium rounded-lg hover:bg-emerald-700 transition-all whitespace-nowrap cursor-pointer">
+            <a href="/contact" className="px-8 py-3 bg-primary text-white font-medium rounded-lg hover:bg-primary-dark transition-all whitespace-nowrap cursor-pointer">
               Contact Support
             </a>
-            <a href="mailto:support@tradehub.com" className="px-8 py-3 bg-white text-emerald-600 font-medium rounded-lg border-2 border-emerald-600 hover:bg-emerald-600 hover:text-white transition-all whitespace-nowrap cursor-pointer">
+            <a href="mailto:support@tradehub.com" className="px-8 py-3 bg-white text-primary font-medium rounded-lg border-2 border-primary hover:bg-primary hover:text-white transition-all whitespace-nowrap cursor-pointer">
               Email Us
             </a>
           </div>

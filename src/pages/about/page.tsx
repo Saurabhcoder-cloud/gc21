@@ -2,7 +2,7 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 bg-gradient-to-br from-emerald-600 to-teal-700">
+      <section className="relative pt-32 pb-20 bg-gradient-to-br from-primary to-primary-dark">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-5xl font-bold text-white mb-6" style={{ fontFamily: 'Poppins, sans-serif' }}>
@@ -20,8 +20,8 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div>
-              <div className="w-16 h-16 bg-emerald-100 rounded-lg flex items-center justify-center mb-6">
-                <i className="ri-target-line text-emerald-600 text-3xl"></i>
+              <div className="w-16 h-16 bg-primary-light rounded-lg flex items-center justify-center mb-6">
+                <i className="ri-target-line text-primary text-3xl"></i>
               </div>
               <h2 className="text-3xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Poppins, sans-serif' }}>
                 Our Mission
@@ -34,8 +34,8 @@ export default function AboutPage() {
               </p>
             </div>
             <div>
-              <div className="w-16 h-16 bg-emerald-100 rounded-lg flex items-center justify-center mb-6">
-                <i className="ri-eye-line text-emerald-600 text-3xl"></i>
+              <div className="w-16 h-16 bg-primary-light rounded-lg flex items-center justify-center mb-6">
+                <i className="ri-eye-line text-primary text-3xl"></i>
               </div>
               <h2 className="text-3xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Poppins, sans-serif' }}>
                 Our Vision
@@ -64,19 +64,19 @@ export default function AboutPage() {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="text-5xl font-bold text-emerald-600 mb-2">2.5M+</div>
+              <div className="text-5xl font-bold text-primary mb-2">2.5M+</div>
               <div className="text-base text-gray-600">Products Listed</div>
             </div>
             <div className="text-center">
-              <div className="text-5xl font-bold text-emerald-600 mb-2">150K+</div>
+              <div className="text-5xl font-bold text-primary mb-2">150K+</div>
               <div className="text-base text-gray-600">Verified Suppliers</div>
             </div>
             <div className="text-center">
-              <div className="text-5xl font-bold text-emerald-600 mb-2">5M+</div>
+              <div className="text-5xl font-bold text-primary mb-2">5M+</div>
               <div className="text-base text-gray-600">Active Buyers</div>
             </div>
             <div className="text-center">
-              <div className="text-5xl font-bold text-emerald-600 mb-2">180+</div>
+              <div className="text-5xl font-bold text-primary mb-2">180+</div>
               <div className="text-base text-gray-600">Countries Served</div>
             </div>
           </div>
@@ -121,8 +121,8 @@ export default function AboutPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
-              <div className="w-14 h-14 bg-emerald-100 rounded-lg flex items-center justify-center mb-6">
-                <i className="ri-shield-check-line text-emerald-600 text-2xl"></i>
+              <div className="w-14 h-14 bg-primary-light rounded-lg flex items-center justify-center mb-6">
+                <i className="ri-shield-check-line text-primary text-2xl"></i>
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Trust & Security</h3>
               <p className="text-base text-gray-600 leading-relaxed">
@@ -130,8 +130,8 @@ export default function AboutPage() {
               </p>
             </div>
             <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
-              <div className="w-14 h-14 bg-emerald-100 rounded-lg flex items-center justify-center mb-6">
-                <i className="ri-lightbulb-line text-emerald-600 text-2xl"></i>
+              <div className="w-14 h-14 bg-primary-light rounded-lg flex items-center justify-center mb-6">
+                <i className="ri-lightbulb-line text-primary text-2xl"></i>
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Innovation</h3>
               <p className="text-base text-gray-600 leading-relaxed">
@@ -139,8 +139,8 @@ export default function AboutPage() {
               </p>
             </div>
             <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
-              <div className="w-14 h-14 bg-emerald-100 rounded-lg flex items-center justify-center mb-6">
-                <i className="ri-customer-service-line text-emerald-600 text-2xl"></i>
+              <div className="w-14 h-14 bg-primary-light rounded-lg flex items-center justify-center mb-6">
+                <i className="ri-customer-service-line text-primary text-2xl"></i>
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Customer Success</h3>
               <p className="text-base text-gray-600 leading-relaxed">
@@ -148,8 +148,8 @@ export default function AboutPage() {
               </p>
             </div>
             <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
-              <div className="w-14 h-14 bg-emerald-100 rounded-lg flex items-center justify-center mb-6">
-                <i className="ri-global-line text-emerald-600 text-2xl"></i>
+              <div className="w-14 h-14 bg-primary-light rounded-lg flex items-center justify-center mb-6">
+                <i className="ri-global-line text-primary text-2xl"></i>
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Global Reach</h3>
               <p className="text-base text-gray-600 leading-relaxed">
@@ -157,8 +157,8 @@ export default function AboutPage() {
               </p>
             </div>
             <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
-              <div className="w-14 h-14 bg-emerald-100 rounded-lg flex items-center justify-center mb-6">
-                <i className="ri-eye-line text-emerald-600 text-2xl"></i>
+              <div className="w-14 h-14 bg-primary-light rounded-lg flex items-center justify-center mb-6">
+                <i className="ri-eye-line text-primary text-2xl"></i>
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Transparency</h3>
               <p className="text-base text-gray-600 leading-relaxed">
@@ -166,8 +166,8 @@ export default function AboutPage() {
               </p>
             </div>
             <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
-              <div className="w-14 h-14 bg-emerald-100 rounded-lg flex items-center justify-center mb-6">
-                <i className="ri-team-line text-emerald-600 text-2xl"></i>
+              <div className="w-14 h-14 bg-primary-light rounded-lg flex items-center justify-center mb-6">
+                <i className="ri-team-line text-primary text-2xl"></i>
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Community</h3>
               <p className="text-base text-gray-600 leading-relaxed">
@@ -209,7 +209,7 @@ export default function AboutPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-emerald-600 to-teal-700">
+      <section className="py-20 bg-gradient-to-br from-primary to-primary-dark">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold text-white mb-6" style={{ fontFamily: 'Poppins, sans-serif' }}>
             Join Our Growing Community
@@ -218,10 +218,10 @@ export default function AboutPage() {
             Be part of the global B2B revolution and grow your business with TradeHub
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-            <a href="/auth/register?type=buyer" className="px-8 py-4 bg-white text-emerald-600 font-medium rounded-lg hover:bg-gray-50 transition-all whitespace-nowrap cursor-pointer">
+            <a href="/auth/register?type=buyer" className="px-8 py-4 bg-white text-primary font-medium rounded-lg hover:bg-gray-50 transition-all whitespace-nowrap cursor-pointer">
               Register as Buyer
             </a>
-            <a href="/become-supplier" className="px-8 py-4 bg-transparent text-white font-medium rounded-lg border-2 border-white hover:bg-white hover:text-emerald-600 transition-all whitespace-nowrap cursor-pointer">
+            <a href="/become-supplier" className="px-8 py-4 bg-transparent text-white font-medium rounded-lg border-2 border-white hover:bg-white hover:text-primary transition-all whitespace-nowrap cursor-pointer">
               Become a Supplier
             </a>
           </div>

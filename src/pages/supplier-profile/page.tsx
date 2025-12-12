@@ -156,7 +156,7 @@ export default function SupplierProfilePage() {
     <>
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-emerald-600 via-teal-600 to-emerald-700 text-white py-16">
+        <section className="bg-gradient-to-br from-primary to-primary-dark via-primary text-white py-16">
           <div className="max-w-7xl mx-auto px-4">
             <div className="flex flex-col md:flex-row items-start md:items-center gap-8">
               {/* ... existing code ... */}
@@ -165,7 +165,7 @@ export default function SupplierProfilePage() {
               <div className="flex flex-col gap-3 w-full md:w-auto">
                 <button
                   onClick={() => setIsContactModalOpen(true)}
-                  className="px-6 py-2.5 bg-emerald-600 text-white font-medium rounded-lg hover:bg-emerald-700 transition-all whitespace-nowrap cursor-pointer"
+                  className="px-6 py-2.5 bg-primary text-white font-medium rounded-lg hover:bg-primary-dark transition-all whitespace-nowrap cursor-pointer"
                 >
                   <i className="ri-mail-line mr-2"></i>
                   Contact Supplier
@@ -200,7 +200,7 @@ export default function SupplierProfilePage() {
                           {supplier.name}
                         </h1>
                         {supplier.verified && (
-                          <div className="px-3 py-1 bg-emerald-100 text-emerald-600 rounded-full text-sm font-medium flex items-center space-x-1">
+                          <div className="px-3 py-1 bg-primary-light text-primary rounded-full text-sm font-medium flex items-center space-x-1">
                             <i className="ri-verified-badge-fill"></i>
                             <span>Verified</span>
                           </div>
@@ -226,14 +226,14 @@ export default function SupplierProfilePage() {
                   <div className="flex flex-wrap gap-3">
                     <button 
                       onClick={() => setIsContactModalOpen(true)}
-                      className="px-6 py-2.5 bg-emerald-600 text-white font-medium rounded-lg hover:bg-emerald-700 transition-all whitespace-nowrap cursor-pointer"
+                      className="px-6 py-2.5 bg-primary text-white font-medium rounded-lg hover:bg-primary-dark transition-all whitespace-nowrap cursor-pointer"
                     >
                       <i className="ri-mail-line mr-2"></i>
                       Contact Supplier
                     </button>
                     <button 
                       onClick={() => setIsInquiryModalOpen(true)}
-                      className="px-6 py-2.5 bg-white text-emerald-600 font-medium rounded-lg border-2 border-emerald-600 hover:bg-emerald-50 transition-all whitespace-nowrap cursor-pointer"
+                      className="px-6 py-2.5 bg-white text-primary font-medium rounded-lg border-2 border-primary hover:bg-primary-light transition-all whitespace-nowrap cursor-pointer"
                     >
                       <i className="ri-chat-3-line mr-2"></i>
                       Send Inquiry
@@ -250,19 +250,19 @@ export default function SupplierProfilePage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="bg-white rounded-lg p-6 text-center">
-                <div className="text-3xl font-bold text-emerald-600 mb-1">{supplier.totalProducts}</div>
+                <div className="text-3xl font-bold text-primary mb-1">{supplier.totalProducts}</div>
                 <div className="text-sm text-gray-600">Products</div>
               </div>
               <div className="bg-white rounded-lg p-6 text-center">
-                <div className="text-3xl font-bold text-emerald-600 mb-1">{supplier.totalOrders}</div>
+                <div className="text-3xl font-bold text-primary mb-1">{supplier.totalOrders}</div>
                 <div className="text-sm text-gray-600">Total Orders</div>
               </div>
               <div className="bg-white rounded-lg p-6 text-center">
-                <div className="text-3xl font-bold text-emerald-600 mb-1">{supplier.responseRate}</div>
+                <div className="text-3xl font-bold text-primary mb-1">{supplier.responseRate}</div>
                 <div className="text-sm text-gray-600">Response Rate</div>
               </div>
               <div className="bg-white rounded-lg p-6 text-center">
-                <div className="text-3xl font-bold text-emerald-600 mb-1">{supplier.responseTime}</div>
+                <div className="text-3xl font-bold text-primary mb-1">{supplier.responseTime}</div>
                 <div className="text-sm text-gray-600">Response Time</div>
               </div>
             </div>
@@ -279,7 +279,7 @@ export default function SupplierProfilePage() {
                   onClick={() => setActiveTab(tab)}
                   className={`pb-4 px-2 text-sm font-medium whitespace-nowrap border-b-2 transition-colors ${
                     activeTab === tab
-                      ? 'border-emerald-600 text-emerald-600'
+                      ? 'border-primary text-primary'
                       : 'border-transparent text-gray-600 hover:text-gray-900'
                   }`}
                 >
@@ -297,7 +297,7 @@ export default function SupplierProfilePage() {
               <div>
                 <div className="flex items-center justify-between mb-8">
                   <h2 className="text-2xl font-bold text-gray-900">Products</h2>
-                  <button className="text-emerald-600 hover:text-emerald-700 font-medium text-sm">
+                  <button className="text-primary hover:text-primary-dark font-medium text-sm">
                     View All Products →
                   </button>
                 </div>
@@ -317,11 +317,11 @@ export default function SupplierProfilePage() {
                         />
                       </div>
                       <div className="p-4">
-                        <h3 className="text-sm font-semibold text-gray-900 mb-2 line-clamp-2 group-hover:text-emerald-600 transition-colors">
+                        <h3 className="text-sm font-semibold text-gray-900 mb-2 line-clamp-2 group-hover:text-primary transition-colors">
                           {product.name}
                         </h3>
                         <div className="flex items-center justify-between mb-2">
-                          <span className="text-base font-bold text-emerald-600">{product.price}</span>
+                          <span className="text-base font-bold text-primary">{product.price}</span>
                           <div className="flex items-center space-x-1">
                             <i className="ri-star-fill text-yellow-400 text-sm"></i>
                             <span className="text-sm text-gray-600">{product.rating}</span>
@@ -367,7 +367,7 @@ export default function SupplierProfilePage() {
                     <h3 className="text-lg font-semibold text-gray-900 mb-4">Main Markets</h3>
                     <div className="flex flex-wrap gap-2">
                       {supplier.mainMarkets.map((market, index) => (
-                        <span key={index} className="px-3 py-1 bg-emerald-100 text-emerald-600 rounded-full text-sm">
+                        <span key={index} className="px-3 py-1 bg-primary-light text-primary rounded-full text-sm">
                           {market}
                         </span>
                       ))}
@@ -439,14 +439,14 @@ export default function SupplierProfilePage() {
                   <div className="space-y-3">
                     <button 
                       onClick={() => setIsContactModalOpen(true)}
-                      className="w-full px-6 py-2.5 bg-emerald-600 text-white font-medium rounded-lg hover:bg-emerald-700 transition-all whitespace-nowrap cursor-pointer"
+                      className="w-full px-6 py-2.5 bg-primary text-white font-medium rounded-lg hover:bg-primary-dark transition-all whitespace-nowrap cursor-pointer"
                     >
                       <i className="ri-mail-line mr-2"></i>
                       Contact Supplier
                     </button>
                     <button 
                       onClick={() => setIsInquiryModalOpen(true)}
-                      className="w-full px-6 py-2.5 bg-white text-emerald-600 font-medium rounded-lg border-2 border-emerald-600 hover:bg-emerald-50 transition-all whitespace-nowrap cursor-pointer"
+                      className="w-full px-6 py-2.5 bg-white text-primary font-medium rounded-lg border-2 border-primary hover:bg-primary-light transition-all whitespace-nowrap cursor-pointer"
                     >
                       <i className="ri-chat-3-line mr-2"></i>
                       Send Inquiry
@@ -485,8 +485,8 @@ export default function SupplierProfilePage() {
             <div className="p-6">
               {isContactSubmitted ? (
                 <div className="text-center py-12">
-                  <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <i className="ri-check-line text-3xl text-green-600"></i>
+                  <div className="w-16 h-16 bg-primary-light rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i className="ri-check-line text-3xl text-primary"></i>
                   </div>
                   <h4 className="text-xl font-bold text-gray-900 mb-2">Message Sent Successfully!</h4>
                   <p className="text-gray-600">The supplier will contact you shortly.</p>
@@ -514,7 +514,7 @@ export default function SupplierProfilePage() {
                         type="text"
                         value={contactFormData.name}
                         onChange={(e) => updateContactForm('name', e.target.value)}
-                        className="w-full px-4 py-2.5 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                        className="w-full px-4 py-2.5 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary"
                         placeholder="John Smith"
                         required
                       />
@@ -528,7 +528,7 @@ export default function SupplierProfilePage() {
                         type="email"
                         value={contactFormData.email}
                         onChange={(e) => updateContactForm('email', e.target.value)}
-                        className="w-full px-4 py-2.5 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                        className="w-full px-4 py-2.5 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary"
                         placeholder="john@company.com"
                         required
                       />
@@ -542,7 +542,7 @@ export default function SupplierProfilePage() {
                         type="tel"
                         value={contactFormData.phone}
                         onChange={(e) => updateContactForm('phone', e.target.value)}
-                        className="w-full px-4 py-2.5 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                        className="w-full px-4 py-2.5 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary"
                         placeholder="+1 234 567 8900"
                         required
                       />
@@ -556,7 +556,7 @@ export default function SupplierProfilePage() {
                         type="text"
                         value={contactFormData.company}
                         onChange={(e) => updateContactForm('company', e.target.value)}
-                        className="w-full px-4 py-2.5 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                        className="w-full px-4 py-2.5 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary"
                         placeholder="Your Company Ltd."
                         required
                       />
@@ -571,7 +571,7 @@ export default function SupplierProfilePage() {
                       value={contactFormData.message}
                       onChange={(e) => updateContactForm('message', e.target.value)}
                       rows={6}
-                      className="w-full px-4 py-2.5 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 resize-none"
+                      className="w-full px-4 py-2.5 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary resize-none"
                       placeholder="Please include:&#10;- Product name or specifications&#10;- Quantity needed&#10;- Target price (if any)&#10;- Delivery requirements&#10;- Any other specific requirements"
                       required
                     ></textarea>
@@ -582,7 +582,7 @@ export default function SupplierProfilePage() {
                   <div className="bg-gray-50 rounded-lg p-4 border border-gray-200">
                     <p className="text-sm font-semibold text-gray-900 mb-2">You are contacting:</p>
                     <div className="flex items-center space-x-3">
-                      <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center">
+                      <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary-dark rounded-lg flex items-center justify-center">
                         <span className="text-white font-bold text-lg">TS</span>
                       </div>
                       <div>
@@ -603,7 +603,7 @@ export default function SupplierProfilePage() {
                     </button>
                     <button
                       type="submit"
-                      className="px-6 py-2.5 bg-emerald-600 text-white font-medium rounded-lg hover:bg-emerald-700 transition-all whitespace-nowrap cursor-pointer"
+                      className="px-6 py-2.5 bg-primary text-white font-medium rounded-lg hover:bg-primary-dark transition-all whitespace-nowrap cursor-pointer"
                     >
                       <i className="ri-send-plane-line mr-2"></i>
                       Send Message
@@ -667,7 +667,7 @@ export default function SupplierProfilePage() {
                             required
                             value={inquiryFormData.name}
                             onChange={(e) => setInquiryFormData({ ...inquiryFormData, name: e.target.value })}
-                            className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-600 text-sm"
+                            className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-sm"
                             placeholder="John Doe"
                           />
                         </div>
@@ -680,7 +680,7 @@ export default function SupplierProfilePage() {
                             required
                             value={inquiryFormData.email}
                             onChange={(e) => setInquiryFormData({ ...inquiryFormData, email: e.target.value })}
-                            className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-600 text-sm"
+                            className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-sm"
                             placeholder="john@company.com"
                           />
                         </div>
@@ -693,7 +693,7 @@ export default function SupplierProfilePage() {
                             required
                             value={inquiryFormData.phone}
                             onChange={(e) => setInquiryFormData({ ...inquiryFormData, phone: e.target.value })}
-                            className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-600 text-sm"
+                            className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-sm"
                             placeholder="+1 (555) 000-0000"
                           />
                         </div>
@@ -706,7 +706,7 @@ export default function SupplierProfilePage() {
                             required
                             value={inquiryFormData.company}
                             onChange={(e) => setInquiryFormData({ ...inquiryFormData, company: e.target.value })}
-                            className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-600 text-sm"
+                            className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-sm"
                             placeholder="Your Company Ltd."
                           />
                         </div>
@@ -726,7 +726,7 @@ export default function SupplierProfilePage() {
                             required
                             value={inquiryFormData.productName}
                             onChange={(e) => setInquiryFormData({ ...inquiryFormData, productName: e.target.value })}
-                            className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-600 text-sm"
+                            className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-sm"
                             placeholder="e.g., LED Solar Street Light"
                           />
                         </div>
@@ -740,7 +740,7 @@ export default function SupplierProfilePage() {
                               required
                               value={inquiryFormData.quantity}
                               onChange={(e) => setInquiryFormData({ ...inquiryFormData, quantity: e.target.value })}
-                              className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-600 text-sm"
+                              className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-sm"
                               placeholder="e.g., 500 units"
                             />
                           </div>
@@ -752,7 +752,7 @@ export default function SupplierProfilePage() {
                               type="text"
                               value={inquiryFormData.targetPrice}
                               onChange={(e) => setInquiryFormData({ ...inquiryFormData, targetPrice: e.target.value })}
-                              className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-600 text-sm"
+                              className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-sm"
                               placeholder="e.g., $50 per unit"
                             />
                           </div>
@@ -766,7 +766,7 @@ export default function SupplierProfilePage() {
                             value={inquiryFormData.requirements}
                             onChange={(e) => setInquiryFormData({ ...inquiryFormData, requirements: e.target.value })}
                             rows={6}
-                            className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-600 text-sm resize-none"
+                            className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-sm resize-none"
                             placeholder="Please provide detailed specifications, quality requirements, delivery timeline, shipping destination, and any other important information..."
                           />
                           <p className="text-xs text-gray-500 mt-1">
@@ -788,7 +788,7 @@ export default function SupplierProfilePage() {
                         <div>
                           <h4 className="font-semibold text-gray-900">TechGlobal Industries Co., Ltd.</h4>
                           <div className="flex items-center space-x-2 mt-1">
-                            <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-emerald-100 text-emerald-800">
+                            <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-primary-light text-primary-dark">
                               <i className="ri-verified-badge-fill mr-1"></i>
                               Verified
                             </span>
@@ -809,7 +809,7 @@ export default function SupplierProfilePage() {
                       </button>
                       <button
                         type="submit"
-                        className="px-6 py-2.5 bg-emerald-600 text-white font-medium rounded-lg hover:bg-emerald-700 transition-all whitespace-nowrap cursor-pointer"
+                        className="px-6 py-2.5 bg-primary text-white font-medium rounded-lg hover:bg-primary-dark transition-all whitespace-nowrap cursor-pointer"
                       >
                         <i className="ri-send-plane-fill mr-2"></i>
                         Send Inquiry
@@ -819,14 +819,14 @@ export default function SupplierProfilePage() {
                 </>
               ) : (
                 <div className="py-12 text-center">
-                  <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <i className="ri-check-line text-3xl text-emerald-600"></i>
+                  <div className="w-16 h-16 bg-primary-light rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i className="ri-check-line text-3xl text-primary"></i>
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">Inquiry Sent Successfully!</h3>
                   <p className="text-gray-600 mb-6">
                     Your product inquiry has been sent to TechGlobal Industries. They will review your requirements and respond within 24 hours.
                   </p>
-                  <div className="inline-flex items-center space-x-2 text-sm text-emerald-600">
+                  <div className="inline-flex items-center space-x-2 text-sm text-primary">
                     <i className="ri-mail-check-line"></i>
                     <span>Check your email for confirmation</span>
                   </div>

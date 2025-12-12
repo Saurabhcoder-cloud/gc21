@@ -192,7 +192,7 @@ export default function ProductsPage() {
                   <select
                     value={selectedCategory}
                     onChange={(e) => setSelectedCategory(e.target.value)}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary"
                   >
                     <option value="all">All Categories</option>
                     <option value="electronics">Electronics</option>
@@ -209,13 +209,13 @@ export default function ProductsPage() {
                     <input
                       type="number"
                       placeholder="Min"
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary"
                     />
                     <span className="text-gray-500">-</span>
                     <input
                       type="number"
                       placeholder="Max"
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary"
                     />
                   </div>
                 </div>
@@ -228,7 +228,7 @@ export default function ProductsPage() {
                     value={minMOQ}
                     onChange={(e) => setMinMOQ(e.target.value)}
                     placeholder="Enter MOQ"
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary"
                   />
                 </div>
 
@@ -238,7 +238,7 @@ export default function ProductsPage() {
                   <select
                     value={supplierCountry}
                     onChange={(e) => setSupplierCountry(e.target.value)}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary"
                   >
                     <option value="all">All Countries</option>
                     <option value="china">China</option>
@@ -251,7 +251,7 @@ export default function ProductsPage() {
                 {/* Verified Suppliers */}
                 <div className="mb-6">
                   <label className="flex items-center space-x-2 cursor-pointer">
-                    <input type="checkbox" className="w-4 h-4 text-emerald-600 border-gray-300 rounded focus:ring-emerald-500" />
+                    <input type="checkbox" className="w-4 h-4 text-primary border-gray-300 rounded focus:ring-primary" />
                     <span className="text-sm text-gray-700">Verified Suppliers Only</span>
                   </label>
                 </div>
@@ -262,7 +262,7 @@ export default function ProductsPage() {
                   <div className="space-y-2">
                     {[4.5, 4.0, 3.5, 3.0].map((rating) => (
                       <label key={rating} className="flex items-center space-x-2 cursor-pointer">
-                        <input type="radio" name="rating" className="w-4 h-4 text-emerald-600 border-gray-300 focus:ring-emerald-500" />
+                        <input type="radio" name="rating" className="w-4 h-4 text-primary border-gray-300 focus:ring-primary" />
                         <div className="flex items-center">
                           <i className="ri-star-fill text-yellow-400 text-sm mr-1"></i>
                           <span className="text-sm text-gray-700">{rating} & up</span>
@@ -272,7 +272,7 @@ export default function ProductsPage() {
                   </div>
                 </div>
 
-                <button className="w-full px-4 py-2 bg-emerald-600 text-white font-medium rounded-lg hover:bg-emerald-700 transition-all text-sm whitespace-nowrap">
+                <button className="w-full px-4 py-2 bg-primary text-white font-medium rounded-lg hover:bg-primary-dark transition-all text-sm whitespace-nowrap">
                   Apply Filters
                 </button>
               </div>
@@ -300,7 +300,7 @@ export default function ProductsPage() {
                     <select
                       value={sortBy}
                       onChange={(e) => setSortBy(e.target.value)}
-                      className="px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                      className="px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary"
                     >
                       <option value="relevance">Relevance</option>
                       <option value="newest">Newest</option>
@@ -329,18 +329,18 @@ export default function ProductsPage() {
                         className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
                       />
                       {product.verified && (
-                        <div className="absolute top-3 right-3 bg-emerald-600 text-white px-2 py-1 rounded-md text-xs font-medium flex items-center space-x-1">
+                        <div className="absolute top-3 right-3 bg-primary text-white px-2 py-1 rounded-md text-xs font-medium flex items-center space-x-1">
                           <i className="ri-verified-badge-fill"></i>
                           <span>Verified</span>
                         </div>
                       )}
                     </div>
                     <div className="p-4">
-                      <h3 className="text-sm font-semibold text-gray-900 mb-2 line-clamp-2 group-hover:text-emerald-600 transition-colors">
+                      <h3 className="text-sm font-semibold text-gray-900 mb-2 line-clamp-2 group-hover:text-primary transition-colors">
                         {product.name}
                       </h3>
                       <div className="flex items-center justify-between mb-2">
-                        <span className="text-base font-bold text-emerald-600">{product.price}</span>
+                        <span className="text-base font-bold text-primary">{product.price}</span>
                         <div className="flex items-center space-x-1">
                           <i className="ri-star-fill text-yellow-400 text-sm"></i>
                           <span className="text-sm text-gray-600">{product.rating}</span>
@@ -367,7 +367,7 @@ export default function ProductsPage() {
                 <button className="px-4 py-2 border border-gray-300 rounded-lg text-sm text-gray-700 hover:bg-gray-50 transition-all whitespace-nowrap">
                   <i className="ri-arrow-left-s-line"></i>
                 </button>
-                <button className="px-4 py-2 bg-emerald-600 text-white rounded-lg text-sm font-medium whitespace-nowrap">1</button>
+                <button className="px-4 py-2 bg-primary text-white rounded-lg text-sm font-medium whitespace-nowrap">1</button>
                 <button className="px-4 py-2 border border-gray-300 rounded-lg text-sm text-gray-700 hover:bg-gray-50 transition-all whitespace-nowrap">2</button>
                 <button className="px-4 py-2 border border-gray-300 rounded-lg text-sm text-gray-700 hover:bg-gray-50 transition-all whitespace-nowrap">3</button>
                 <button className="px-4 py-2 border border-gray-300 rounded-lg text-sm text-gray-700 hover:bg-gray-50 transition-all whitespace-nowrap">4</button>

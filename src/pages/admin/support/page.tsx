@@ -64,8 +64,8 @@ export default function AdminSupportPage() {
         </div>
         <div className="bg-white rounded-xl p-6 border border-gray-200">
           <div className="flex items-center justify-between mb-2">
-            <div className="w-10 h-10 bg-emerald-100 rounded-lg flex items-center justify-center">
-              <i className="ri-check-line text-emerald-600"></i>
+            <div className="w-10 h-10 bg-primary-light rounded-lg flex items-center justify-center">
+              <i className="ri-check-line text-primary"></i>
             </div>
             <span className="text-2xl font-bold text-gray-900">142</span>
           </div>
@@ -131,7 +131,7 @@ export default function AdminSupportPage() {
                     <span className={`px-3 py-1 text-xs font-semibold rounded-full ${
                       ticket.status === 'Open' ? 'bg-red-100 text-red-700' :
                       ticket.status === 'In Progress' ? 'bg-blue-100 text-blue-700' :
-                      'bg-emerald-100 text-emerald-700'
+                      'bg-primary-light text-primary-dark'
                     }`}>
                       {ticket.status}
                     </span>
@@ -184,7 +184,7 @@ export default function AdminSupportPage() {
                       <span className={`px-3 py-1 text-xs font-semibold rounded-full ${
                         selectedTicket.status === 'Open' ? 'bg-red-100 text-red-700' :
                         selectedTicket.status === 'In Progress' ? 'bg-blue-100 text-blue-700' :
-                        'bg-emerald-100 text-emerald-700'
+                        'bg-primary-light text-primary-dark'
                       }`}>
                         {selectedTicket.status}
                       </span>

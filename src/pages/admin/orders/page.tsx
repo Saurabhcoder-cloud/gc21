@@ -103,11 +103,11 @@ export default function AdminOrdersPage() {
                     <p className="text-sm text-gray-900">{order.quantity} pcs</p>
                   </td>
                   <td className="px-6 py-4">
-                    <p className="text-sm font-semibold text-emerald-600">{order.amount}</p>
+                    <p className="text-sm font-semibold text-primary">{order.amount}</p>
                   </td>
                   <td className="px-6 py-4">
                     <span className={`px-3 py-1 text-xs font-semibold rounded-full ${
-                      order.status === 'Completed' ? 'bg-emerald-100 text-emerald-700' :
+                      order.status === 'Completed' ? 'bg-primary-light text-primary-dark' :
                       order.status === 'Shipped' ? 'bg-blue-100 text-blue-700' :
                       order.status === 'Confirmed' ? 'bg-purple-100 text-purple-700' :
                       order.status === 'Pending' ? 'bg-amber-100 text-amber-700' :

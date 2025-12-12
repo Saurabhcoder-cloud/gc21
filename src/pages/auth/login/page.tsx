@@ -16,7 +16,7 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-white to-teal-50 flex items-center justify-center px-4 py-12">
+    <div className="min-h-screen bg-gradient-to-br from-primary-light via-white to-primary-light flex items-center justify-center px-4 py-12">
       <div className="max-w-md w-full">
         {/* Logo */}
         <div className="text-center mb-8">
@@ -43,7 +43,7 @@ export default function LoginPage() {
                   id="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                   placeholder="you@company.com"
                   required
                 />
@@ -64,7 +64,7 @@ export default function LoginPage() {
                   id="password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="w-full pl-10 pr-12 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+                  className="w-full pl-10 pr-12 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                   placeholder="Enter your password"
                   required
                 />
@@ -85,13 +85,13 @@ export default function LoginPage() {
                   type="checkbox"
                   checked={rememberMe}
                   onChange={(e) => setRememberMe(e.target.checked)}
-                  className="w-4 h-4 text-emerald-600 border-gray-300 rounded focus:ring-emerald-500"
+                  className="w-4 h-4 text-primary border-gray-300 rounded focus:ring-primary"
                 />
                 <span className="text-sm text-gray-700">Remember me</span>
               </label>
               <a
                 href="/auth/forgot-password"
-                className="text-sm font-medium text-emerald-600 hover:text-emerald-700 cursor-pointer"
+                className="text-sm font-medium text-primary hover:text-primary-dark cursor-pointer"
               >
                 Forgot password?
               </a>
@@ -100,7 +100,7 @@ export default function LoginPage() {
             {/* Login Button */}
             <button
               type="submit"
-              className="w-full px-6 py-3 bg-emerald-600 text-white font-semibold rounded-lg hover:bg-emerald-700 transition-all whitespace-nowrap"
+              className="w-full px-6 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-primary-dark transition-all whitespace-nowrap"
             >
               Sign In
             </button>
@@ -134,7 +134,7 @@ export default function LoginPage() {
               Don't have an account?{' '}
               <a
                 href="/auth/register"
-                className="font-semibold text-emerald-600 hover:text-emerald-700 cursor-pointer"
+                className="font-semibold text-primary hover:text-primary-dark cursor-pointer"
               >
                 Create Account
               </a>

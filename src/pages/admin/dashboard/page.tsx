@@ -3,7 +3,7 @@ import AdminLayout from '../../../components/layout/AdminLayout';
 
 export default function AdminDashboardPage() {
   const stats = [
-    { label: 'Total Buyers', value: '2,847', change: '+12%', icon: 'ri-user-line', color: 'emerald' },
+    { label: 'Total Buyers', value: '2,847', change: '+12%', icon: 'ri-user-line', color: 'primary' },
     { label: 'Total Suppliers', value: '1,234', change: '+8%', icon: 'ri-store-line', color: 'blue' },
     { label: 'Active Products', value: '15,678', change: '+24%', icon: 'ri-box-3-line', color: 'purple' },
     { label: 'Total Orders', value: '8,945', change: '+18%', icon: 'ri-shopping-bag-line', color: 'orange' },
@@ -12,7 +12,7 @@ export default function AdminDashboardPage() {
   const pendingActions = [
     { type: 'Supplier Verifications', count: 5, icon: 'ri-shield-check-line', color: 'blue', path: '/admin/suppliers' },
     { type: 'Product Approvals', count: 12, icon: 'ri-checkbox-circle-line', color: 'purple', path: '/admin/products' },
-    { type: 'Support Tickets', count: 8, icon: 'ri-customer-service-line', color: 'emerald', path: '/admin/support' },
+    { type: 'Support Tickets', count: 8, icon: 'ri-customer-service-line', color: 'primary', path: '/admin/support' },
     { type: 'Disputes', count: 2, icon: 'ri-alert-line', color: 'red', path: '/admin/disputes' },
   ];
 
@@ -48,7 +48,7 @@ export default function AdminDashboardPage() {
               <div className={`w-12 h-12 bg-${stat.color}-100 rounded-lg flex items-center justify-center`}>
                 <i className={`${stat.icon} text-2xl text-${stat.color}-600`}></i>
               </div>
-              <span className="text-sm font-semibold text-emerald-600">{stat.change}</span>
+              <span className="text-sm font-semibold text-primary">{stat.change}</span>
             </div>
             <h3 className="text-3xl font-bold text-gray-900 mb-1">{stat.value}</h3>
             <p className="text-sm text-gray-600">{stat.label}</p>
@@ -112,7 +112,7 @@ export default function AdminDashboardPage() {
                     <p className="text-xs text-gray-500">{reg.email}</p>
                   </div>
                   <span className={`px-2 py-1 text-xs font-semibold rounded-full ${
-                    reg.status === 'Active' ? 'bg-emerald-100 text-emerald-700' : 'bg-amber-100 text-amber-700'
+                    reg.status === 'Active' ? 'bg-primary-light text-primary-dark' : 'bg-amber-100 text-amber-700'
                   }`}>
                     {reg.status}
                   </span>

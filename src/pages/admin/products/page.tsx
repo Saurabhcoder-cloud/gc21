@@ -93,7 +93,7 @@ export default function AdminProductsPage() {
                   </div>
                 )}
                 <span className={`absolute top-3 right-3 px-3 py-1 text-xs font-semibold rounded-full ${
-                  product.status === 'Active' ? 'bg-emerald-100 text-emerald-700' :
+                  product.status === 'Active' ? 'bg-primary-light text-primary-dark' :
                   product.status === 'Pending' ? 'bg-amber-100 text-amber-700' :
                   'bg-gray-100 text-gray-700'
                 }`}>
@@ -125,7 +125,7 @@ export default function AdminProductsPage() {
                   </div>
                   <div>
                     <p className="text-xs text-gray-500">Inquiries</p>
-                    <p className="text-sm font-semibold text-emerald-600">{product.inquiries}</p>
+                    <p className="text-sm font-semibold text-primary">{product.inquiries}</p>
                   </div>
                 </div>
 
@@ -137,7 +137,7 @@ export default function AdminProductsPage() {
                     <i className="ri-eye-line mr-1"></i>
                     View
                   </button>
-                  <button className="px-3 py-2 bg-emerald-100 text-emerald-700 rounded-lg hover:bg-emerald-200 transition-all text-sm font-medium whitespace-nowrap">
+                  <button className="px-3 py-2 bg-primary-light text-primary-dark rounded-lg hover:bg-primary-light transition-all text-sm font-medium whitespace-nowrap">
                     <i className="ri-check-line"></i>
                   </button>
                   <button className="px-3 py-2 bg-amber-100 text-amber-700 rounded-lg hover:bg-amber-200 transition-all text-sm font-medium whitespace-nowrap">
@@ -199,7 +199,7 @@ export default function AdminProductsPage() {
                         <label className="text-sm font-semibold text-gray-700">Status</label>
                         <p className="mt-1">
                           <span className={`px-3 py-1 text-xs font-semibold rounded-full ${
-                            selectedProduct.status === 'Active' ? 'bg-emerald-100 text-emerald-700' :
+                            selectedProduct.status === 'Active' ? 'bg-primary-light text-primary-dark' :
                             selectedProduct.status === 'Pending' ? 'bg-amber-100 text-amber-700' :
                             'bg-gray-100 text-gray-700'
                           }`}>
@@ -224,7 +224,7 @@ export default function AdminProductsPage() {
                     </div>
                     <div className="p-4 bg-gray-50 rounded-lg">
                       <p className="text-sm text-gray-600">Inquiries</p>
-                      <p className="text-2xl font-bold text-emerald-600 mt-1">{selectedProduct.inquiries}</p>
+                      <p className="text-2xl font-bold text-primary mt-1">{selectedProduct.inquiries}</p>
                     </div>
                     <div className="p-4 bg-gray-50 rounded-lg">
                       <p className="text-sm text-gray-600">Conversion</p>
@@ -236,7 +236,7 @@ export default function AdminProductsPage() {
                 <div className="border-t border-gray-200 pt-6">
                   <h3 className="font-semibold text-gray-900 mb-4">Admin Actions</h3>
                   <div className="flex flex-wrap gap-3">
-                    <button className="px-4 py-2 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 transition-all whitespace-nowrap">
+                    <button className="px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary-dark transition-all whitespace-nowrap">
                       <i className="ri-check-line mr-2"></i>
                       Approve Product
                     </button>

@@ -89,7 +89,7 @@ export default function SupplierProductsPage() {
           </div>
           <button
             onClick={() => setShowAddModal(true)}
-            className="px-6 py-3 bg-emerald-600 text-white font-semibold rounded-lg hover:bg-emerald-700 transition-all whitespace-nowrap"
+            className="px-6 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-primary-dark transition-all whitespace-nowrap"
           >
             <i className="ri-add-line mr-2"></i>
             Add New Product
@@ -107,14 +107,14 @@ export default function SupplierProductsPage() {
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   placeholder="Search products..."
-                  className="pl-10 pr-4 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 w-64"
+                  className="pl-10 pr-4 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary w-64"
                 />
               </div>
 
               <select
                 value={filterStatus}
                 onChange={(e) => setFilterStatus(e.target.value)}
-                className="px-4 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                className="px-4 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary"
               >
                 <option value="all">All Status</option>
                 <option value="active">Active</option>
@@ -127,7 +127,7 @@ export default function SupplierProductsPage() {
               <button
                 onClick={() => setView('list')}
                 className={`w-10 h-10 flex items-center justify-center rounded-lg transition-all ${
-                  view === 'list' ? 'bg-emerald-100 text-emerald-600' : 'text-gray-600 hover:bg-gray-100'
+                  view === 'list' ? 'bg-primary-light text-primary' : 'text-gray-600 hover:bg-gray-100'
                 }`}
               >
                 <i className="ri-list-check text-xl"></i>
@@ -135,7 +135,7 @@ export default function SupplierProductsPage() {
               <button
                 onClick={() => setView('grid')}
                 className={`w-10 h-10 flex items-center justify-center rounded-lg transition-all ${
-                  view === 'grid' ? 'bg-emerald-100 text-emerald-600' : 'text-gray-600 hover:bg-gray-100'
+                  view === 'grid' ? 'bg-primary-light text-primary' : 'text-gray-600 hover:bg-gray-100'
                 }`}
               >
                 <i className="ri-grid-line text-xl"></i>
@@ -185,7 +185,7 @@ export default function SupplierProductsPage() {
                     </td>
                     <td className="px-6 py-4">
                       <span className={`px-2 py-1 rounded-full text-xs font-semibold ${
-                        product.stock === 'In Stock' ? 'bg-emerald-100 text-emerald-700' : 'bg-amber-100 text-amber-700'
+                        product.stock === 'In Stock' ? 'bg-primary-light text-primary-dark' : 'bg-amber-100 text-amber-700'
                       }`}>
                         {product.stock}
                       </span>
@@ -204,7 +204,7 @@ export default function SupplierProductsPage() {
                     </td>
                     <td className="px-6 py-4">
                       <span className={`px-2 py-1 rounded-full text-xs font-semibold ${
-                        product.status === 'active' ? 'bg-emerald-100 text-emerald-700' : 'bg-gray-100 text-gray-700'
+                        product.status === 'active' ? 'bg-primary-light text-primary-dark' : 'bg-gray-100 text-gray-700'
                       }`}>
                         {product.status}
                       </span>
@@ -239,7 +239,7 @@ export default function SupplierProductsPage() {
                     <img src={product.image} alt={product.title} className="w-full h-full object-cover" />
                   </div>
                   <span className={`absolute top-3 right-3 px-2 py-1 rounded-full text-xs font-semibold ${
-                    product.status === 'active' ? 'bg-emerald-100 text-emerald-700' : 'bg-gray-100 text-gray-700'
+                    product.status === 'active' ? 'bg-primary-light text-primary-dark' : 'bg-gray-100 text-gray-700'
                   }`}>
                     {product.status}
                   </span>
@@ -263,7 +263,7 @@ export default function SupplierProductsPage() {
                     <span><i className="ri-file-list-3-line mr-1"></i>{product.inquiries}</span>
                   </div>
                   <div className="flex space-x-2">
-                    <button className="flex-1 px-3 py-2 bg-emerald-600 text-white text-sm font-semibold rounded-lg hover:bg-emerald-700 transition-all whitespace-nowrap">
+                    <button className="flex-1 px-3 py-2 bg-primary text-white text-sm font-semibold rounded-lg hover:bg-primary-dark transition-all whitespace-nowrap">
                       Edit
                     </button>
                     <button className="w-10 h-10 flex items-center justify-center border border-gray-300 text-gray-600 rounded-lg hover:bg-gray-50 transition-all">
@@ -293,7 +293,7 @@ export default function SupplierProductsPage() {
                 <p className="text-gray-600 mb-6">This will redirect to the full product creation form</p>
                 <button
                   onClick={() => setShowAddModal(false)}
-                  className="w-full px-6 py-3 bg-emerald-600 text-white font-semibold rounded-lg hover:bg-emerald-700 transition-all whitespace-nowrap"
+                  className="w-full px-6 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-primary-dark transition-all whitespace-nowrap"
                 >
                   Go to Product Form
                 </button>

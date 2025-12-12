@@ -3,7 +3,7 @@ import AdminLayout from '../../../components/layout/AdminLayout';
 
 export default function AdminAnalyticsPage() {
   const stats = [
-    { label: 'Total Revenue', value: '$2.4M', change: '+18%', icon: 'ri-money-dollar-circle-line', color: 'emerald' },
+    { label: 'Total Revenue', value: '$2.4M', change: '+18%', icon: 'ri-money-dollar-circle-line', color: 'primary' },
     { label: 'Total Orders', value: '8,945', change: '+12%', icon: 'ri-shopping-bag-line', color: 'blue' },
     { label: 'Active Users', value: '4,081', change: '+8%', icon: 'ri-user-line', color: 'purple' },
     { label: 'Conversion Rate', value: '3.2%', change: '+0.4%', icon: 'ri-line-chart-line', color: 'orange' },
@@ -62,7 +62,7 @@ export default function AdminAnalyticsPage() {
               <div className={`w-12 h-12 bg-${stat.color}-100 rounded-lg flex items-center justify-center`}>
                 <i className={`${stat.icon} text-2xl text-${stat.color}-600`}></i>
               </div>
-              <span className="text-sm font-semibold text-emerald-600">{stat.change}</span>
+              <span className="text-sm font-semibold text-primary">{stat.change}</span>
             </div>
             <h3 className="text-3xl font-bold text-gray-900 mb-1">{stat.value}</h3>
             <p className="text-sm text-gray-600">{stat.label}</p>
@@ -112,8 +112,8 @@ export default function AdminAnalyticsPage() {
                   <td className="px-6 py-4 text-sm font-semibold text-gray-900">{product.name}</td>
                   <td className="px-6 py-4 text-sm text-gray-600">{product.category}</td>
                   <td className="px-6 py-4 text-sm text-gray-900">{product.sales}</td>
-                  <td className="px-6 py-4 text-sm font-semibold text-emerald-600">{product.revenue}</td>
-                  <td className="px-6 py-4 text-sm font-semibold text-emerald-600">{product.trend}</td>
+                  <td className="px-6 py-4 text-sm font-semibold text-primary">{product.revenue}</td>
+                  <td className="px-6 py-4 text-sm font-semibold text-primary">{product.trend}</td>
                 </tr>
               ))}
             </tbody>
@@ -139,7 +139,7 @@ export default function AdminAnalyticsPage() {
                   </div>
                 </div>
                 <div className="text-right">
-                  <p className="font-bold text-emerald-600">{supplier.revenue}</p>
+                  <p className="font-bold text-primary">{supplier.revenue}</p>
                 </div>
               </div>
             ))}
@@ -163,7 +163,7 @@ export default function AdminAnalyticsPage() {
                   </div>
                 </div>
                 <div className="text-right">
-                  <p className="font-bold text-emerald-600">{buyer.spent}</p>
+                  <p className="font-bold text-primary">{buyer.spent}</p>
                 </div>
               </div>
             ))}

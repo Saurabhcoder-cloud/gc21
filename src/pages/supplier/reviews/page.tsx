@@ -114,12 +114,12 @@ export default function SupplierReviewsPage() {
             </div>
 
             <div className="grid grid-cols-2 gap-4">
-              <div className="bg-emerald-50 rounded-lg p-4">
+              <div className="bg-primary-light rounded-lg p-4">
                 <div className="flex items-center justify-between mb-2">
-                  <span className="text-sm font-semibold text-emerald-900">Product Quality</span>
-                  <i className="ri-star-fill text-emerald-600"></i>
+                  <span className="text-sm font-semibold text-primary">Product Quality</span>
+                  <i className="ri-star-fill text-primary"></i>
                 </div>
-                <p className="text-2xl font-bold text-emerald-900">4.8</p>
+                <p className="text-2xl font-bold text-primary">4.8</p>
               </div>
               <div className="bg-blue-50 rounded-lg p-4">
                 <div className="flex items-center justify-between mb-2">
@@ -152,7 +152,7 @@ export default function SupplierReviewsPage() {
             <button
               onClick={() => setFilterRating('all')}
               className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all whitespace-nowrap ${
-                filterRating === 'all' ? 'bg-emerald-600 text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                filterRating === 'all' ? 'bg-primary text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
               All Reviews
@@ -162,7 +162,7 @@ export default function SupplierReviewsPage() {
                 key={rating}
                 onClick={() => setFilterRating(rating.toString())}
                 className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all whitespace-nowrap ${
-                  filterRating === rating.toString() ? 'bg-emerald-600 text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                  filterRating === rating.toString() ? 'bg-primary text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                 }`}
               >
                 {rating} Stars
@@ -177,7 +177,7 @@ export default function SupplierReviewsPage() {
             <div key={review.id} className="bg-white rounded-xl border border-gray-200 p-6">
               <div className="flex items-start justify-between mb-4">
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-emerald-600 rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">
+                  <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">
                     {review.avatar}
                   </div>
                   <div>
@@ -203,12 +203,12 @@ export default function SupplierReviewsPage() {
               <p className="text-sm text-gray-900 mb-4">{review.comment}</p>
 
               {review.response && (
-                <div className="bg-emerald-50 border border-emerald-200 rounded-lg p-4 mb-4">
+                <div className="bg-primary-light border border-primary rounded-lg p-4 mb-4">
                   <div className="flex items-start space-x-3">
-                    <i className="ri-reply-line text-emerald-600 mt-0.5"></i>
+                    <i className="ri-reply-line text-primary mt-0.5"></i>
                     <div>
-                      <p className="text-xs font-semibold text-emerald-900 mb-1">Your Response</p>
-                      <p className="text-sm text-emerald-800">{review.response}</p>
+                      <p className="text-xs font-semibold text-primary mb-1">Your Response</p>
+                      <p className="text-sm text-primary">{review.response}</p>
                     </div>
                   </div>
                 </div>
@@ -222,7 +222,7 @@ export default function SupplierReviewsPage() {
                   </button>
                 </div>
                 {!review.response && (
-                  <button className="px-4 py-2 bg-emerald-600 text-white text-sm font-semibold rounded-lg hover:bg-emerald-700 transition-all whitespace-nowrap">
+                  <button className="px-4 py-2 bg-primary text-white text-sm font-semibold rounded-lg hover:bg-primary-dark transition-all whitespace-nowrap">
                     <i className="ri-reply-line mr-2"></i>
                     Respond
                   </button>

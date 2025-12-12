@@ -15,7 +15,29 @@ export default function Header() {
   const [selectedLocation, setSelectedLocation] = useState('');
   const [recentSearches, setRecentSearches] = useState<string[]>([]);
 
-  const isHomePage = location.pathname === '/';
+  const isActivePath = (path: string) => location.pathname.startsWith(path);
+
+  const primaryNavLinks = [
+    { href: '/products', label: 'Products' },
+    { href: '/suppliers', label: 'Suppliers' },
+    { href: '/buyer-central', label: 'Buyer Central' },
+    { href: '/pricing', label: 'Pricing' },
+    { href: '/help', label: 'Support' }
+  ];
+
+  const secondaryNavLinks = [
+    { href: '/trade-shows', label: 'Trade Shows' },
+    { href: '/top-ranking', label: 'Top Ranking' },
+    { href: '/ready-to-ship', label: 'Ready to Ship' },
+    { href: '/global-logistics', label: 'Global Logistics' },
+    { href: '/supplier-hub', label: 'Supplier Hub' },
+    { href: '/rfq-service', label: 'RFQ Service' }
+  ];
+
+  const navLinkClass = (path: string) =>
+    `transition-colors whitespace-nowrap cursor-pointer border-b-2 border-transparent text-text hover:text-primary-dark hover:border-primary ${
+      isActivePath(path) ? 'text-primary-dark border-primary' : ''
+    }`;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -203,35 +225,31 @@ export default function Header() {
 
   return (
     <>
-      <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isHomePage && !isScrolled 
-          ? 'bg-transparent' 
-          : 'bg-white shadow-md'
-      }`}>
+      <header
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-primary-light ${
+          isScrolled ? 'shadow-md' : ''
+        }`}
+      >
         {/* Top Bar */}
-        <div className={`border-b transition-colors duration-300 ${
-          isHomePage && !isScrolled 
-            ? 'bg-primary-500 border-primary-400' 
-            : 'bg-primary-500 border-primary-400'
-        }`}>
+        <div className="border-b border-border transition-colors duration-300 bg-primary-light">
           <div className="max-w-7xl mx-auto px-4">
             <div className="flex items-center justify-between h-10">
               <div className="flex items-center space-x-6 text-xs">
-                <a href="/news" className="text-white/90 hover:text-white transition-colors whitespace-nowrap cursor-pointer">
+                <a href="/news" className="text-text hover:text-primary-dark transition-colors whitespace-nowrap cursor-pointer">
                   News
                 </a>
-                <a href="/trust" className="text-white/90 hover:text-white transition-colors whitespace-nowrap cursor-pointer">
+                <a href="/trust" className="text-text hover:text-primary-dark transition-colors whitespace-nowrap cursor-pointer">
                   Trust Certificate
                 </a>
-                <a href="/about" className="text-white/90 hover:text-white transition-colors whitespace-nowrap cursor-pointer">
+                <a href="/about" className="text-text hover:text-primary-dark transition-colors whitespace-nowrap cursor-pointer">
                   About
                 </a>
-                <a href="/help" className="text-white/90 hover:text-white transition-colors whitespace-nowrap cursor-pointer">
+                <a href="/help" className="text-text hover:text-primary-dark transition-colors whitespace-nowrap cursor-pointer">
                   Need Help?
                 </a>
               </div>
               <div className="flex items-center space-x-4 text-xs">
-                <button className="text-white/90 hover:text-white transition-colors whitespace-nowrap">
+                <button className="text-text hover:text-primary-dark transition-colors whitespace-nowrap">
                   English - USD
                 </button>
               </div>
@@ -240,109 +258,70 @@ export default function Header() {
         </div>
 
         {/* Main Header */}
-        <div className={`border-b transition-colors duration-300 ${
-          isHomePage && !isScrolled 
-            ? 'bg-primary-600/95 border-primary-500' 
-            : 'bg-white border-gray-200'
-        }`}>
+        <div
+          className={`border-b transition-colors duration-300 bg-primary-light border-border ${
+            isScrolled ? 'shadow-sm' : ''
+          }`}
+        >
           <div className="max-w-7xl mx-auto px-4">
             <div className="flex items-center justify-between h-16">
-              <a href="/" className={`text-2xl font-bold transition-colors duration-300 cursor-pointer ${
-                isHomePage && !isScrolled ? 'text-white' : 'text-primary-600'
-              }`} style={{ fontFamily: 'Inter, sans-serif' }}>
+              <a
+                href="/"
+                className="text-2xl font-bold transition-colors duration-300 cursor-pointer text-text hover:text-primary-dark"
+                style={{ fontFamily: 'Inter, sans-serif' }}
+              >
                 Global Connection 21
               </a>
               <div className="hidden md:flex items-center space-x-6 text-sm">
-                <a href="/products" className={`transition-colors whitespace-nowrap cursor-pointer ${
-                  isHomePage && !isScrolled 
-                    ? 'text-white/90 hover:text-white' 
-                    : 'text-gray-600 hover:text-primary-500'
-                }`}>
-                  Products
-                </a>
-                <a href="/suppliers" className={`transition-colors whitespace-nowrap cursor-pointer ${
-                  isHomePage && !isScrolled 
-                    ? 'text-white/90 hover:text-white' 
-                    : 'text-gray-600 hover:text-primary-500'
-                }`}>
-                  Suppliers
-                </a>
-                <a href="/buyer-central" className={`transition-colors whitespace-nowrap cursor-pointer ${
-                  isHomePage && !isScrolled 
-                    ? 'text-white/90 hover:text-white' 
-                    : 'text-gray-600 hover:text-primary-500'
-                }`}>
-                  Buyer Central
-                </a>
-                <a href="/pricing" className={`transition-colors whitespace-nowrap cursor-pointer ${
-                  isHomePage && !isScrolled 
-                    ? 'text-white/90 hover:text-white' 
-                    : 'text-gray-600 hover:text-primary-500'
-                }`}>
-                  Pricing
-                </a>
-                <a href="/help" className={`transition-colors whitespace-nowrap cursor-pointer ${
-                  isHomePage && !isScrolled 
-                    ? 'text-white/90 hover:text-white' 
-                    : 'text-gray-600 hover:text-primary-500'
-                }`}>
-                  Support
-                </a>
+                {primaryNavLinks.map((link) => (
+                  <a key={link.href} href={link.href} className={navLinkClass(link.href)}>
+                    {link.label}
+                  </a>
+                ))}
               </div>
             </div>
           </div>
         </div>
 
         {/* Navigation Bar */}
-        <div className={`transition-colors duration-300 ${
-          isHomePage && !isScrolled ? 'bg-white' : 'bg-white'
-        }`}>
+        <div
+          className={`transition-colors duration-300 bg-primary-light ${
+            isScrolled ? 'shadow-sm' : ''
+          }`}
+        >
           <div className="max-w-7xl mx-auto px-4">
             <div className="flex items-center justify-between h-14">
               <div className="flex items-center space-x-6">
-                <button 
+                <button
                   onClick={() => setIsCategoriesDropdownOpen(!isCategoriesDropdownOpen)}
-                  className="flex items-center space-x-2 px-4 py-2 bg-primary-500 text-white rounded-md hover:bg-primary-600 transition-colors whitespace-nowrap cursor-pointer"
+                  className="flex items-center space-x-2 px-4 py-2 bg-primary text-white rounded-md hover:bg-primary-dark transition-colors whitespace-nowrap cursor-pointer"
                 >
                   <i className="ri-menu-line"></i>
                   <span className="text-sm font-medium">All categories</span>
                 </button>
-                
-                <button 
+
+                <button
                   onClick={() => setIsSearchModalOpen(true)}
-                  className="flex items-center space-x-2 px-4 py-2 border border-gray-300 rounded-md hover:border-primary-300 transition-colors whitespace-nowrap cursor-pointer"
+                  className="flex items-center space-x-2 px-4 py-2 border border-border rounded-md hover:border-primary transition-colors whitespace-nowrap cursor-pointer"
                 >
-                  <i className="ri-search-line text-gray-600"></i>
-                  <span className="text-sm font-medium text-gray-700">Search Products</span>
+                  <i className="ri-search-line text-text-muted"></i>
+                  <span className="text-sm font-medium text-text">Search Products</span>
                 </button>
               </div>
 
               <nav className="hidden lg:flex items-center space-x-6 text-sm">
-                <a href="/trade-shows" className="text-gray-700 hover:text-primary-500 transition-colors whitespace-nowrap cursor-pointer">
-                  Trade Shows
-                </a>
-                <a href="/top-ranking" className="text-gray-700 hover:text-primary-500 transition-colors whitespace-nowrap cursor-pointer">
-                  Top Ranking
-                </a>
-                <a href="/ready-to-ship" className="text-gray-700 hover:text-primary-500 transition-colors whitespace-nowrap cursor-pointer">
-                  Ready to Ship
-                </a>
-                <a href="/global-logistics" className="text-gray-700 hover:text-primary-500 transition-colors whitespace-nowrap cursor-pointer">
-                  Global Logistics
-                </a>
-                <a href="/supplier-hub" className="text-gray-700 hover:text-primary-500 transition-colors whitespace-nowrap cursor-pointer">
-                  Supplier Hub
-                </a>
-                <a href="/rfq-service" className="text-gray-700 hover:text-primary-500 transition-colors whitespace-nowrap cursor-pointer">
-                  RFQ Service
-                </a>
+                {secondaryNavLinks.map((link) => (
+                  <a key={link.href} href={link.href} className={navLinkClass(link.href)}>
+                    {link.label}
+                  </a>
+                ))}
               </nav>
 
               <div className="flex items-center space-x-4">
-                <a href="/auth/login" className="text-sm text-gray-700 hover:text-primary-500 transition-colors whitespace-nowrap cursor-pointer">
+                <a href="/auth/login" className="text-sm text-text hover:text-primary-dark transition-colors whitespace-nowrap cursor-pointer">
                   Sign In
                 </a>
-                <a href="/auth/register" className="px-4 py-2 bg-primary-500 text-white text-sm font-medium rounded-md hover:bg-primary-600 transition-colors whitespace-nowrap cursor-pointer">
+                <a href="/auth/register" className="px-4 py-2 bg-primary text-white text-sm font-medium rounded-md hover:bg-primary-dark transition-colors whitespace-nowrap cursor-pointer">
                   Join Free
                 </a>
               </div>

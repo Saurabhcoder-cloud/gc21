@@ -359,7 +359,7 @@ export default function SuppliersPage() {
                   <select
                     value={selectedCountry}
                     onChange={(e) => setSelectedCountry(e.target.value)}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary"
                   >
                     <option value="all">All Countries</option>
                     <option value="china">China</option>
@@ -377,7 +377,7 @@ export default function SuppliersPage() {
                   <select
                     value={selectedBusinessType}
                     onChange={(e) => setSelectedBusinessType(e.target.value)}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary"
                   >
                     <option value="all">All Types</option>
                     <option value="manufacturer">Manufacturer</option>
@@ -392,7 +392,7 @@ export default function SuppliersPage() {
                   <select
                     value={selectedCategory}
                     onChange={(e) => setSelectedCategory(e.target.value)}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary"
                   >
                     <option value="all">All Categories</option>
                     <option value="electronics">Electronics</option>
@@ -408,7 +408,7 @@ export default function SuppliersPage() {
                   <div className="space-y-2">
                     {['1-5 years', '5-10 years', '10-15 years', '15+ years'].map((range) => (
                       <label key={range} className="flex items-center space-x-2 cursor-pointer">
-                        <input type="radio" name="years" className="w-4 h-4 text-emerald-600 border-gray-300 focus:ring-emerald-500" />
+                        <input type="radio" name="years" className="w-4 h-4 text-primary border-gray-300 focus:ring-primary" />
                         <span className="text-sm text-gray-700">{range}</span>
                       </label>
                     ))}
@@ -422,13 +422,13 @@ export default function SuppliersPage() {
                       type="checkbox"
                       checked={verifiedOnly}
                       onChange={(e) => setVerifiedOnly(e.target.checked)}
-                      className="w-4 h-4 text-emerald-600 border-gray-300 rounded focus:ring-emerald-500"
+                      className="w-4 h-4 text-primary border-gray-300 rounded focus:ring-primary"
                     />
                     <span className="text-sm text-gray-700">Verified Suppliers Only</span>
                   </label>
                 </div>
 
-                <button className="w-full px-4 py-2 bg-emerald-600 text-white font-medium rounded-lg hover:bg-emerald-700 transition-all text-sm whitespace-nowrap">
+                <button className="w-full px-4 py-2 bg-primary text-white font-medium rounded-lg hover:bg-primary-dark transition-all text-sm whitespace-nowrap">
                   Apply Filters
                 </button>
               </div>
@@ -472,12 +472,12 @@ export default function SuppliersPage() {
                       </div>
                       <div className="flex-1 min-w-0">
                         <div className="flex items-start justify-between mb-1">
-                          <h3 className="text-base font-semibold text-gray-900 group-hover:text-emerald-600 transition-colors line-clamp-2">
+                          <h3 className="text-base font-semibold text-gray-900 group-hover:text-primary transition-colors line-clamp-2">
                             {supplier.name}
                           </h3>
                           {supplier.verified && (
                             <div className="flex-shrink-0 ml-2">
-                              <div className="w-6 h-6 bg-emerald-600 rounded-full flex items-center justify-center">
+                              <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center">
                                 <i className="ri-verified-badge-fill text-white text-sm"></i>
                               </div>
                             </div>
@@ -514,7 +514,7 @@ export default function SuppliersPage() {
                       </div>
                     </div>
 
-                    <button className="w-full px-4 py-2 bg-emerald-50 text-emerald-600 font-medium rounded-lg hover:bg-emerald-600 hover:text-white transition-all whitespace-nowrap">
+                    <button className="w-full px-4 py-2 bg-primary-light text-primary font-medium rounded-lg hover:bg-primary hover:text-white transition-all whitespace-nowrap">
                       View Supplier
                     </button>
                   </div>
@@ -544,7 +544,7 @@ export default function SuppliersPage() {
                       onClick={() => handlePageChange(page as number)}
                       className={`px-4 py-2 rounded-lg text-sm font-medium transition-all whitespace-nowrap ${
                         currentPage === page
-                          ? 'bg-emerald-600 text-white'
+                          ? 'bg-primary text-white'
                           : 'border border-gray-300 text-gray-700 hover:bg-gray-50'
                       }`}
                     >

@@ -160,7 +160,7 @@ export default function AdminCategoriesPage() {
                     <i className={`${category.icon} text-2xl text-white`}></i>
                   </div>
                   <span className={`px-3 py-1 text-xs font-semibold rounded-full ${
-                    category.status === 'active' ? 'bg-emerald-100 text-emerald-700' : 'bg-gray-100 text-gray-700'
+                    category.status === 'active' ? 'bg-primary-light text-primary-dark' : 'bg-gray-100 text-gray-700'
                   }`}>
                     {category.status === 'active' ? 'Active' : 'Inactive'}
                   </span>

@@ -121,9 +121,9 @@ export default function BuyerOrdersPage() {
       case 'In Production':
         return 'bg-purple-100 text-purple-700';
       case 'Shipped':
-        return 'bg-orange-100 text-orange-700';
+        return 'bg-primary-light text-primary-dark';
       case 'Completed':
-        return 'bg-emerald-100 text-emerald-700';
+        return 'bg-primary-light text-primary-dark';
       default:
         return 'bg-gray-100 text-gray-700';
     }
@@ -151,7 +151,7 @@ export default function BuyerOrdersPage() {
           </div>
           <div className="bg-white rounded-xl p-4 shadow-sm">
             <p className="text-sm text-gray-600 mb-1">Completed</p>
-            <p className="text-2xl font-bold text-emerald-600">
+            <p className="text-2xl font-bold text-primary">
               {orders.filter((o) => o.status === 'Completed').length}
             </p>
           </div>
@@ -177,7 +177,7 @@ export default function BuyerOrdersPage() {
                   onClick={() => setActiveTab(tab.key as any)}
                   className={`px-4 py-2 rounded-lg text-sm font-medium transition-all whitespace-nowrap ${
                     activeTab === tab.key
-                      ? 'bg-emerald-50 text-emerald-600'
+                      ? 'bg-primary-light text-primary'
                       : 'text-gray-600 hover:bg-gray-50'
                   }`}
                 >
@@ -215,7 +215,7 @@ export default function BuyerOrdersPage() {
                       <span>Order ID: <strong className="text-gray-900">{order.id}</strong></span>
                       <span>Quantity: <strong className="text-gray-900">{order.quantity}</strong></span>
                       <span>Unit Price: <strong className="text-gray-900">{order.unitPrice}</strong></span>
-                      <span>Total: <strong className="text-emerald-600">{order.totalAmount}</strong></span>
+                      <span>Total: <strong className="text-primary">{order.totalAmount}</strong></span>
                     </div>
                     <div className="flex items-center space-x-4 text-xs text-gray-500">
                       <span>Ordered: {order.orderDate}</span>
@@ -234,7 +234,7 @@ export default function BuyerOrdersPage() {
                 <div className="flex items-center justify-between pt-3 border-t border-gray-200">
                   <div className="flex items-center space-x-2">
                     <span className={`px-2 py-1 rounded-full text-xs font-semibold ${
-                      order.paymentStatus === 'Paid' ? 'bg-emerald-100 text-emerald-700' : 'bg-yellow-100 text-yellow-700'
+                      order.paymentStatus === 'Paid' ? 'bg-primary-light text-primary-dark' : 'bg-yellow-100 text-yellow-700'
                     }`}>
                       {order.paymentStatus}
                     </span>
@@ -242,7 +242,7 @@ export default function BuyerOrdersPage() {
                   <div className="flex space-x-2">
                     <button
                       onClick={() => setSelectedOrder(selectedOrder === order.id ? null : order.id)}
-                      className="px-4 py-2 bg-emerald-600 text-white text-sm font-medium rounded-lg hover:bg-emerald-700 transition-all whitespace-nowrap"
+                      className="px-4 py-2 bg-primary text-white text-sm font-medium rounded-lg hover:bg-primary-dark transition-all whitespace-nowrap"
                     >
                       <i className="ri-eye-line mr-2"></i>
                       View Details
@@ -271,7 +271,7 @@ export default function BuyerOrdersPage() {
                           {order.timeline.map((item, index) => (
                             <div key={index} className="flex items-start space-x-3">
                               <div className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 ${
-                                item.completed ? 'bg-emerald-600' : 'bg-gray-300'
+                                item.completed ? 'bg-primary' : 'bg-gray-300'
                               }`}>
                                 {item.completed ? (
                                   <i className="ri-check-line text-white"></i>
@@ -301,7 +301,7 @@ export default function BuyerOrdersPage() {
                           {order.trackingNumber && (
                             <div className="mt-4 pt-4 border-t border-gray-200">
                               <p className="text-sm font-semibold text-gray-900 mb-1">Tracking Number</p>
-                              <p className="text-sm text-emerald-600 font-mono">{order.trackingNumber}</p>
+                              <p className="text-sm text-primary font-mono">{order.trackingNumber}</p>
                             </div>
                           )}
                         </div>

@@ -197,7 +197,7 @@ export default function AdminSettingsPage() {
               { name: 'Super Admin', users: 2, permissions: 'Full Access', color: 'red' },
               { name: 'User Manager', users: 3, permissions: 'Manage Buyers & Suppliers', color: 'blue' },
               { name: 'Content Manager', users: 2, permissions: 'Manage Content & Pages', color: 'purple' },
-              { name: 'Support Agent', users: 5, permissions: 'Handle Support Tickets', color: 'emerald' },
+              { name: 'Support Agent', users: 5, permissions: 'Handle Support Tickets', color: 'primary' },
             ].map((role, index) => (
               <div key={index} className="flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:border-red-500 transition-all">
                 <div className="flex items-center space-x-4">

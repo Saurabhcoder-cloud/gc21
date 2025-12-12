@@ -115,7 +115,7 @@ export default function BuyerMessagesPage() {
               <input
                 type="text"
                 placeholder="Search conversations..."
-                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary"
               />
               <i className="ri-search-line absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
             </div>
@@ -127,23 +127,23 @@ export default function BuyerMessagesPage() {
                 key={conv.id}
                 onClick={() => setSelectedConversation(conv.id)}
                 className={`p-4 border-b border-gray-200 cursor-pointer transition-all ${
-                  selectedConversation === conv.id ? 'bg-emerald-50' : 'hover:bg-gray-50'
+                  selectedConversation === conv.id ? 'bg-primary-light' : 'hover:bg-gray-50'
                 }`}
               >
                 <div className="flex items-start space-x-3">
                   <div className="relative flex-shrink-0">
-                    <div className="w-12 h-12 bg-emerald-600 rounded-full flex items-center justify-center text-white font-semibold">
+                    <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white font-semibold">
                       {conv.avatar}
                     </div>
                     {conv.online && (
-                      <div className="absolute bottom-0 right-0 w-3 h-3 bg-emerald-500 border-2 border-white rounded-full"></div>
+                      <div className="absolute bottom-0 right-0 w-3 h-3 bg-primary-light0 border-2 border-white rounded-full"></div>
                     )}
                   </div>
                   <div className="flex-1 min-w-0">
                     <div className="flex items-start justify-between mb-1">
                       <h3 className="text-sm font-semibold text-gray-900 truncate">{conv.supplier}</h3>
                       {conv.unread > 0 && (
-                        <span className="ml-2 px-2 py-0.5 bg-emerald-600 text-white text-xs font-semibold rounded-full flex-shrink-0">
+                        <span className="ml-2 px-2 py-0.5 bg-primary text-white text-xs font-semibold rounded-full flex-shrink-0">
                           {conv.unread}
                         </span>
                       )}
@@ -166,11 +166,11 @@ export default function BuyerMessagesPage() {
               <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-3">
                   <div className="relative">
-                    <div className="w-10 h-10 bg-emerald-600 rounded-full flex items-center justify-center text-white font-semibold">
+                    <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white font-semibold">
                       {selectedConv.avatar}
                     </div>
                     {selectedConv.online && (
-                      <div className="absolute bottom-0 right-0 w-3 h-3 bg-emerald-500 border-2 border-white rounded-full"></div>
+                      <div className="absolute bottom-0 right-0 w-3 h-3 bg-primary-light0 border-2 border-white rounded-full"></div>
                     )}
                   </div>
                   <div>
@@ -203,7 +203,7 @@ export default function BuyerMessagesPage() {
                   <div
                     className={`px-4 py-3 rounded-lg ${
                       message.sender === 'buyer'
-                        ? 'bg-emerald-600 text-white'
+                        ? 'bg-primary text-white'
                         : 'bg-gray-100 text-gray-900'
                     }`}
                   >
@@ -233,13 +233,13 @@ export default function BuyerMessagesPage() {
                   placeholder="Type your message..."
                   rows={2}
                   maxLength={500}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 resize-none"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary resize-none"
                 />
               </div>
               <button
                 type="submit"
                 disabled={!messageText.trim()}
-                className="w-10 h-10 flex items-center justify-center bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex-shrink-0 cursor-pointer"
+                className="w-10 h-10 flex items-center justify-center bg-primary text-white rounded-lg hover:bg-primary-dark transition-all disabled:opacity-50 disabled:cursor-not-allowed flex-shrink-0 cursor-pointer"
               >
                 <i className="ri-send-plane-fill text-xl"></i>
               </button>

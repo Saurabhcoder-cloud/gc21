@@ -36,7 +36,7 @@ export default function BuyerProfilePage() {
         {!isEditing ? (
           <button
             onClick={() => setIsEditing(true)}
-            className="px-6 py-2.5 bg-emerald-600 text-white rounded-lg font-semibold hover:bg-emerald-700 transition-all whitespace-nowrap cursor-pointer"
+            className="px-6 py-2.5 bg-primary text-white rounded-lg font-semibold hover:bg-primary-dark transition-all whitespace-nowrap cursor-pointer"
           >
             <i className="ri-edit-line mr-2"></i>
             Edit Profile
@@ -51,7 +51,7 @@ export default function BuyerProfilePage() {
             </button>
             <button
               onClick={handleSave}
-              className="px-6 py-2.5 bg-emerald-600 text-white rounded-lg font-semibold hover:bg-emerald-700 transition-all whitespace-nowrap cursor-pointer"
+              className="px-6 py-2.5 bg-primary text-white rounded-lg font-semibold hover:bg-primary-dark transition-all whitespace-nowrap cursor-pointer"
             >
               <i className="ri-save-line mr-2"></i>
               Save Changes
@@ -64,12 +64,12 @@ export default function BuyerProfilePage() {
       <div className="bg-white rounded-xl border border-gray-200 p-6">
         <h2 className="text-lg font-bold text-gray-900 mb-4">Profile Picture</h2>
         <div className="flex items-center space-x-6">
-          <div className="w-24 h-24 bg-emerald-600 rounded-full flex items-center justify-center text-white text-3xl font-bold">
+          <div className="w-24 h-24 bg-primary rounded-full flex items-center justify-center text-white text-3xl font-bold">
             JS
           </div>
           <div>
             <p className="text-sm text-gray-600 mb-3">Upload a professional photo to help suppliers recognize you</p>
-            <button className="px-4 py-2 bg-emerald-50 text-emerald-600 rounded-lg font-medium hover:bg-emerald-100 transition-all whitespace-nowrap cursor-pointer">
+            <button className="px-4 py-2 bg-primary-light text-primary rounded-lg font-medium hover:bg-primary-light transition-all whitespace-nowrap cursor-pointer">
               <i className="ri-upload-2-line mr-2"></i>
               Upload Photo
             </button>
@@ -88,7 +88,7 @@ export default function BuyerProfilePage() {
                 type="text"
                 value={profile.name}
                 onChange={(e) => setProfile({ ...profile, name: e.target.value })}
-                className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-sm"
+                className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary text-sm"
               />
             ) : (
               <p className="text-gray-900 py-2.5">{profile.name}</p>
@@ -102,7 +102,7 @@ export default function BuyerProfilePage() {
                 type="email"
                 value={profile.email}
                 onChange={(e) => setProfile({ ...profile, email: e.target.value })}
-                className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-sm"
+                className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary text-sm"
               />
             ) : (
               <p className="text-gray-900 py-2.5">{profile.email}</p>
@@ -116,7 +116,7 @@ export default function BuyerProfilePage() {
                 type="tel"
                 value={profile.phone}
                 onChange={(e) => setProfile({ ...profile, phone: e.target.value })}
-                className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-sm"
+                className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary text-sm"
               />
             ) : (
               <p className="text-gray-900 py-2.5">{profile.phone}</p>
@@ -130,7 +130,7 @@ export default function BuyerProfilePage() {
                 type="text"
                 value={profile.company}
                 onChange={(e) => setProfile({ ...profile, company: e.target.value })}
-                className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-sm"
+                className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary text-sm"
               />
             ) : (
               <p className="text-gray-900 py-2.5">{profile.company}</p>
@@ -149,7 +149,7 @@ export default function BuyerProfilePage() {
               <select
                 value={profile.country}
                 onChange={(e) => setProfile({ ...profile, country: e.target.value })}
-                className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-sm"
+                className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary text-sm"
               >
                 <option>United States</option>
                 <option>United Kingdom</option>
@@ -171,7 +171,7 @@ export default function BuyerProfilePage() {
                 type="text"
                 value={profile.city}
                 onChange={(e) => setProfile({ ...profile, city: e.target.value })}
-                className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-sm"
+                className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary text-sm"
               />
             ) : (
               <p className="text-gray-900 py-2.5">{profile.city}</p>
@@ -185,7 +185,7 @@ export default function BuyerProfilePage() {
                 type="text"
                 value={profile.state}
                 onChange={(e) => setProfile({ ...profile, state: e.target.value })}
-                className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-sm"
+                className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary text-sm"
               />
             ) : (
               <p className="text-gray-900 py-2.5">{profile.state}</p>
@@ -199,7 +199,7 @@ export default function BuyerProfilePage() {
                 type="text"
                 value={profile.zipCode}
                 onChange={(e) => setProfile({ ...profile, zipCode: e.target.value })}
-                className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-sm"
+                className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary text-sm"
               />
             ) : (
               <p className="text-gray-900 py-2.5">{profile.zipCode}</p>
@@ -218,7 +218,7 @@ export default function BuyerProfilePage() {
               <select
                 value={profile.businessType}
                 onChange={(e) => setProfile({ ...profile, businessType: e.target.value })}
-                className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-sm"
+                className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary text-sm"
               >
                 <option>Manufacturer</option>
                 <option>Distributor</option>
@@ -238,7 +238,7 @@ export default function BuyerProfilePage() {
                 type="text"
                 value={profile.industry}
                 onChange={(e) => setProfile({ ...profile, industry: e.target.value })}
-                className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-sm"
+                className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary text-sm"
               />
             ) : (
               <p className="text-gray-900 py-2.5">{profile.industry}</p>
@@ -251,7 +251,7 @@ export default function BuyerProfilePage() {
               <select
                 value={profile.employeeCount}
                 onChange={(e) => setProfile({ ...profile, employeeCount: e.target.value })}
-                className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-sm"
+                className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary text-sm"
               >
                 <option>1-10</option>
                 <option>11-50</option>
@@ -271,7 +271,7 @@ export default function BuyerProfilePage() {
               <select
                 value={profile.annualRevenue}
                 onChange={(e) => setProfile({ ...profile, annualRevenue: e.target.value })}
-                className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-sm"
+                className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary text-sm"
               >
                 <option>&lt; $1M</option>
                 <option>$1M - $10M</option>
@@ -291,7 +291,7 @@ export default function BuyerProfilePage() {
                 type="url"
                 value={profile.website}
                 onChange={(e) => setProfile({ ...profile, website: e.target.value })}
-                className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-sm"
+                className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary text-sm"
               />
             ) : (
               <p className="text-gray-900 py-2.5">{profile.website}</p>
@@ -304,7 +304,7 @@ export default function BuyerProfilePage() {
       <div className="bg-white rounded-xl border border-gray-200 p-6">
         <h2 className="text-lg font-bold text-gray-900 mb-6">Security Settings</h2>
         <div className="space-y-4">
-          <button className="w-full flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:border-emerald-300 hover:bg-emerald-50 transition-all cursor-pointer">
+          <button className="w-full flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:border-primary hover:bg-primary-light transition-all cursor-pointer">
             <div className="flex items-center space-x-3">
               <i className="ri-lock-password-line text-xl text-gray-600"></i>
               <div className="text-left">
@@ -315,7 +315,7 @@ export default function BuyerProfilePage() {
             <i className="ri-arrow-right-s-line text-xl text-gray-400"></i>
           </button>
 
-          <button className="w-full flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:border-emerald-300 hover:bg-emerald-50 transition-all cursor-pointer">
+          <button className="w-full flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:border-primary hover:bg-primary-light transition-all cursor-pointer">
             <div className="flex items-center space-x-3">
               <i className="ri-shield-check-line text-xl text-gray-600"></i>
               <div className="text-left">

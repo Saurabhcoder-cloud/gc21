@@ -109,7 +109,7 @@ export default function BuyerRFQPage() {
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'Open': return 'bg-blue-100 text-blue-700';
-      case 'Quoted': return 'bg-emerald-100 text-emerald-700';
+      case 'Quoted': return 'bg-primary-light text-primary-dark';
       case 'Closed': return 'bg-gray-100 text-gray-700';
       default: return 'bg-gray-100 text-gray-700';
     }
@@ -173,7 +173,7 @@ export default function BuyerRFQPage() {
         </div>
         <button
           onClick={() => setShowCreateModal(true)}
-          className="px-6 py-2.5 bg-emerald-600 text-white rounded-lg font-semibold hover:bg-emerald-700 transition-all whitespace-nowrap cursor-pointer"
+          className="px-6 py-2.5 bg-primary text-white rounded-lg font-semibold hover:bg-primary-dark transition-all whitespace-nowrap cursor-pointer"
         >
           <i className="ri-add-line mr-2"></i>
           Create New RFQ
@@ -192,7 +192,7 @@ export default function BuyerRFQPage() {
         </div>
         <div className="bg-white rounded-lg p-4 border border-gray-200">
           <p className="text-sm text-gray-600 mb-1">Quoted RFQs</p>
-          <p className="text-2xl font-bold text-emerald-600">{rfqs.filter(r => r.status === 'Quoted').length}</p>
+          <p className="text-2xl font-bold text-primary">{rfqs.filter(r => r.status === 'Quoted').length}</p>
         </div>
         <div className="bg-white rounded-lg p-4 border border-gray-200">
           <p className="text-sm text-gray-600 mb-1">Total Quotes</p>
@@ -210,7 +210,7 @@ export default function BuyerRFQPage() {
               onClick={() => setFilterStatus(status)}
               className={`px-4 py-2 rounded-lg text-sm font-medium transition-all whitespace-nowrap cursor-pointer ${
                 filterStatus === status
-                  ? 'bg-emerald-600 text-white'
+                  ? 'bg-primary text-white'
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
@@ -261,7 +261,7 @@ export default function BuyerRFQPage() {
                     </span>
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
-                    <span className="text-sm font-semibold text-emerald-600">{rfq.quotes} quotes</span>
+                    <span className="text-sm font-semibold text-primary">{rfq.quotes} quotes</span>
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
                     <span className="text-sm text-gray-500">{rfq.date}</span>
@@ -269,7 +269,7 @@ export default function BuyerRFQPage() {
                   <td className="px-6 py-4 whitespace-nowrap">
                     <button
                       onClick={() => setSelectedRFQ(rfq)}
-                      className="text-emerald-600 hover:text-emerald-700 font-medium text-sm cursor-pointer"
+                      className="text-primary hover:text-primary-dark font-medium text-sm cursor-pointer"
                     >
                       View Details
                     </button>
@@ -316,7 +316,7 @@ export default function BuyerRFQPage() {
                   </div>
                   <div className="text-right">
                     <p className="text-sm text-gray-600 mb-1">Quotes Received</p>
-                    <p className="text-3xl font-bold text-emerald-600">{selectedRFQ.quotes}</p>
+                    <p className="text-3xl font-bold text-primary">{selectedRFQ.quotes}</p>
                   </div>
                 </div>
 
@@ -356,12 +356,12 @@ export default function BuyerRFQPage() {
                 </div>
 
                 {/* Your Contact Info (visible to buyer) */}
-                <div className="bg-emerald-50 rounded-lg p-4 border border-emerald-200">
-                  <p className="text-sm font-semibold text-emerald-900 mb-3">
+                <div className="bg-primary-light rounded-lg p-4 border border-primary">
+                  <p className="text-sm font-semibold text-primary mb-3">
                     <i className="ri-user-line mr-2"></i>
                     Your Contact Information (Visible to Suppliers)
                   </p>
-                  <div className="space-y-2 text-sm text-emerald-900">
+                  <div className="space-y-2 text-sm text-primary">
                     <p><span className="font-semibold">Name:</span> John Smith</p>
                     <p><span className="font-semibold">Company:</span> TechCorp Industries</p>
                     <p><span className="font-semibold">Email:</span> john.smith@techcorp.com</p>
@@ -371,7 +371,7 @@ export default function BuyerRFQPage() {
 
                 {/* Actions */}
                 <div className="flex space-x-3">
-                  <button className="flex-1 px-6 py-3 bg-emerald-600 text-white rounded-lg font-semibold hover:bg-emerald-700 transition-all whitespace-nowrap cursor-pointer">
+                  <button className="flex-1 px-6 py-3 bg-primary text-white rounded-lg font-semibold hover:bg-primary-dark transition-all whitespace-nowrap cursor-pointer">
                     <i className="ri-mail-line mr-2"></i>
                     View Quotes ({selectedRFQ.quotes})
                   </button>
@@ -418,7 +418,7 @@ export default function BuyerRFQPage() {
                     onChange={handleInputChange}
                     required
                     placeholder="e.g., Industrial LED Lights"
-                    className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent text-sm"
+                    className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-sm"
                   />
                 </div>
 
@@ -432,7 +432,7 @@ export default function BuyerRFQPage() {
                     value={formData.category}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent text-sm cursor-pointer"
+                    className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-sm cursor-pointer"
                   >
                     <option value="">Select Category</option>
                     <option value="electronics">Electronics</option>
@@ -459,13 +459,13 @@ export default function BuyerRFQPage() {
                       onChange={handleInputChange}
                       required
                       placeholder="1000"
-                      className="flex-1 px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent text-sm"
+                      className="flex-1 px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-sm"
                     />
                     <select
                       name="unit"
                       value={formData.unit}
                       onChange={handleInputChange}
-                      className="px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent text-sm cursor-pointer"
+                      className="px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-sm cursor-pointer"
                     >
                       <option value="pieces">Pieces</option>
                       <option value="kg">Kilograms</option>
@@ -490,13 +490,13 @@ export default function BuyerRFQPage() {
                       onChange={handleInputChange}
                       placeholder="10.50"
                       step="0.01"
-                      className="flex-1 px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent text-sm"
+                      className="flex-1 px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-sm"
                     />
                     <select
                       name="currency"
                       value={formData.currency}
                       onChange={handleInputChange}
-                      className="px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent text-sm cursor-pointer"
+                      className="px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-sm cursor-pointer"
                     >
                       <option value="USD">USD</option>
                       <option value="EUR">EUR</option>
@@ -518,7 +518,7 @@ export default function BuyerRFQPage() {
                     onChange={handleInputChange}
                     required
                     placeholder="e.g., New York, USA"
-                    className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent text-sm"
+                    className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-sm"
                   />
                 </div>
 
@@ -534,7 +534,7 @@ export default function BuyerRFQPage() {
                     onChange={handleInputChange}
                     required
                     min={new Date().toISOString().split('T')[0]}
-                    className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent text-sm cursor-pointer"
+                    className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-sm cursor-pointer"
                   />
                 </div>
 
@@ -548,7 +548,7 @@ export default function BuyerRFQPage() {
                     value={formData.paymentTerms}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent text-sm cursor-pointer"
+                    className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-sm cursor-pointer"
                   >
                     <option value="T/T">T/T (Telegraphic Transfer)</option>
                     <option value="L/C">L/C (Letter of Credit)</option>
@@ -570,7 +570,7 @@ export default function BuyerRFQPage() {
                     value={formData.certifications}
                     onChange={handleInputChange}
                     placeholder="e.g., CE, ISO 9001, FDA"
-                    className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent text-sm"
+                    className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-sm"
                   />
                 </div>
 
@@ -586,7 +586,7 @@ export default function BuyerRFQPage() {
                     required
                     rows={4}
                     placeholder="Describe your product requirements in detail..."
-                    className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent text-sm resize-none"
+                    className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-sm resize-none"
                   />
                 </div>
 
@@ -601,7 +601,7 @@ export default function BuyerRFQPage() {
                     onChange={handleInputChange}
                     rows={3}
                     placeholder="Size, color, material, power requirements, etc."
-                    className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent text-sm resize-none"
+                    className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-sm resize-none"
                   />
                 </div>
 
@@ -610,7 +610,7 @@ export default function BuyerRFQPage() {
                   <label className="block text-sm font-semibold text-gray-700 mb-2">
                     Attachments (Optional)
                   </label>
-                  <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-emerald-500 transition-colors cursor-pointer">
+                  <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-primary transition-colors cursor-pointer">
                     <input
                       type="file"
                       onChange={handleFileChange}
@@ -624,7 +624,7 @@ export default function BuyerRFQPage() {
                       <p className="text-sm text-gray-600 mb-1">Click to upload or drag and drop</p>
                       <p className="text-xs text-gray-500">PDF, DOC, JPG, PNG (Max 10MB each)</p>
                       {formData.attachments && (
-                        <p className="text-sm text-emerald-600 mt-2 font-medium">
+                        <p className="text-sm text-primary mt-2 font-medium">
                           {formData.attachments.length} file(s) selected
                         </p>
                       )}
@@ -645,7 +645,7 @@ export default function BuyerRFQPage() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="px-6 py-2.5 bg-emerald-600 text-white rounded-lg font-semibold hover:bg-emerald-700 transition-all whitespace-nowrap cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="px-6 py-2.5 bg-primary text-white rounded-lg font-semibold hover:bg-primary-dark transition-all whitespace-nowrap cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {isSubmitting ? (
                     <>
